@@ -11,7 +11,7 @@
 	}
 </style>
 <script type="text/javascript">
-	(这个要用js，父元素触发，作用在img上)(filter:alpha(opacity=80);  /*支持 IE 浏览器*/
+	(这个要用js(/* class="a" */)，父元素触发，作用在img上)(filter:alpha(opacity=80);  /*支持 IE 浏览器*/
 	-moz-opacity:0.80; /*支持 FireFox 浏览器*/
 	opacity:0.80;  /*支持 Chrome, Opera, Safari 等浏览器*/)
 </script>
