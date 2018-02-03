@@ -5,23 +5,28 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-min.js"></script>
+<script src="4.js"></script>
 <style type="text/css">
-*{
+* {
 	margin: 0;
 	padding: 0;
 }
-ul{
+
+ul {
 	list-style: none;
 }
-a{
+
+a {
 	text-decoration: none;
 	cursor: pointer;
 }
+
 .nav_con {
-	background-color: #000;	
-	filter:alpha(opacity=35);  /*支持 IE 浏览器*/
-	-moz-opacity:0.35; /*支持 FireFox 浏览器*/
-	opacity:0.35;  /*支持 Chrome, Opera, Safari 等浏览器*/)
+	background-color: #000;
+	filter: alpha(opacity = 35); /*支持 IE 浏览器*/
+	-moz-opacity: 0.35; /*支持 FireFox 浏览器*/
+	opacity: 0.35; /*支持 Chrome, Opera, Safari 等浏览器*/ )
 	background-color: rgba(0, 0, 0, .55);
 	width: 200px;
 	height: 500px;
@@ -34,17 +39,28 @@ a{
 	line-height: 31.2px;
 	color: #fff;
 	font-size: 14px;
-	font-weight:700;
-	font-family: 'Microsoft YaHei',SimSun,sans-serif;
+	font-weight: 700;
+	font-family: 'Microsoft YaHei', SimSun, sans-serif;
 }
-.nav_con li:hover{
-	background-color: #fff;	
-	color:red;
+
+.nav_con li:hover {
+	background-color: #fff;
+	color: red;
+}
+.nav_ul a{
+	height: 22px;
+    line-height: 22px;
+    font-size: 14px;
+    color: #666;
+    float: left;
+    margin-left: 13px;
+    display: block;
 }
 </style>
 </head>
 <body>
-	<div style="width: 200px; height: 500px;">
+<div style="margin: 0 auto;width: 67%;">
+	<div style="width: 200px; height: 500px; float: left;">
 		<ul class="nav_con">
 			<li><i>(这里是有一个小小图标的)</i>女装</li>
 			<li>男装</li>
@@ -65,5 +81,416 @@ a{
 		</ul>
 	</div>
 
+	<div class="aaa" style="width: 852px; height: 500px; float: left; overflow: hidden;display: none;">
+		<div style="width: 583px; height: 462px; margin: 19px 30px;overflow: hidden;
+    				background-color: #fff; float: left;">
+			<ul>
+				<li>
+					<div style="width: 60px; color: #333; margin-right: 30px; position: relative;
+    							font-size: 14px; font-weight: 700; line-height: 22px; height: 22px;
+    							float: left;">
+						进口食品1
+					</div>
+					<i style="font-family: fpIconFont!important;display: block;float: left;"></i>
+					<div class="nav_ul" style="width: 493px; float: left;border-bottom: 1px dashed;    
+								border-bottom-color: #eee; border-bottom-color: rgba(0,0,0,.1);
+								margin-bottom: 10.5px;padding-bottom: 10.5px;
+								">
+						<a>进口</a>
+						<a>进口零食</a>
+						<a>进口巧克力</a>
+						<a>进口橄榄油</a>
+						<a>进口葡萄酒</a>
+						<a>进口洋酒</a>
+						<a>饼干</a>
+					</div>
+				</li>
+				
+				<li>
+					<div style="width: 60px; color: #333; margin-right: 30px; position: relative;
+    							font-size: 14px; font-weight: 700; line-height: 22px; height: 22px;
+    							float: left;">
+						进口食品
+						<i style="font-family: fpIconFont!important;display: block;float: left;"></i>
+					</div>
+					<div class="nav_ul" style="width: 493px; float: left;border-bottom: 1px dashed;    
+								border-bottom-color: #eee; border-bottom-color: rgba(0,0,0,.1);
+								margin-bottom: 10.5px;padding-bottom: 10.5px;
+								">
+						<a>进口</a>
+						<a>进口零食</a>
+						<a>进口巧克力</a>
+						<a>进口橄榄油</a>
+						<a>进口葡萄酒</a>
+						<a>进口洋酒</a>
+						<a>饼干</a>
+						<a>饼干</a>
+						<a>饼干</a>
+					</div>
+				</li>
+				
+				<li>
+					<div style="width: 60px; color: #333; margin-right: 30px; position: relative;
+    							font-size: 14px; font-weight: 700; line-height: 22px; height: 22px;
+    							float: left;">
+						进口食品
+						<i style="font-family: fpIconFont!important;display: block;float: left;"></i>
+					</div>
+					<div class="nav_ul" style="width: 493px; float: left;border-bottom: 1px dashed;    
+								border-bottom-color: #eee; border-bottom-color: rgba(0,0,0,.1);
+								margin-bottom: 10.5px;padding-bottom: 10.5px;
+								">
+						<a>进口</a>
+						<a>进口零食</a>
+						<a>进口巧克力</a>
+						<a>进口橄榄油</a>
+						<a>进口葡萄酒</a>
+						<a>进口洋酒</a>
+						<a>饼干</a>
+					</div>
+				</li>
+				
+				<li>
+					<div style="width: 60px; color: #333; margin-right: 30px; position: relative;
+    							font-size: 14px; font-weight: 700; line-height: 22px; height: 22px;
+    							float: left;">
+						进口食品
+						<i style="font-family: fpIconFont!important;display: block;float: left;"></i>
+					</div>
+					<div class="nav_ul" style="width: 493px; float: left;border-bottom: 1px dashed;    
+								border-bottom-color: #eee; border-bottom-color: rgba(0,0,0,.1);
+								margin-bottom: 10.5px;padding-bottom: 10.5px;
+								">
+						<a>进口</a>
+						<a>进口零食</a>
+						<a>进口巧克力</a>
+						<a>进口橄榄油</a>
+						<a>进口葡萄酒</a>
+						<a>进口洋酒</a>
+						<a>饼干</a>
+						<a>饼干</a>
+						<a>饼干</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+		<div style="width: 207px; height: 500px; float: left;">
+			<ul>
+				<li style="float: left; width: 73px; margin-right: 1px; margin-bottom: 1px; 
+					height: 37px; padding: 5px 10px; overflow: hidden; background-color: #fff;
+					">
+					<a href="#">
+					<img src="../image/nav_ul_brand_pic.jpg" alt="" 
+						 style=" width: 73px; display: block; margin: 0 auto;border: none">
+					</a>
+				</li>
+				<li style="float: left; width: 73px; margin-right: 1px; margin-bottom: 1px; 
+					height: 37px; padding: 5px 10px; overflow: hidden; background-color: #fff;
+					">
+					<a href="#">
+					<img src="../image/nav_ul_brand_pic.jpg" alt="" 
+						 style=" width: 73px; display: block; margin: 0 auto;border: none">
+					</a>
+				</li>
+				<li style="float: left; width: 73px; margin-right: 1px; margin-bottom: 1px; 
+					height: 37px; padding: 5px 10px; overflow: hidden; background-color: #fff;">
+					<a href="#">
+					<img src="../image/nav_ul_brand_pic.jpg" alt="" 
+						 style=" width: 73px; display: block; margin: 0 auto;border: none">
+					</a>
+				</li>
+				<li style="float: left; width: 73px; margin-right: 1px; margin-bottom: 1px; 
+					height: 37px; padding: 5px 10px; overflow: hidden; background-color: #fff;">
+					<a href="#">
+					<img src="../image/nav_ul_brand_pic.jpg" alt="" 
+						 style=" width: 73px; display: block; margin: 0 auto;border: none">
+					</a>
+				</li>
+				<li style="float: left; width: 73px; margin-right: 1px; margin-bottom: 1px; 
+					height: 37px; padding: 5px 10px; overflow: hidden; background-color: #fff;">
+					<a href="#">
+					<img src="../image/nav_ul_brand_pic.jpg" alt="" 
+						 style=" width: 73px; display: block; margin: 0 auto;border: none">
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="aaa" style="width: 852px; height: 500px; float: left; overflow: hidden;display: none;">
+		<div style="width: 583px; height: 462px; margin: 19px 30px;overflow: hidden;
+    				background-color: #fff; float: left;">
+			<ul>
+				<li>
+					<div style="width: 60px; color: #333; margin-right: 30px; position: relative;
+    							font-size: 14px; font-weight: 700; line-height: 22px; height: 22px;
+    							float: left;">
+						进口食品2
+					</div>
+					<i style="font-family: fpIconFont!important;display: block;float: left;"></i>
+					<div class="nav_ul" style="width: 493px; float: left;border-bottom: 1px dashed;    
+								border-bottom-color: #eee; border-bottom-color: rgba(0,0,0,.1);
+								margin-bottom: 10.5px;padding-bottom: 10.5px;
+								">
+						<a>进口</a>
+						<a>进口零食</a>
+						<a>进口巧克力</a>
+						<a>进口橄榄油</a>
+						<a>进口葡萄酒</a>
+						<a>进口洋酒</a>
+						<a>饼干</a>
+					</div>
+				</li>
+				
+				<li>
+					<div style="width: 60px; color: #333; margin-right: 30px; position: relative;
+    							font-size: 14px; font-weight: 700; line-height: 22px; height: 22px;
+    							float: left;">
+						进口食品
+						<i style="font-family: fpIconFont!important;display: block;float: left;"></i>
+					</div>
+					<div class="nav_ul" style="width: 493px; float: left;border-bottom: 1px dashed;    
+								border-bottom-color: #eee; border-bottom-color: rgba(0,0,0,.1);
+								margin-bottom: 10.5px;padding-bottom: 10.5px;
+								">
+						<a>进口</a>
+						<a>进口零食</a>
+						<a>进口巧克力</a>
+						<a>进口橄榄油</a>
+						<a>进口葡萄酒</a>
+						<a>进口洋酒</a>
+						<a>饼干</a>
+						<a>饼干</a>
+						<a>饼干</a>
+					</div>
+				</li>
+				
+				<li>
+					<div style="width: 60px; color: #333; margin-right: 30px; position: relative;
+    							font-size: 14px; font-weight: 700; line-height: 22px; height: 22px;
+    							float: left;">
+						进口食品
+						<i style="font-family: fpIconFont!important;display: block;float: left;"></i>
+					</div>
+					<div class="nav_ul" style="width: 493px; float: left;border-bottom: 1px dashed;    
+								border-bottom-color: #eee; border-bottom-color: rgba(0,0,0,.1);
+								margin-bottom: 10.5px;padding-bottom: 10.5px;
+								">
+						<a>进口</a>
+						<a>进口零食</a>
+						<a>进口巧克力</a>
+						<a>进口橄榄油</a>
+						<a>进口葡萄酒</a>
+						<a>进口洋酒</a>
+						<a>饼干</a>
+					</div>
+				</li>
+				
+				<li>
+					<div style="width: 60px; color: #333; margin-right: 30px; position: relative;
+    							font-size: 14px; font-weight: 700; line-height: 22px; height: 22px;
+    							float: left;">
+						进口食品
+						<i style="font-family: fpIconFont!important;display: block;float: left;"></i>
+					</div>
+					<div class="nav_ul" style="width: 493px; float: left;border-bottom: 1px dashed;    
+								border-bottom-color: #eee; border-bottom-color: rgba(0,0,0,.1);
+								margin-bottom: 10.5px;padding-bottom: 10.5px;
+								">
+						<a>进口</a>
+						<a>进口零食</a>
+						<a>进口巧克力</a>
+						<a>进口橄榄油</a>
+						<a>进口葡萄酒</a>
+						<a>进口洋酒</a>
+						<a>饼干</a>
+						<a>饼干</a>
+						<a>饼干</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+		<div style="width: 207px; height: 500px; float: left;">
+			<ul>
+				<li style="float: left; width: 73px; margin-right: 1px; margin-bottom: 1px; 
+					height: 37px; padding: 5px 10px; overflow: hidden; background-color: #fff;
+					">
+					<a href="#">
+					<img src="../image/nav_ul_brand_pic.jpg" alt="" 
+						 style=" width: 73px; display: block; margin: 0 auto;border: none">
+					</a>
+				</li>
+				<li style="float: left; width: 73px; margin-right: 1px; margin-bottom: 1px; 
+					height: 37px; padding: 5px 10px; overflow: hidden; background-color: #fff;
+					">
+					<a href="#">
+					<img src="../image/nav_ul_brand_pic.jpg" alt="" 
+						 style=" width: 73px; display: block; margin: 0 auto;border: none">
+					</a>
+				</li>
+				<li style="float: left; width: 73px; margin-right: 1px; margin-bottom: 1px; 
+					height: 37px; padding: 5px 10px; overflow: hidden; background-color: #fff;">
+					<a href="#">
+					<img src="../image/nav_ul_brand_pic.jpg" alt="" 
+						 style=" width: 73px; display: block; margin: 0 auto;border: none">
+					</a>
+				</li>
+				<li style="float: left; width: 73px; margin-right: 1px; margin-bottom: 1px; 
+					height: 37px; padding: 5px 10px; overflow: hidden; background-color: #fff;">
+					<a href="#">
+					<img src="../image/nav_ul_brand_pic.jpg" alt="" 
+						 style=" width: 73px; display: block; margin: 0 auto;border: none">
+					</a>
+				</li>
+				<li style="float: left; width: 73px; margin-right: 1px; margin-bottom: 1px; 
+					height: 37px; padding: 5px 10px; overflow: hidden; background-color: #fff;">
+					<a href="#">
+					<img src="../image/nav_ul_brand_pic.jpg" alt="" 
+						 style=" width: 73px; display: block; margin: 0 auto;border: none">
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="aaa" style="width: 852px; height: 500px; float: left; overflow: hidden;display: none;">
+		<div style="width: 583px; height: 462px; margin: 19px 30px;overflow: hidden;
+    				background-color: #fff; float: left;">
+			<ul>
+				<li>
+					<div style="width: 60px; color: #333; margin-right: 30px; position: relative;
+    							font-size: 14px; font-weight: 700; line-height: 22px; height: 22px;
+    							float: left;">
+						进口食品3
+					</div>
+					<i style="font-family: fpIconFont!important;display: block;float: left;"></i>
+					<div class="nav_ul" style="width: 493px; float: left;border-bottom: 1px dashed;    
+								border-bottom-color: #eee; border-bottom-color: rgba(0,0,0,.1);
+								margin-bottom: 10.5px;padding-bottom: 10.5px;
+								">
+						<a>进口</a>
+						<a>进口零食</a>
+						<a>进口巧克力</a>
+						<a>进口橄榄油</a>
+						<a>进口葡萄酒</a>
+						<a>进口洋酒</a>
+						<a>饼干</a>
+					</div>
+				</li>
+				
+				<li>
+					<div style="width: 60px; color: #333; margin-right: 30px; position: relative;
+    							font-size: 14px; font-weight: 700; line-height: 22px; height: 22px;
+    							float: left;">
+						进口食品
+						<i style="font-family: fpIconFont!important;display: block;float: left;"></i>
+					</div>
+					<div class="nav_ul" style="width: 493px; float: left;border-bottom: 1px dashed;    
+								border-bottom-color: #eee; border-bottom-color: rgba(0,0,0,.1);
+								margin-bottom: 10.5px;padding-bottom: 10.5px;
+								">
+						<a>进口</a>
+						<a>进口零食</a>
+						<a>进口巧克力</a>
+						<a>进口橄榄油</a>
+						<a>进口葡萄酒</a>
+						<a>进口洋酒</a>
+						<a>饼干</a>
+						<a>饼干</a>
+						<a>饼干</a>
+					</div>
+				</li>
+				
+				<li>
+					<div style="width: 60px; color: #333; margin-right: 30px; position: relative;
+    							font-size: 14px; font-weight: 700; line-height: 22px; height: 22px;
+    							float: left;">
+						进口食品
+						<i style="font-family: fpIconFont!important;display: block;float: left;"></i>
+					</div>
+					<div class="nav_ul" style="width: 493px; float: left;border-bottom: 1px dashed;    
+								border-bottom-color: #eee; border-bottom-color: rgba(0,0,0,.1);
+								margin-bottom: 10.5px;padding-bottom: 10.5px;
+								">
+						<a>进口</a>
+						<a>进口零食</a>
+						<a>进口巧克力</a>
+						<a>进口橄榄油</a>
+						<a>进口葡萄酒</a>
+						<a>进口洋酒</a>
+						<a>饼干</a>
+					</div>
+				</li>
+				
+				<li>
+					<div style="width: 60px; color: #333; margin-right: 30px; position: relative;
+    							font-size: 14px; font-weight: 700; line-height: 22px; height: 22px;
+    							float: left;">
+						进口食品
+						<i style="font-family: fpIconFont!important;display: block;float: left;"></i>
+					</div>
+					<div class="nav_ul" style="width: 493px; float: left;border-bottom: 1px dashed;    
+								border-bottom-color: #eee; border-bottom-color: rgba(0,0,0,.1);
+								margin-bottom: 10.5px;padding-bottom: 10.5px;
+								">
+						<a>进口</a>
+						<a>进口零食</a>
+						<a>进口巧克力</a>
+						<a>进口橄榄油</a>
+						<a>进口葡萄酒</a>
+						<a>进口洋酒</a>
+						<a>饼干</a>
+						<a>饼干</a>
+						<a>饼干</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+		<div style="width: 207px; height: 500px; float: left;">
+			<ul>
+				<li style="float: left; width: 73px; margin-right: 1px; margin-bottom: 1px; 
+					height: 37px; padding: 5px 10px; overflow: hidden; background-color: #fff;
+					">
+					<a href="#">
+					<img src="../image/nav_ul_brand_pic.jpg" alt="" 
+						 style=" width: 73px; display: block; margin: 0 auto;border: none">
+					</a>
+				</li>
+				<li style="float: left; width: 73px; margin-right: 1px; margin-bottom: 1px; 
+					height: 37px; padding: 5px 10px; overflow: hidden; background-color: #fff;
+					">
+					<a href="#">
+					<img src="../image/nav_ul_brand_pic.jpg" alt="" 
+						 style=" width: 73px; display: block; margin: 0 auto;border: none">
+					</a>
+				</li>
+				<li style="float: left; width: 73px; margin-right: 1px; margin-bottom: 1px; 
+					height: 37px; padding: 5px 10px; overflow: hidden; background-color: #fff;">
+					<a href="#">
+					<img src="../image/nav_ul_brand_pic.jpg" alt="" 
+						 style=" width: 73px; display: block; margin: 0 auto;border: none">
+					</a>
+				</li>
+				<li style="float: left; width: 73px; margin-right: 1px; margin-bottom: 1px; 
+					height: 37px; padding: 5px 10px; overflow: hidden; background-color: #fff;">
+					<a href="#">
+					<img src="../image/nav_ul_brand_pic.jpg" alt="" 
+						 style=" width: 73px; display: block; margin: 0 auto;border: none">
+					</a>
+				</li>
+				<li style="float: left; width: 73px; margin-right: 1px; margin-bottom: 1px; 
+					height: 37px; padding: 5px 10px; overflow: hidden; background-color: #fff;">
+					<a href="#">
+					<img src="../image/nav_ul_brand_pic.jpg" alt="" 
+						 style=" width: 73px; display: block; margin: 0 auto;border: none">
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
 </body>
 </html>
