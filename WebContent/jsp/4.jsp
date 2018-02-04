@@ -23,10 +23,7 @@ a {
 }
 
 .nav_con {
-	background-color: #000;
-	filter: alpha(opacity = 35); /*支持 IE 浏览器*/
-	-moz-opacity: 0.35; /*支持 FireFox 浏览器*/
-	opacity: 0.35; /*支持 Chrome, Opera, Safari 等浏览器*/ )
+	background-color: #696969;
 	background-color: rgba(0, 0, 0, .55);
 	width: 200px;
 	height: 500px;
@@ -59,6 +56,7 @@ a {
 </style>
 </head>
 <body>
+<div style="height: 500px;overflow: hidden;position: relative;background-color: #E2244C;">
 <div style="margin: 0 auto;width: 67%;">
 	<div style="width: 200px; height: 500px; float: left;">
 		<ul class="nav_con">
@@ -81,7 +79,7 @@ a {
 		</ul>
 	</div>
 
-	<div class="aaa" style="width: 852px; height: 500px; float: left; overflow: hidden;display: none;">
+	<div class="aaa" style="width: 852px; height: 500px; float: left; overflow: hidden;display: none;z-index: 10;">
 		<div style="width: 583px; height: 462px; margin: 19px 30px;overflow: hidden;
     				background-color: #fff; float: left;">
 			<ul>
@@ -491,6 +489,14 @@ a {
 			</ul>
 		</div>
 	</div>
+</div>
+
+<div style="width: 1230px;margin: 0 auto;">
+	<div class="turn" style="position: absolute;z-index: 1;margin: 0 auto;"><img alt="" src="../image/head_ad_1.jpg" /></div>
+	<div class="turn" style="position: absolute;z-index: 0;"><img alt="" src="../image/head_ad_02.jpg" /></div>
+	<div class="turn" style="position: absolute;z-index: 0;"><img alt="" src="../image/head_ad_1.jpg" /></div>
+	<div class="turn" style="position: absolute;z-index: 0;"><img alt="" src="../image/head_ad_1.jpg" /></div>
+</div>
 </div>
 </body>
 </html>
