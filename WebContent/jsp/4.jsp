@@ -79,7 +79,9 @@ a {
 		</ul>
 	</div>
 
-	<div class="aaa" style="width: 852px; height: 500px; float: left; overflow: hidden;display: none;z-index: 10;">
+	<div class="aaa" style="width: 852px; height: 500px; float: left; overflow: hidden;display: none;z-index: 10;position: relative;
+				background-color: #fff;
+	">
 		<div style="width: 583px; height: 462px; margin: 19px 30px;overflow: hidden;
     				background-color: #fff; float: left;">
 			<ul>
@@ -216,7 +218,9 @@ a {
 		</div>
 	</div>
 	
-	<div class="aaa" style="width: 852px; height: 500px; float: left; overflow: hidden;display: none;">
+	<div class="aaa" style="width: 852px; height: 500px; float: left; overflow: hidden;display: none;z-index: 10;position: relative;
+				background-color: #fff;
+	">
 		<div style="width: 583px; height: 462px; margin: 19px 30px;overflow: hidden;
     				background-color: #fff; float: left;">
 			<ul>
@@ -353,7 +357,9 @@ a {
 		</div>
 	</div>
 	
-	<div class="aaa" style="width: 852px; height: 500px; float: left; overflow: hidden;display: none;">
+	<div class="aaa" style="width: 852px; height: 500px; float: left; overflow: hidden;display: none;z-index: 10;position: relative;
+				background-color: #fff;
+				">
 		<div style="width: 583px; height: 462px; margin: 19px 30px;overflow: hidden;
     				background-color: #fff; float: left;">
 			<ul>
@@ -491,11 +497,11 @@ a {
 	</div>
 </div>
 
-<div style="width: 1230px;margin: 0 auto;">
-	<div class="turn" style="position: absolute;z-index: 1;margin: 0 auto;"><img alt="" src="../image/head_ad_1.jpg" /></div>
-	<div class="turn" style="position: absolute;z-index: 0;"><img alt="" src="../image/head_ad_02.jpg" /></div>
-	<div class="turn" style="position: absolute;z-index: 0;"><img alt="" src="../image/head_ad_1.jpg" /></div>
-	<div class="turn" style="position: absolute;z-index: 0;"><img alt="" src="../image/head_ad_1.jpg" /></div>
+<div class="box_turn" style="height:500px;width: 1030px;margin: 0 auto;position: relative;border: 1px solid black;cursor: pointer;">
+	<div class="turn" style="position: absolute;z-index: 0;opacity:0;"><img alt="" src="../image/head_ad_1.jpg" /></div>
+	<div class="turn" style="position: absolute;z-index: 0;opacity:0;"><img alt="" src="../image/head_ad_02.jpg" /></div>
+	<div class="turn" style="position: absolute;z-index: 0;opacity:0;"><img alt="" src="../image/head_ad_1.jpg" /></div>
+	<div class="turn" style="position: absolute;z-index: 1;opacity:1;"><img alt="" src="../image/head_ad_02.jpg" /></div>
 </div>
 </div>
 </body>
