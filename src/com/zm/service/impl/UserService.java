@@ -55,5 +55,8 @@ public class UserService implements IUserService {
 	public List<User> getByids(Long[] ids) {
 		return userdao.getByIds(ids);
 	}
+	public User getByName(String name) {
+		return userdao.getByName(name);
+	}
 
 }

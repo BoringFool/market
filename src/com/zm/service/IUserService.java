@@ -11,4 +11,5 @@ public interface IUserService {
 	public List<User> findall();
 	public User getByid(Long id);
 	public List<User> getByids(Long[] ids);
+	public User getByName(String name);
 }
