@@ -1,0 +1,157 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.head {
+	width: 1230px;
+	height: 32px;
+	margin: 0px auto;
+	border: 1px solid red;
+}
+
+.nav_box {
+	height: 500px;
+	overflow: hidden;
+	position: relative;
+	background-color: #E2244C;
+}
+
+.nav_box_2 {
+	margin: 0 auto;
+	width: 67%;
+}
+
+.box {
+	width: 200px;
+	height: 500px;
+	float: left;
+}
+
+.aaa {
+	width: 852px;
+	height: 500px;
+	float: left;
+	overflow: hidden;
+	display: none;
+	z-index: 10;
+	position: relative;
+	background-color: #fff;
+}
+
+.aaa_box {
+	width: 583px;
+	height: 462px;
+	margin: 19px 30px;
+	overflow: hidden;
+	background-color: #fff;
+	float: left;
+}
+
+.show_div {
+	width: 60px;
+	color: #333;
+	margin-right: 30px;
+	position: relative;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 22px;
+	height: 22px;
+	float: left;
+}
+
+.i_undo {
+	font-family: fpIconFont !important;
+	display: block;
+	float: left;
+}
+
+.nav_con {
+	background-color: #696969;
+	background-color: rgba(0, 0, 0, .55);
+	width: 200px;
+	height: 500px;
+	position: relative;
+	z-index: 11;
+}
+
+.nav_con li {
+	height: 31.2px;
+	line-height: 31.2px;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 700;
+	font-family: "Microsoft YaHei", SimSun, sans-serif;
+}
+
+.nav_con li:hover {
+	background-color: #fff;
+	color: red;
+}
+
+
+.nav_ul {
+	width: 493px;
+	float: left;
+	border-bottom: 1px dashed;
+	border-bottom-color: #eee;
+	border-bottom-color: rgba(0, 0, 0, .1);
+	margin-bottom: 10.5px;
+	padding-bottom: 10.5px;
+}
+
+.image {
+	width: 207px;
+	height: 500px;
+	float: left;
+}
+
+.image ul li {
+	float: left;
+	width: 73px;
+	margin-right: 1px;
+	margin-bottom: 1px;
+	height: 37px;
+	padding: 5px 10px;
+	overflow: hidden;
+	background-color: #fff;
+}
+
+.image ul li img {
+	width: 73px;
+	display: block;
+	margin: 0 auto;
+	border: none;
+}
+
+.box_turn {
+	height: 500px;
+	width: 1030px;
+	margin: 0 auto;
+	position: relative;
+	border: 1px solid black;
+	cursor: pointer;
+}
+
+.box_turn .turn {
+	position: absolute;
+}
+
+.nav_ul a {
+	height: 22px;
+	line-height: 22px;
+	font-size: 14px;
+	color: #666;
+	float: left;
+	margin-left: 13px;
+	display: block;
+}
