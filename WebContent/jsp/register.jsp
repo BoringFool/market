@@ -8,22 +8,6 @@
 <script type="text/javascript" src="../js/jquery-min.js"></script>
 <script src="../js/register.js"></script>
 <link href="../css/register.css" rel="stylesheet" type="text/css" />
-<script>
-	$().ready(function() {
-		
-		/* $("#a").click(function(){
-			$(this).hide();
-		}); */
-		/* $(".sc_d").click(function(){
-			$(this).hide();
-		}); */
-	});
-</script>
-<script>
-	if (typeof jQuery == 'undefined') {
-		window.alert("没有jquery");
-	}
-</script>
 </head>
 <body>
 	<div class="main">
