@@ -18,6 +18,7 @@
 			<li></li>
 		</ul>
 	</div>
+	<!-- turn模块 -->
 	<div class="nav_box">
 		<div class="nav_box_2">
 			<div class="box">
@@ -232,9 +233,8 @@
 					</ul>
 				</div>
 			</div>
-		</div>
-
-		<div class="box_turn">
+			
+			<div class="box_turn">
 			<div class="turn" style="z-index: 0; opacity: 0;">
 				<img alt="" src="../image/head_ad_1.jpg" />
 			</div>
@@ -248,7 +248,44 @@
 				<img alt="" src="../image/head_ad_02.jpg" />
 			</div>
 		</div>
-	</div>
+		</div>
 
+		
+	</div>
+	<!-- brand模块 -->
+	<div class="brand">
+		<div class="branwall" style="width: 242px !important;">
+			<div class="box">
+				<span class="title_l">聚名品</span> 
+				<span class="title_l_r">LUXURYCHANNEL</span> 
+				<a class="more" href="#">更多</a>
+			</div>
+			<a href="#"> 
+			<img alt="" src="../image/brand_pic.jpg" class="imga" style="display:block;width: 242.5px !important;"/>
+			</a>
+		</div>
+		
+		<div class="branwall">
+			<div class="box">
+				<span class="title_l">聚名品</span> 
+				<span class="title_l_r">LUXURYCHANNEL</span> 
+				<a class="more" href="#">更多</a>
+			</div>
+			<a href="#"> 
+			<img alt="" src="../image/brand_pic.jpg" class="imga" />
+			</a>
+		</div>
+		
+		<div class="branwall">
+			<div class="box">
+				<span class="title_l">聚名品</span> 
+				<span class="title_l_r">LUXURYCHANNEL</span> 
+				<a class="more" href="#">更多</a>
+			</div>
+			<a href="#"> 
+			<img alt="" src="../image/brand_pic.jpg" class="imga" />
+			</a>
+		</div>
+	</div>
 </body>
 </html>

@@ -19,7 +19,7 @@
 </head>
 <body style="background-color: #f5f5f5;">
 	<div class="branwall" style="float: left;
-    display: block;
+    
     width: 485px;
     height: 370px;
     margin-right: 13px;

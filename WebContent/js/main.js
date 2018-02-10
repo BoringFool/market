@@ -42,4 +42,21 @@ $(document).ready(function(){
 			},3000);
 	});
 	
+	$(".imga").hover(function(){
+		$(this).addClass("ttt");
+	},function(){
+		$(this).removeClass("ttt");
+	});
+	
+	
+	function chan(){
+		var a=parseInt($(".branwall").css("width"));
+		if(a==242){
+			$(this).find(".more").html(null);
+		}else{
+			
+		}
+	}
+	$().click(function(){chan();});
+	
 });

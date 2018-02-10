@@ -12,6 +12,14 @@ a {
 	cursor: pointer;
 }
 
+body {
+	background-color: #f5f5f5;
+}
+.ttt{
+	filter:alpha(opacity=80);  /*支持 IE 浏览器*/
+	-moz-opacity:0.80; /*支持 FireFox 浏览器*/
+	opacity:0.80;  /*支持 Chrome, Opera, Safari 等浏览器*/
+}
 .head {
 	width: 1230px;
 	height: 32px;
@@ -23,12 +31,15 @@ a {
 	height: 500px;
 	overflow: hidden;
 	position: relative;
-	background-color: #E2244C;
+	background-color: #F62538;
 }
 
 .nav_box_2 {
 	margin: 0 auto;
-	width: 67%;
+	width: 1260px;
+	position: relative;
+	overflow:hidden;
+	border: 1px solid blue;
 }
 
 .box {
@@ -98,7 +109,6 @@ a {
 	color: red;
 }
 
-
 .nav_ul {
 	width: 493px;
 	float: left;
@@ -135,9 +145,9 @@ a {
 
 .box_turn {
 	height: 500px;
-	width: 1030px;
+	width: 1160px;
 	margin: 0 auto;
-	position: relative;
+	position:relative;
 	cursor: pointer;
 }
 
@@ -153,4 +163,73 @@ a {
 	float: left;
 	margin-left: 13px;
 	display: block;
+}
+
+.brand {
+	height:370px;
+	width: 1260px;
+	margin: 0px auto;
+	margin-top:30px;
+	position: relative;
+	overflow:hidden;
+	border: 1px solid red;
+}
+
+.brand .branwall {
+	float: left;
+	width: 485px;
+	height: 370px;
+	margin-right: 13px;
+	background-color: #fff;
+}
+
+.brand .branwall .box {
+	width:100%;
+	height: 54px;
+	background: #fff;
+	font-size: 0;
+	border-style: solid;
+	border-width: 0 0 1px;
+	border-color: #eee;
+	position: relative;
+}
+
+.brand .branwall .box .title_l,.title_l_r {
+	display: inline-block;
+	font-weight: 700;
+	color: #333;
+	margin-left: 10px;
+	height: 44px;
+	font-family: "Microsoft YaHei", SimSun, sans-serif;
+}
+
+.brand .branwall .box .title_l {
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.brand .branwall .box .title_l_r {
+	font-size: 14px;
+	line-height: 54px;
+}
+
+.brand .branwall .box .more {
+	background-image: url("../image/more_pic.png");
+	width: 42px;
+	height: 54px;
+	line-height: 54px;
+	background-repeat: no-repeat;
+	background-size: 18px 18px;
+	background-position: right center;
+	padding-right: 14px;
+	font-size: 16px;
+	color: #666;
+	float: right;
+	font-family: "Microsoft YaHei", SimSun, "\5b8b\4f53", sans-serif;
+}
+
+.brand .branwall .imga {
+	width: 485px;
+	height: 316px;
+	border: none;
 }
