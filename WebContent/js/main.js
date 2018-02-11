@@ -42,21 +42,36 @@ $(document).ready(function(){
 			},3000);
 	});
 	
-	$(".imga").hover(function(){
+	$(".imga,.goods_box").hover(function(){
 		$(this).addClass("ttt");
 	},function(){
 		$(this).removeClass("ttt");
 	});
 	
-	
-	function chan(){
-		var a=parseInt($(".branwall").css("width"));
+	/*
+	 * 消除（更多）应该是在从数据库读取文件后进行判断后设置
+	 * */
+	/*function chan(){
+		var a=parseInt($(".branwall").eq("0").css("width"));
 		if(a==242){
 			$(this).find(".more").html(null);
 		}else{
 			
 		}
 	}
-	$().click(function(){chan();});
+	$().click(function(){chan();});*/
+	
+	
+	$(".a_hid").hover(function(){
+		$(this).find(".show_hidden").stop(true,true).fadeIn(100);
+	},function(){
+		$(this).find(".show_hidden").stop(true,true).fadeOut(100);
+	});
+	
+	$(".a_hid").each(function(i,d){
+		$(this).click(function(){
+			$(window).attr("location","#");
+		});
+	});
 	
 });

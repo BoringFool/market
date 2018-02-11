@@ -23,12 +23,12 @@ if (typeof jQuery == 'undefined') {
 </head>
 <body>
 	<!-- 这是ul中一个li的内容。需要设置li的postion：absolute，现在设置在《a》标签上 -->
-	
+	<a id="a_hid" href="#" style="width: 122px;height: 108px;list-style: none;display: block;float: left;position: relative;">
 		<div style="width: 122px; height: 108px;position: relative;z-index: 1;">
 		<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 			<img alt="" src="../image/shop_pic.jpg" style="display: block; width: 80%; height: 50px; margin: 29px auto;border: none;"/>
 		</div>
-		<a id="a_hid" href="#" style="width: 122px;height: 108px;list-style: none;display: block;float: left;position: relative;">
+		
 		<!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
 		<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
 		<div id="b" style="display: none;background-color: #333;background-color:rgba(0,0,0,0.8);top: 0;left: 0;z-index: 2;height: 108px;width: 122px;position: absolute;">
