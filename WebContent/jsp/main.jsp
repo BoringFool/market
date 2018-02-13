@@ -11,12 +11,18 @@
 </head>
 <body>
 	<div class="head">
-		<ul>
-			<li>登录</li>
-			<li>注册</li>
-			<li></li>
-			<li></li>
+		<ul style="width: 1260px;margin: 0px auto;">
+			<li style="float: left;margin-right: 30px;">喵，欢迎来天猫</li>
+			<li style="float: left;margin-right: 30px;">登录</li>
+			<li style="float: left;margin-right: 30px;">免费注册</li>
+			
+			<li style="float: right;margin-right: 30px;">我的订单</li>
+			<li style="float: right;margin-right: 30px;">购物车<span>0</span>件</li>
 		</ul>
+	</div>
+	<!-- search -->
+	<div style="width: 1260px;height: 175px;">
+		
 	</div>
 	<!-- turn模块 -->
 	<div class="nav_box">
