@@ -10,19 +10,28 @@
 <script src="../js/main.js"></script>
 </head>
 <body>
+	<!-- head -->
 	<div class="head">
-		<ul style="width: 1260px;margin: 0px auto;">
-			<li style="float: left;margin-right: 30px;">喵，欢迎来天猫</li>
-			<li style="float: left;margin-right: 30px;">登录</li>
-			<li style="float: left;margin-right: 30px;">免费注册</li>
-			
-			<li style="float: right;margin-right: 30px;">我的订单</li>
-			<li style="float: right;margin-right: 30px;">购物车<span>0</span>件</li>
+		<ul style="width: 1260px; margin: 0px auto;">
+			<li style="float: left; margin-right: 30px;">喵，欢迎来天猫</li>
+			<li style="float: left; margin-right: 30px;"><a href="login.jsp">登录</a></li>
+			<li style="float: left; margin-right: 30px;"><a
+				href="register.jsp">免费注册</a></li>
+
+			<li style="float: right; margin-right: 30px;"><a href="#">我的订单</a></li>
+			<li style="float: right; margin-right: 30px;"><a href="#">购物车<span>0</span>件
+			</a></li>
 		</ul>
 	</div>
 	<!-- search -->
-	<div style="width: 1260px;height: 175px;">
-		
+	<div style="width: 1260px; height: 170px; border: 1px solid red; margin: 0px auto;">
+		<div style="width: 200px;margin-top: 5px;">
+			<img alt="" src="../image/logo_s.png" style="width: 240px; height: 130px;position: relative;left: -15px;">
+			<div style=" width: 190px; float: left; height: 36px; color: #fff; background-color: #FF0036;
+                         position: absolute; line-height: 36px;padding-left: 10px;">
+				商品分类
+			</div>
+		</div>
 	</div>
 	<!-- turn模块 -->
 	<div class="nav_box">
@@ -239,7 +248,7 @@
 					</ul>
 				</div>
 			</div>
-			
+
 			<!-- 应该随着图片切换，改变父div的背景色彩，没有做 -->
 			<div class="box_turn">
 				<div class="turn" style="z-index: 0; opacity: 0;">
@@ -303,540 +312,480 @@
 				<div class="single_show">
 					<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 					<img alt="" src="../image/shop_pic.jpg" />
-				</div> 
-				
-					<!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
-					<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
-					<div class="show_hidden">
-						<div id="hidde" class="hidde">
-							<div class="s_div">
-								<span>belublu</span>
-							</div>
-							<span class="ss_div">点击进入</span>
+				</div> <!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
+				<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
+				<div class="show_hidden">
+					<div id="hidde" class="hidde">
+						<div class="s_div">
+							<span>belublu</span>
 						</div>
+						<span class="ss_div">点击进入</span>
 					</div>
+				</div>
 			</li>
 			<li class="a_hid">
 				<!-- 这是ul中一个li的内容。需要设置li的postion：absolute，现在设置在《a》标签上 -->
 				<div class="single_show">
 					<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 					<img alt="" src="../image/shop_pic.jpg" />
-				</div> 
-				
-					<!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
-					<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
-					<div class="show_hidden">
-						<div id="hidde" class="hidde">
-							<div class="s_div">
-								<span>belublu</span>
-							</div>
-							<span class="ss_div">点击进入</span>
+				</div> <!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
+				<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
+				<div class="show_hidden">
+					<div id="hidde" class="hidde">
+						<div class="s_div">
+							<span>belublu</span>
 						</div>
+						<span class="ss_div">点击进入</span>
 					</div>
+				</div>
 			</li>
 			<li class="a_hid">
 				<!-- 这是ul中一个li的内容。需要设置li的postion：absolute，现在设置在《a》标签上 -->
 				<div class="single_show">
 					<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 					<img alt="" src="../image/shop_pic.jpg" />
-				</div> 
-				
-					<!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
-					<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
-					<div class="show_hidden">
-						<div id="hidde" class="hidde">
-							<div class="s_div">
-								<span>belublu</span>
-							</div>
-							<span class="ss_div">点击进入</span>
+				</div> <!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
+				<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
+				<div class="show_hidden">
+					<div id="hidde" class="hidde">
+						<div class="s_div">
+							<span>belublu</span>
 						</div>
+						<span class="ss_div">点击进入</span>
 					</div>
+				</div>
 			</li>
 			<li class="a_hid">
 				<!-- 这是ul中一个li的内容。需要设置li的postion：absolute，现在设置在《a》标签上 -->
 				<div class="single_show">
 					<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 					<img alt="" src="../image/shop_pic.jpg" />
-				</div> 
-				
-					<!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
-					<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
-					<div class="show_hidden">
-						<div id="hidde" class="hidde">
-							<div class="s_div">
-								<span>belublu</span>
-							</div>
-							<span class="ss_div">点击进入</span>
+				</div> <!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
+				<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
+				<div class="show_hidden">
+					<div id="hidde" class="hidde">
+						<div class="s_div">
+							<span>belublu</span>
 						</div>
+						<span class="ss_div">点击进入</span>
 					</div>
+				</div>
 			</li>
 			<li class="a_hid">
 				<!-- 这是ul中一个li的内容。需要设置li的postion：absolute，现在设置在《a》标签上 -->
 				<div class="single_show">
 					<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 					<img alt="" src="../image/shop_pic.jpg" />
-				</div> 
-				
-					<!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
-					<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
-					<div class="show_hidden">
-						<div id="hidde" class="hidde">
-							<div class="s_div">
-								<span>belublu</span>
-							</div>
-							<span class="ss_div">点击进入</span>
+				</div> <!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
+				<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
+				<div class="show_hidden">
+					<div id="hidde" class="hidde">
+						<div class="s_div">
+							<span>belublu</span>
 						</div>
+						<span class="ss_div">点击进入</span>
 					</div>
+				</div>
 			</li>
 			<li class="a_hid">
 				<!-- 这是ul中一个li的内容。需要设置li的postion：absolute，现在设置在《a》标签上 -->
 				<div class="single_show">
 					<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 					<img alt="" src="../image/shop_pic.jpg" />
-				</div> 
-				
-					<!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
-					<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
-					<div class="show_hidden">
-						<div id="hidde" class="hidde">
-							<div class="s_div">
-								<span>belublu</span>
-							</div>
-							<span class="ss_div">点击进入</span>
+				</div> <!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
+				<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
+				<div class="show_hidden">
+					<div id="hidde" class="hidde">
+						<div class="s_div">
+							<span>belublu</span>
 						</div>
+						<span class="ss_div">点击进入</span>
 					</div>
+				</div>
 			</li>
 			<li class="a_hid">
 				<!-- 这是ul中一个li的内容。需要设置li的postion：absolute，现在设置在《a》标签上 -->
 				<div class="single_show">
 					<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 					<img alt="" src="../image/shop_pic.jpg" />
-				</div> 
-				
-					<!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
-					<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
-					<div class="show_hidden">
-						<div id="hidde" class="hidde">
-							<div class="s_div">
-								<span>belublu</span>
-							</div>
-							<span class="ss_div">点击进入</span>
+				</div> <!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
+				<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
+				<div class="show_hidden">
+					<div id="hidde" class="hidde">
+						<div class="s_div">
+							<span>belublu</span>
 						</div>
+						<span class="ss_div">点击进入</span>
 					</div>
+				</div>
 			</li>
 			<li class="a_hid">
 				<!-- 这是ul中一个li的内容。需要设置li的postion：absolute，现在设置在《a》标签上 -->
 				<div class="single_show">
 					<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 					<img alt="" src="../image/shop_pic.jpg" />
-				</div> 
-				
-					<!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
-					<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
-					<div class="show_hidden">
-						<div id="hidde" class="hidde">
-							<div class="s_div">
-								<span>belublu</span>
-							</div>
-							<span class="ss_div">点击进入</span>
+				</div> <!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
+				<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
+				<div class="show_hidden">
+					<div id="hidde" class="hidde">
+						<div class="s_div">
+							<span>belublu</span>
 						</div>
+						<span class="ss_div">点击进入</span>
 					</div>
+				</div>
 			</li>
 			<li class="a_hid">
 				<!-- 这是ul中一个li的内容。需要设置li的postion：absolute，现在设置在《a》标签上 -->
 				<div class="single_show">
 					<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 					<img alt="" src="../image/shop_pic.jpg" />
-				</div> 
-				
-					<!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
-					<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
-					<div class="show_hidden">
-						<div id="hidde" class="hidde">
-							<div class="s_div">
-								<span>belublu</span>
-							</div>
-							<span class="ss_div">点击进入</span>
+				</div> <!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
+				<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
+				<div class="show_hidden">
+					<div id="hidde" class="hidde">
+						<div class="s_div">
+							<span>belublu</span>
 						</div>
+						<span class="ss_div">点击进入</span>
 					</div>
+				</div>
 			</li>
 			<li class="a_hid">
 				<!-- 这是ul中一个li的内容。需要设置li的postion：absolute，现在设置在《a》标签上 -->
 				<div class="single_show">
 					<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 					<img alt="" src="../image/shop_pic.jpg" />
-				</div> 
-				
-					<!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
-					<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
-					<div class="show_hidden">
-						<div id="hidde" class="hidde">
-							<div class="s_div">
-								<span>belublu</span>
-							</div>
-							<span class="ss_div">点击进入</span>
+				</div> <!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
+				<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
+				<div class="show_hidden">
+					<div id="hidde" class="hidde">
+						<div class="s_div">
+							<span>belublu</span>
 						</div>
+						<span class="ss_div">点击进入</span>
 					</div>
+				</div>
 			</li>
 			<li class="a_hid">
 				<!-- 这是ul中一个li的内容。需要设置li的postion：absolute，现在设置在《a》标签上 -->
 				<div class="single_show">
 					<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 					<img alt="" src="../image/shop_pic.jpg" />
-				</div> 
-				
-					<!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
-					<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
-					<div class="show_hidden">
-						<div id="hidde" class="hidde">
-							<div class="s_div">
-								<span>belublu</span>
-							</div>
-							<span class="ss_div">点击进入</span>
+				</div> <!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
+				<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
+				<div class="show_hidden">
+					<div id="hidde" class="hidde">
+						<div class="s_div">
+							<span>belublu</span>
 						</div>
+						<span class="ss_div">点击进入</span>
 					</div>
+				</div>
 			</li>
 			<li class="a_hid">
 				<!-- 这是ul中一个li的内容。需要设置li的postion：absolute，现在设置在《a》标签上 -->
 				<div class="single_show">
 					<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 					<img alt="" src="../image/shop_pic.jpg" />
-				</div> 
-				
-					<!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
-					<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
-					<div class="show_hidden">
-						<div id="hidde" class="hidde">
-							<div class="s_div">
-								<span>belublu</span>
-							</div>
-							<span class="ss_div">点击进入</span>
+				</div> <!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
+				<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
+				<div class="show_hidden">
+					<div id="hidde" class="hidde">
+						<div class="s_div">
+							<span>belublu</span>
 						</div>
+						<span class="ss_div">点击进入</span>
 					</div>
+				</div>
 			</li>
 			<li class="a_hid">
 				<!-- 这是ul中一个li的内容。需要设置li的postion：absolute，现在设置在《a》标签上 -->
 				<div class="single_show">
 					<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 					<img alt="" src="../image/shop_pic.jpg" />
-				</div> 
-				
-					<!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
-					<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
-					<div class="show_hidden">
-						<div id="hidde" class="hidde">
-							<div class="s_div">
-								<span>belublu</span>
-							</div>
-							<span class="ss_div">点击进入</span>
+				</div> <!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
+				<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
+				<div class="show_hidden">
+					<div id="hidde" class="hidde">
+						<div class="s_div">
+							<span>belublu</span>
 						</div>
+						<span class="ss_div">点击进入</span>
 					</div>
+				</div>
 			</li>
 			<li class="a_hid">
 				<!-- 这是ul中一个li的内容。需要设置li的postion：absolute，现在设置在《a》标签上 -->
 				<div class="single_show">
 					<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 					<img alt="" src="../image/shop_pic.jpg" />
-				</div> 
-				
-					<!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
-					<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
-					<div class="show_hidden">
-						<div id="hidde" class="hidde">
-							<div class="s_div">
-								<span>belublu</span>
-							</div>
-							<span class="ss_div">点击进入</span>
+				</div> <!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
+				<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
+				<div class="show_hidden">
+					<div id="hidde" class="hidde">
+						<div class="s_div">
+							<span>belublu</span>
 						</div>
+						<span class="ss_div">点击进入</span>
 					</div>
+				</div>
 			</li>
 			<li class="a_hid">
 				<!-- 这是ul中一个li的内容。需要设置li的postion：absolute，现在设置在《a》标签上 -->
 				<div class="single_show">
 					<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 					<img alt="" src="../image/shop_pic.jpg" />
-				</div> 
-				
-					<!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
-					<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
-					<div class="show_hidden">
-						<div id="hidde" class="hidde">
-							<div class="s_div">
-								<span>belublu</span>
-							</div>
-							<span class="ss_div">点击进入</span>
+				</div> <!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
+				<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
+				<div class="show_hidden">
+					<div id="hidde" class="hidde">
+						<div class="s_div">
+							<span>belublu</span>
 						</div>
+						<span class="ss_div">点击进入</span>
 					</div>
+				</div>
 			</li>
 			<li class="a_hid">
 				<!-- 这是ul中一个li的内容。需要设置li的postion：absolute，现在设置在《a》标签上 -->
 				<div class="single_show">
 					<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 					<img alt="" src="../image/shop_pic.jpg" />
-				</div> 
-				
-					<!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
-					<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
-					<div class="show_hidden">
-						<div id="hidde" class="hidde">
-							<div class="s_div">
-								<span>belublu</span>
-							</div>
-							<span class="ss_div">点击进入</span>
+				</div> <!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
+				<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
+				<div class="show_hidden">
+					<div id="hidde" class="hidde">
+						<div class="s_div">
+							<span>belublu</span>
 						</div>
+						<span class="ss_div">点击进入</span>
 					</div>
+				</div>
 			</li>
 			<li class="a_hid">
 				<!-- 这是ul中一个li的内容。需要设置li的postion：absolute，现在设置在《a》标签上 -->
 				<div class="single_show">
 					<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 					<img alt="" src="../image/shop_pic.jpg" />
-				</div> 
-				
-					<!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
-					<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
-					<div class="show_hidden">
-						<div id="hidde" class="hidde">
-							<div class="s_div">
-								<span>belublu</span>
-							</div>
-							<span class="ss_div">点击进入</span>
+				</div> <!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
+				<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
+				<div class="show_hidden">
+					<div id="hidde" class="hidde">
+						<div class="s_div">
+							<span>belublu</span>
 						</div>
+						<span class="ss_div">点击进入</span>
 					</div>
+				</div>
 			</li>
 			<li class="a_hid">
 				<!-- 这是ul中一个li的内容。需要设置li的postion：absolute，现在设置在《a》标签上 -->
 				<div class="single_show">
 					<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 					<img alt="" src="../image/shop_pic.jpg" />
-				</div> 
-				
-					<!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
-					<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
-					<div class="show_hidden">
-						<div id="hidde" class="hidde">
-							<div class="s_div">
-								<span>belublu</span>
-							</div>
-							<span class="ss_div">点击进入</span>
+				</div> <!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
+				<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
+				<div class="show_hidden">
+					<div id="hidde" class="hidde">
+						<div class="s_div">
+							<span>belublu</span>
 						</div>
+						<span class="ss_div">点击进入</span>
 					</div>
+				</div>
 			</li>
 			<li class="a_hid">
 				<!-- 这是ul中一个li的内容。需要设置li的postion：absolute，现在设置在《a》标签上 -->
 				<div class="single_show">
 					<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 					<img alt="" src="../image/shop_pic.jpg" />
-				</div> 
-				
-					<!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
-					<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
-					<div class="show_hidden">
-						<div id="hidde" class="hidde">
-							<div class="s_div">
-								<span>belublu</span>
-							</div>
-							<span class="ss_div">点击进入</span>
+				</div> <!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
+				<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
+				<div class="show_hidden">
+					<div id="hidde" class="hidde">
+						<div class="s_div">
+							<span>belublu</span>
 						</div>
+						<span class="ss_div">点击进入</span>
 					</div>
+				</div>
 			</li>
 			<li class="a_hid">
 				<!-- 这是ul中一个li的内容。需要设置li的postion：absolute，现在设置在《a》标签上 -->
 				<div class="single_show">
 					<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 					<img alt="" src="../image/shop_pic.jpg" />
-				</div> 
-				
-					<!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
-					<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
-					<div class="show_hidden">
-						<div id="hidde" class="hidde">
-							<div class="s_div">
-								<span>belublu</span>
-							</div>
-							<span class="ss_div">点击进入</span>
+				</div> <!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
+				<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
+				<div class="show_hidden">
+					<div id="hidde" class="hidde">
+						<div class="s_div">
+							<span>belublu</span>
 						</div>
+						<span class="ss_div">点击进入</span>
 					</div>
+				</div>
 			</li>
 			<li class="a_hid">
 				<!-- 这是ul中一个li的内容。需要设置li的postion：absolute，现在设置在《a》标签上 -->
 				<div class="single_show">
 					<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 					<img alt="" src="../image/shop_pic.jpg" />
-				</div> 
-				
-					<!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
-					<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
-					<div class="show_hidden">
-						<div id="hidde" class="hidde">
-							<div class="s_div">
-								<span>belublu</span>
-							</div>
-							<span class="ss_div">点击进入</span>
+				</div> <!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
+				<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
+				<div class="show_hidden">
+					<div id="hidde" class="hidde">
+						<div class="s_div">
+							<span>belublu</span>
 						</div>
+						<span class="ss_div">点击进入</span>
 					</div>
+				</div>
 			</li>
 			<li class="a_hid">
 				<!-- 这是ul中一个li的内容。需要设置li的postion：absolute，现在设置在《a》标签上 -->
 				<div class="single_show">
 					<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 					<img alt="" src="../image/shop_pic.jpg" />
-				</div> 
-				
-					<!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
-					<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
-					<div class="show_hidden">
-						<div id="hidde" class="hidde">
-							<div class="s_div">
-								<span>belublu</span>
-							</div>
-							<span class="ss_div">点击进入</span>
+				</div> <!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
+				<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
+				<div class="show_hidden">
+					<div id="hidde" class="hidde">
+						<div class="s_div">
+							<span>belublu</span>
 						</div>
+						<span class="ss_div">点击进入</span>
 					</div>
+				</div>
 			</li>
 			<li class="a_hid">
 				<!-- 这是ul中一个li的内容。需要设置li的postion：absolute，现在设置在《a》标签上 -->
 				<div class="single_show">
 					<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 					<img alt="" src="../image/shop_pic.jpg" />
-				</div> 
-				
-					<!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
-					<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
-					<div class="show_hidden">
-						<div id="hidde" class="hidde">
-							<div class="s_div">
-								<span>belublu</span>
-							</div>
-							<span class="ss_div">点击进入</span>
+				</div> <!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
+				<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
+				<div class="show_hidden">
+					<div id="hidde" class="hidde">
+						<div class="s_div">
+							<span>belublu</span>
 						</div>
+						<span class="ss_div">点击进入</span>
 					</div>
+				</div>
 			</li>
 			<li class="a_hid">
 				<!-- 这是ul中一个li的内容。需要设置li的postion：absolute，现在设置在《a》标签上 -->
 				<div class="single_show">
 					<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 					<img alt="" src="../image/shop_pic.jpg" />
-				</div> 
-				
-					<!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
-					<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
-					<div class="show_hidden">
-						<div id="hidde" class="hidde">
-							<div class="s_div">
-								<span>belublu</span>
-							</div>
-							<span class="ss_div">点击进入</span>
+				</div> <!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
+				<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
+				<div class="show_hidden">
+					<div id="hidde" class="hidde">
+						<div class="s_div">
+							<span>belublu</span>
 						</div>
+						<span class="ss_div">点击进入</span>
 					</div>
+				</div>
 			</li>
 			<li class="a_hid">
 				<!-- 这是ul中一个li的内容。需要设置li的postion：absolute，现在设置在《a》标签上 -->
 				<div class="single_show">
 					<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 					<img alt="" src="../image/shop_pic.jpg" />
-				</div> 
-				
-					<!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
-					<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
-					<div class="show_hidden">
-						<div id="hidde" class="hidde">
-							<div class="s_div">
-								<span>belublu</span>
-							</div>
-							<span class="ss_div">点击进入</span>
+				</div> <!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
+				<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
+				<div class="show_hidden">
+					<div id="hidde" class="hidde">
+						<div class="s_div">
+							<span>belublu</span>
 						</div>
+						<span class="ss_div">点击进入</span>
 					</div>
+				</div>
 			</li>
 			<li class="a_hid">
 				<!-- 这是ul中一个li的内容。需要设置li的postion：absolute，现在设置在《a》标签上 -->
 				<div class="single_show">
 					<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 					<img alt="" src="../image/shop_pic.jpg" />
-				</div> 
-				
-					<!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
-					<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
-					<div class="show_hidden">
-						<div id="hidde" class="hidde">
-							<div class="s_div">
-								<span>belublu</span>
-							</div>
-							<span class="ss_div">点击进入</span>
+				</div> <!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
+				<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
+				<div class="show_hidden">
+					<div id="hidde" class="hidde">
+						<div class="s_div">
+							<span>belublu</span>
 						</div>
+						<span class="ss_div">点击进入</span>
 					</div>
+				</div>
 			</li>
 			<li class="a_hid">
 				<!-- 这是ul中一个li的内容。需要设置li的postion：absolute，现在设置在《a》标签上 -->
 				<div class="single_show">
 					<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 					<img alt="" src="../image/shop_pic.jpg" />
-				</div> 
-				
-					<!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
-					<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
-					<div class="show_hidden">
-						<div id="hidde" class="hidde">
-							<div class="s_div">
-								<span>belublu</span>
-							</div>
-							<span class="ss_div">点击进入</span>
+				</div> <!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
+				<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
+				<div class="show_hidden">
+					<div id="hidde" class="hidde">
+						<div class="s_div">
+							<span>belublu</span>
 						</div>
+						<span class="ss_div">点击进入</span>
 					</div>
+				</div>
 			</li>
 			<li class="a_hid">
 				<!-- 这是ul中一个li的内容。需要设置li的postion：absolute，现在设置在《a》标签上 -->
 				<div class="single_show">
 					<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 					<img alt="" src="../image/shop_pic.jpg" />
-				</div> 
-				
-					<!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
-					<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
-					<div class="show_hidden">
-						<div id="hidde" class="hidde">
-							<div class="s_div">
-								<span>belublu</span>
-							</div>
-							<span class="ss_div">点击进入</span>
+				</div> <!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
+				<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
+				<div class="show_hidden">
+					<div id="hidde" class="hidde">
+						<div class="s_div">
+							<span>belublu</span>
 						</div>
+						<span class="ss_div">点击进入</span>
 					</div>
+				</div>
 			</li>
 			<li class="a_hid">
 				<!-- 这是ul中一个li的内容。需要设置li的postion：absolute，现在设置在《a》标签上 -->
 				<div class="single_show">
 					<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 					<img alt="" src="../image/shop_pic.jpg" />
-				</div> 
-				
-					<!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
-					<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
-					<div class="show_hidden">
-						<div id="hidde" class="hidde">
-							<div class="s_div">
-								<span>belublu</span>
-							</div>
-							<span class="ss_div">点击进入</span>
+				</div> <!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
+				<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
+				<div class="show_hidden">
+					<div id="hidde" class="hidde">
+						<div class="s_div">
+							<span>belublu</span>
 						</div>
+						<span class="ss_div">点击进入</span>
 					</div>
+				</div>
 			</li>
 			<li class="a_hid">
 				<!-- 这是ul中一个li的内容。需要设置li的postion：absolute，现在设置在《a》标签上 -->
 				<div class="single_show">
 					<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 					<img alt="" src="../image/shop_pic.jpg" />
-				</div> 
-				
-					<!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
-					<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
-					<div class="show_hidden">
-						<div id="hidde" class="hidde">
-							<div class="s_div">
-								<span>belublu</span>
-							</div>
-							<span class="ss_div">点击进入</span>
+				</div> <!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
+				<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
+				<div class="show_hidden">
+					<div id="hidde" class="hidde">
+						<div class="s_div">
+							<span>belublu</span>
 						</div>
+						<span class="ss_div">点击进入</span>
 					</div>
+				</div>
 			</li>
 		</ul>
 	</div>
@@ -849,7 +798,7 @@
 				<span>（价格）</span>
 			</div>
 		</div>
-		
+
 		<div class="goods_box">
 			<img alt="" src="../image/goods_pic.jpg">
 			<div class="content_box">
@@ -857,7 +806,7 @@
 				<span>（价格）</span>
 			</div>
 		</div>
-		
+
 		<div class="goods_box">
 			<img alt="" src="../image/goods_pic.jpg">
 			<div class="content_box">
@@ -865,7 +814,7 @@
 				<span>（价格）</span>
 			</div>
 		</div>
-		
+
 		<div class="goods_box">
 			<img alt="" src="../image/goods_pic.jpg">
 			<div class="content_box">
@@ -873,7 +822,7 @@
 				<span>（价格）</span>
 			</div>
 		</div>
-		
+
 		<div class="goods_box">
 			<img alt="" src="../image/goods_pic.jpg">
 			<div class="content_box">
@@ -881,7 +830,7 @@
 				<span>（价格）</span>
 			</div>
 		</div>
-		
+
 		<div class="goods_box">
 			<img alt="" src="../image/goods_pic.jpg">
 			<div class="content_box">
@@ -889,7 +838,7 @@
 				<span>（价格）</span>
 			</div>
 		</div>
-		
+
 		<div class="goods_box">
 			<img alt="" src="../image/goods_pic.jpg">
 			<div class="content_box">
@@ -897,7 +846,7 @@
 				<span>（价格）</span>
 			</div>
 		</div>
-		
+
 		<div class="goods_box">
 			<img alt="" src="../image/goods_pic.jpg">
 			<div class="content_box">
@@ -905,7 +854,7 @@
 				<span>（价格）</span>
 			</div>
 		</div>
-		
+
 		<div class="goods_box">
 			<img alt="" src="../image/goods_pic.jpg">
 			<div class="content_box">
@@ -913,7 +862,7 @@
 				<span>（价格）</span>
 			</div>
 		</div>
-		
+
 		<div class="goods_box">
 			<img alt="" src="../image/goods_pic.jpg">
 			<div class="content_box">
@@ -921,7 +870,7 @@
 				<span>（价格）</span>
 			</div>
 		</div>
-		
+
 	</div>
 
 </body>
