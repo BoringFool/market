@@ -12,25 +12,44 @@
 <body>
 	<!-- head -->
 	<div class="head">
-		<ul style="width: 1260px; margin: 0px auto;">
-			<li style="float: left; margin-right: 30px;">喵，欢迎来天猫</li>
-			<li style="float: left; margin-right: 30px;"><a href="login.jsp">登录</a></li>
-			<li style="float: left; margin-right: 30px;"><a
-				href="register.jsp">免费注册</a></li>
+		<ul>
+			<li class="top_half">喵，欢迎来天猫</li>
+			<li class="top_half"><a href="login.jsp">登录</a></li>
+			<li class="top_half"><a href="register.jsp">免费注册</a></li>
 
-			<li style="float: right; margin-right: 30px;"><a href="#">我的订单</a></li>
-			<li style="float: right; margin-right: 30px;"><a href="#">购物车<span>0</span>件
-			</a></li>
+			<li class="bottom_half"><a href="#">我的订单</a></li>
+			<li class="bottom_half"><a href="#">购物车<span>0</span>件</a></li>
 		</ul>
 	</div>
 	<!-- search -->
-	<div style="width: 1260px; height: 170px; border: 1px solid red; margin: 0px auto;">
-		<div style="width: 200px;margin-top: 5px;">
+	<div style="width: 1260px; height: 170px; margin: 0px auto;">
+		<div style="width: 200px;margin-top: 5px;float: left;">
 			<img alt="" src="../image/logo_s.png" style="width: 240px; height: 130px;position: relative;left: -15px;">
 			<div style=" width: 190px; float: left; height: 36px; color: #fff; background-color: #FF0036;
                          position: absolute; line-height: 36px;padding-left: 10px;">
 				商品分类
 			</div>
+		</div>
+		<div style="float: left;margin-left: 120px;margin-top: 50px;width: 627px;">
+			<div style="border: 2px solid red;float: left;height: 36px;">
+				<form action="#" method="post">
+					<input type="text" style="float: left;height: 36px; width: 491px; font: 16px/22px arial; box-sizing: border-box;
+    								padding-left: 5px;outline:none;">
+					<input type="submit" value="搜索" style="float: left;background-color: red;width: 132px; height: 36px;
+    								font-size: 20px; font-weight: 700; letter-spacing: 5px;color: #fff;border: solid red;outline:none;cursor: pointer;">
+				</form>
+			</div>
+			<ul style="color: #999;margin-top: 5px;float: left;overflow: hidden;">
+				<li style="margin-left: -10px;display: inline-block; border-left: 1px solid #ccc; line-height: 1.1; padding: 0 10px;height: 14px; font-size: 14px;">针织衫</li>
+				<li style="display: inline-block; border-left: 1px solid #ccc; line-height: 1.1; padding: 0 10px;height: 14px; font-size: 14px;">羽绒服</li>
+				<li style="display: inline-block; border-left: 1px solid #ccc; line-height: 1.1; padding: 0 10px;height: 14px; font-size: 14px;">四件套</li>
+				<li style="display: inline-block; border-left: 1px solid #ccc; line-height: 1.1; padding: 0 10px;height: 14px; font-size: 14px;">电动牙刷</li>
+				<li style="display: inline-block; border-left: 1px solid #ccc; line-height: 1.1; padding: 0 10px;height: 14px; font-size: 14px;">客厅灯</li>
+				<li style="display: inline-block; border-left: 1px solid #ccc; line-height: 1.1; padding: 0 10px;height: 14px; font-size: 14px;">口红</li>
+				<li style="display: inline-block; border-left: 1px solid #ccc; line-height: 1.1; padding: 0 10px;height: 14px; font-size: 14px;">手机</li>
+				<li style="display: inline-block; border-left: 1px solid #ccc; line-height: 1.1; padding: 0 10px;height: 14px; font-size: 14px;">运动鞋</li>
+				<li style="display: inline-block; border-left: 1px solid #ccc; line-height: 1.1; padding: 0 10px;height: 14px; font-size: 14px;">牛奶</li>
+			</ul>
 		</div>
 	</div>
 	<!-- turn模块 -->

@@ -29,6 +29,15 @@ body {
 	margin: 0px auto;
 	border-bottom: 1px solid #e5e5e5;
 }
+.head ul{
+	width: 1260px; margin: 0px auto;
+}
+.head .top_half{
+	float: left; margin-right: 30px;
+}
+.head .bottom_half{
+	float: right; margin-right: 30px;
+}
 .head ul li{
 	font-size:12px;
 	line-height: 32px;
