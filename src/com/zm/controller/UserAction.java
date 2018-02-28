@@ -46,7 +46,7 @@ public class UserAction {
 	}
 	
 	/*
-	 * ��֤��½�����洢��½״̬
+	 * login判断
 	 * */
 	@RequestMapping("/in")
 	public @ResponseBody Long in(@RequestBody User u,HttpServletRequest req) {
@@ -70,7 +70,7 @@ public class UserAction {
 	public String a(HttpServletRequest req){
 		//获取支持文件上传的Request对象 MultipartHttpServletRequest
 		MultipartHttpServletRequest mtpreq = (MultipartHttpServletRequest) req;
-		//通过 mtpreq 获取文件域中的文件
+		//通过 mtpreq 获取文件域中的文件，文件名是file元素的id
 		MultipartFile file = mtpreq.getFile("docFile");
 		//通过MultipartFile 对象获取文件的原文件名 
 		String fileName = file.getOriginalFilename();
