@@ -4,7 +4,8 @@ import java.util.List;
 
 public class Attribute {
 	private Long id;
-	private List<String> attrValue;
+	private List<Attribute> attrValue;
+	private Long number;
 
 	public Long getId() {
 		return id;
