@@ -1,15 +1,50 @@
 package com.zm.model;
 
-import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Goods {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="id",unique=false,nullable=false)
 	private Long id;
-	private String name;
+	private String store;
 	private String brand;
+	private String name;
 	private String imgeurl;
 	private Double price;
-	private String store;
-	private List<Attribute> attributes;
+	private String color;
+	private String size;
+	private Long number;
+
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	public String getSize() {
+		return size;
+	}
+
+	public void setSize(String size) {
+		this.size = size;
+	}
+
+	public Long getNumber() {
+		return number;
+	}
+
+	public void setNumber(Long number) {
+		this.number = number;
+	}
 
 	public Long getId() {
 		return id;
@@ -59,11 +94,4 @@ public class Goods {
 		this.store = store;
 	}
 
-	public List<Attribute> getAttributes() {
-		return attributes;
-	}
-
-	public void setAttributes(List<Attribute> attributes) {
-		this.attributes = attributes;
-	}
 }
