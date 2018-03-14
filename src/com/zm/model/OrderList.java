@@ -1,9 +1,8 @@
 package com.zm.model;
 
-import javax.persistence.ManyToMany;
 
 public class OrderList {
-	@ManyToMany
+	
 	private Goods goods;
 
 	public Goods getGoods() {

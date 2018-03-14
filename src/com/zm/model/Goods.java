@@ -6,7 +6,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
 
 @Entity
 public class Goods {
@@ -22,18 +21,7 @@ public class Goods {
 	private String color;
 	private String size;
 	private Long number;
-	@ManyToMany(mappedBy="goods")
-	private OrderList orderlist;
-
-	public OrderList getOrderlist() {
-		return orderlist;
-	}
-
-	public void setOrderlist(OrderList orderlist) {
-		this.orderlist = orderlist;
-	}
-
-
+	
 	public String getColor() {
 		return color;
 	}
