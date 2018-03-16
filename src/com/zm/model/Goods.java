@@ -1,17 +1,22 @@
 package com.zm.model;
 
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="t_good")
 public class Goods {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="id",unique=false,nullable=false)
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id", unique = false, nullable = false)
 	private Long id;
 	private String store;
 	private String brand;
@@ -21,7 +26,25 @@ public class Goods {
 	private String color;
 	private String size;
 	private Long number;
-	
+	@ManyToMany(mappedBy="goods")//　　表示由Course那一方来进行维护
+	private Set<OrderList> orderlists;
+
+	public Set<OrderList> getOrderlists() {
+		return orderlists;
+	}
+
+	public void setOrderlists(Set<OrderList> orderlists) {
+		this.orderlists = orderlists;
+	}
+
+	public Goods() {
+		orderlists = new HashSet<OrderList>();
+	}
+
+	public void addTeacher(OrderList orderlist) {
+		orderlists.add(orderlist);
+	}
+
 	public String getColor() {
 		return color;
 	}
