@@ -1,6 +1,7 @@
 package com.zm.model;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,26 +15,26 @@ import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 
 @Entity
-@Table(name="user")
+@Table(name = "t_user")
 public class User {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "id", unique = false, nullable = false)
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(nullable=false,unique=false,name="id")
 	private int id;
+
+	@OneToMany(mappedBy="users")
+	@LazyCollection(LazyCollectionOption.EXTRA)
+	private Set<Order> orders;
+
 	private String name;
 	private String password;
-	private String email;
-	@OneToMany(mappedBy="user")
-	@LazyCollection(LazyCollectionOption.EXTRA)
-	private List<Order> orders;
-	
-	public String getEmail() {
-		return email;
+	public Set<Order> getOrders() {
+		return orders;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setOrders(Set<Order> orders) {
+		this.orders = orders;
 	}
 
 	public String getPassword() {
@@ -42,6 +43,24 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	private String email;
+
+	public User() {
+		orders = new HashSet<>();
+	}
+
+	public void add(Order order) {
+		orders.add(order);
 	}
 
 	public int getId() {
@@ -59,5 +78,6 @@ public class User {
 	public void setName(String name) {
 		this.name = name;
 	}
+
 
 }

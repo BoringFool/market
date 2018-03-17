@@ -9,22 +9,33 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "order")
+@Table(name = "t_order")
 public class Order {
 
 	@Id
 	@GeneratedValue
 	private int id;
+	private String name;
+	private int age;
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "uid")
-	private User user;
-	private String num;
+	private User users;
+	
+	private Integer num;
 
-	public String getNum() {
+	public User getUsers() {
+		return users;
+	}
+
+	public void setUser(User users) {
+		this.users = users;
+	}
+
+	public Integer getNum() {
 		return num;
 	}
 
-	public void setNum(String num) {
+	public void setNum(Integer num) {
 		this.num = num;
 	}
 
@@ -36,11 +47,20 @@ public class Order {
 		this.id = id;
 	}
 
-	public User getUser() {
-		return user;
+	public String getName() {
+		return name;
 	}
 
-	public void setUser(User user) {
-		this.user = user;
+	public void setName(String name) {
+		this.name = name;
 	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
 }

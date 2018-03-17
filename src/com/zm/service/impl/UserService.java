@@ -29,10 +29,10 @@ public class UserService implements IUserService {
 	public String save(User u) {
 		User user=userdao.getByName(u.getName());
 		if(user!=null){
-			return "ç”¨æˆ·å·²ç»å­˜åœ¨ï¼";
+			return "ÓÃ»§ÒÑ´æÔÚ£¡£¡£¡";
 		}else{
 			userdao.add(u);
-			return "å­˜å…¥æˆåŠŸ";
+			return "±£´æ³É¹¦£¡£¡£¡";
 		}
 	}
 
