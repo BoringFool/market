@@ -5,12 +5,14 @@ import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -21,14 +23,17 @@ public class OrderList {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id", unique = false, nullable = false)
 	private int id;
-	@ManyToMany//¡¡ManyToManyÖ¸¶¨¶à¶Ô¶àµÄ¹ØÁª¹ØÏµ
-    //ÒòÎª¶à¶Ô¶àÖ®¼ä»áÍ¨¹ıÒ»ÕÅÖĞ¼ä±íÀ´Î¬»¤Á½±íÖ±½ÓµÄ¹ØÏµ£¬ËùÒÔÍ¨¹ı JoinTable Õâ¸ö×¢½âÀ´ÉùÃ÷£¬name¾ÍÊÇ
-    //Ö¸¶¨ÁËÖĞ¼ä±íµÄÃû×Ö£¬JoinColumnsÊÇÒ»¸ö @JoinColumnÀàĞÍµÄÊı×é£¬±íÊ¾µÄÊÇÎÒÕâ·½ÔÚ¶Ô·½ÖĞµÄÍâ¼üÃû³Æ£¬ÎÒ
-    //·½ÊÇCourse£¬ËùÒÔÔÚ¶Ô·½Íâ¼üµÄÃû³Æ¾ÍÊÇ rid£¬inverseJoinColumnsÒ²ÊÇÒ»¸ö @JoinColumnÀàĞÍµÄÊı×é£¬±íÊ¾µÄ
-    //ÊÇ¶Ô·½ÔÚÎÒÕâ·ÅÖĞµÄÍâ¼üÃû³Æ£¬¶Ô·½ÊÇTeacher£¬ËùÒÔÔÚÎÒ·½Íâ¼üµÄÃû³Æ¾ÍÊÇ tid
+	@ManyToMany//ï¿½ï¿½ManyToManyÖ¸ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½Ïµ
+    //ï¿½ï¿½Îªï¿½ï¿½Ô¶ï¿½Ö®ï¿½ï¿½ï¿½Í¨ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ğ¼ï¿½ï¿½ï¿½ï¿½Î¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ÓµÄ¹ï¿½Ïµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ JoinTable ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½nameï¿½ï¿½ï¿½ï¿½
+    //Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö£ï¿½JoinColumnsï¿½ï¿½Ò»ï¿½ï¿½ @JoinColumnï¿½ï¿½ï¿½Íµï¿½ï¿½ï¿½ï¿½é£¬ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â·½ï¿½Ú¶Ô·ï¿½ï¿½Ğµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½
+    //ï¿½ï¿½ï¿½ï¿½Courseï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¶Ô·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¾ï¿½ï¿½ï¿½ ridï¿½ï¿½inverseJoinColumnsÒ²ï¿½ï¿½Ò»ï¿½ï¿½ @JoinColumnï¿½ï¿½ï¿½Íµï¿½ï¿½ï¿½ï¿½é£¬ï¿½ï¿½Ê¾ï¿½ï¿½
+    //ï¿½Ç¶Ô·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½Ô·ï¿½ï¿½ï¿½Teacherï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¾ï¿½ï¿½ï¿½ tid
     @JoinTable(name="t_good_orderlist", joinColumns={ @JoinColumn(name="oid")}, 
     inverseJoinColumns={ @JoinColumn(name = "gid") })
 	private Set<Goods> goods;
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="order_id")
+	private Order order;
 
 	public OrderList() {
 		goods = new HashSet<Goods>();

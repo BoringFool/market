@@ -1,12 +1,18 @@
 package com.zm.model;
 
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 
 @Entity
 @Table(name = "t_order")
@@ -22,6 +28,10 @@ public class Order {
 	private User users;
 	
 	private Integer num;
+	
+	@OneToMany(mappedBy="order")
+	@LazyCollection(LazyCollectionOption.EXTRA)
+	private Set<OrderList> order_num;
 
 	public User getUsers() {
 		return users;
