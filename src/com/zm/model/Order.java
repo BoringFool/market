@@ -3,12 +3,11 @@ package com.zm.model;
 import java.util.Set;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.LazyCollection;
@@ -23,12 +22,10 @@ public class Order {
 	private int id;
 	private String name;
 	private int age;
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "uid")
+	@OneToOne
+	@JoinColumn(name="uid")
 	private User users;
-	
 	private Integer num;
-	
 	@OneToMany(mappedBy="order")
 	@LazyCollection(LazyCollectionOption.EXTRA)
 	private Set<OrderList> order_num;

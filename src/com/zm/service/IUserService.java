@@ -12,4 +12,5 @@ public interface IUserService {
 	public User getByid(Long id);
 	public List<User> getByids(Long[] ids);
 	public User getByName(String name);
+	public void tex();
 }

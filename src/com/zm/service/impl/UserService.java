@@ -29,10 +29,10 @@ public class UserService implements IUserService {
 	public String save(User u) {
 		User user=userdao.getByName(u.getName());
 		if(user!=null){
-			return "ÓÃ»§ÒÑ´æÔÚ£¡£¡£¡";
+			return "ï¿½Ã»ï¿½ï¿½Ñ´ï¿½ï¿½Ú£ï¿½ï¿½ï¿½ï¿½ï¿½";
 		}else{
 			userdao.add(u);
-			return "±£´æ³É¹¦£¡£¡£¡";
+			return "ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
 		}
 	}
 
@@ -57,6 +57,10 @@ public class UserService implements IUserService {
 	}
 	public User getByName(String name) {
 		return userdao.getByName(name);
+	}
+	
+	public void tex(){
+		userdao.connect_ineer();
 	}
 
 }

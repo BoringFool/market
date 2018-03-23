@@ -19,6 +19,14 @@ public class ClassRoom
     private int id;
     private String className;
     private Set<Student> students;
+    public String toString(){
+    	StringBuffer sb=new StringBuffer();
+    	for(Student s:students){
+    		Student st=s;
+    		sb.append(st.getName());
+    	}
+    	return id+className+sb;
+    }
     
     public ClassRoom()
     {
@@ -51,12 +59,12 @@ public class ClassRoom
     {
         this.className = className;
     }
-    /*OneToManyÖ¸¶¨ÁËÒ»¶Ô¶àµÄ¹ØÏµ£¬mappedBy="room"Ö¸¶¨ÁËÓÉ¶àµÄÄÇÒ»·½À´Î¬»¤¹ØÁª¹ØÏµ£¬
-     *mappedByÖ¸µÄÊÇ¶àµÄÒ»·½¶Ô1µÄÕâÒ»·½µÄÒÀÀµµÄÊôĞÔ£¬(×¢Òâ£ºÈç¹ûÃ»ÓĞÖ¸¶¨ÓÉË­À´Î¬»¤¹Ø
-     *Áª¹ØÏµ£¬ÔòÏµÍ³»á¸øÎÒÃÇ´´½¨Ò»ÕÅÖĞ¼ä±í)*/
+    /*OneToManyÖ¸ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Ô¶ï¿½Ä¹ï¿½Ïµï¿½ï¿½mappedBy="room"Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½É¶ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Î¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½
+     *mappedByÖ¸ï¿½ï¿½ï¿½Ç¶ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô£ï¿½(×¢ï¿½â£ºï¿½ï¿½ï¿½Ã»ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½Ë­ï¿½ï¿½Î¬ï¿½ï¿½ï¿½ï¿½
+     *ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½ÏµÍ³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç´ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ğ¼ï¿½ï¿½)*/
     @OneToMany(mappedBy="room")
-    /*LazyCollectionÊôĞÔÉèÖÃ³ÉEXTRAÖ¸¶¨ÁËµ±Èç¹û²éÑ¯Êı¾İµÄ¸öÊıÊ±ºò£¬Ö»»á·¢³öÒ»Ìõ count(*)
-     *µÄÓï¾ä£¬Ìá¸ßĞÔÄÜ*/
+    /*LazyCollectionï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã³ï¿½EXTRAÖ¸ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½İµÄ¸ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ö»ï¿½á·¢ï¿½ï¿½Ò»ï¿½ï¿½ count(*)
+     *ï¿½ï¿½ï¿½ï¿½ä£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
     @LazyCollection(LazyCollectionOption.EXTRA)
     public Set<Student> getStudents()
     {
