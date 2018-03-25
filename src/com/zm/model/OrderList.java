@@ -39,7 +39,7 @@ public class OrderList {
 		goods = new HashSet<Goods>();
 	}
 
-	public void addTeacher(Goods good) {
+	public void addGood(Goods good) {
 		goods.add(good);
 	}
 

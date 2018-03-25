@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.zm.dao.IGoodsDao;
+import com.zm.model.Goods;
 import com.zm.service.IGoodsService;
 
 @Service("goodsservice")
@@ -21,5 +22,17 @@ public class GoodsService implements IGoodsService {
 
 	public void setGoodsdao(IGoodsDao goodsdao) {
 		this.goodsdao = goodsdao;
+	}
+
+	@Override
+	public void save(Goods g) {
+		goodsdao.add(g);
+		
+	}
+
+	@Override
+	public Goods getById(long l) {
+		return goodsdao.getById(l);
+		
 	}
 }

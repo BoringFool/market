@@ -5,6 +5,8 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.zm.dao.IOrderListDao;
+import com.zm.model.OrderList;
 import com.zm.service.IOrderListService;
 
 @Service("orderlistservice")
@@ -12,13 +14,19 @@ import com.zm.service.IOrderListService;
 public class OrderListService implements IOrderListService {
 
 	@Resource
-	private IOrderListService orderlistservice;
+	private IOrderListDao orderlistdao;
 
-	public IOrderListService getOrderlistservice() {
-		return orderlistservice;
+	public IOrderListDao getOrderlistdao() {
+		return orderlistdao;
 	}
 
-	public void setOrderlistservice(IOrderListService orderlistservice) {
-		this.orderlistservice = orderlistservice;
+	public void setOrderlistdao(IOrderListDao orderlistdao) {
+		this.orderlistdao = orderlistdao;
+	}
+
+	@Override
+	public void save(OrderList o_l) {
+		orderlistdao.add(o_l);
+
 	}
 }
