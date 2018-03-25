@@ -31,7 +31,7 @@ public class GoodsService implements IGoodsService {
 	}
 
 	@Override
-	public Goods getById(long l) {
+	public Goods getById(int l) {
 		return goodsdao.getById(l);
 		
 	}

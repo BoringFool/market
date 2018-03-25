@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.zm.dao.IOrderDao;
+import com.zm.model.Order;
 import com.zm.service.IOrderService;
 @Service("orderservice")
 @Transactional
@@ -20,5 +21,11 @@ public class OrderService implements IOrderService {
 
 	public void setOrderdao(IOrderDao orderdao) {
 		this.orderdao = orderdao;
+	}
+
+	@Override
+	public void save(Order o) {
+		orderdao.add(o);
+		
 	}
 }

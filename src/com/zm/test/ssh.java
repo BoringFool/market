@@ -5,10 +5,12 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.zm.model.Goods;
+import com.zm.model.Order;
 import com.zm.model.OrderList;
 import com.zm.model.User;
 import com.zm.service.IGoodsService;
 import com.zm.service.IOrderListService;
+import com.zm.service.IOrderService;
 import com.zm.service.IUserService;
 
 public class ssh {
@@ -21,6 +23,7 @@ public class ssh {
 		User u=new User();
 		u.setName("zz");
 		String a=userservice.save(u);
+		userservice.getById(1);
 		System.out.println(a);
 	}
 	
@@ -48,11 +51,28 @@ public class ssh {
 		ApplicationContext ctx=new ClassPathXmlApplicationContext("beans.xml");
 		IOrderListService orderlistservice=(IOrderListService) ctx.getBean("orderlistservice");
 		IGoodsService goodsservice=(IGoodsService) ctx.getBean("goodsservice");
-		Goods g=goodsservice.getById(1l);
+		Goods g=goodsservice.getById(1);
 		OrderList o_l=new OrderList();
  		o_l.addGood(g);
 		orderlistservice.save(o_l);
 		System.out.println(o_l.getId());
+	}
+	
+	@Test
+	@SuppressWarnings("resource")
+	public void test_order() {
+		ApplicationContext ctx=new ClassPathXmlApplicationContext("beans.xml");
+		IOrderService orderservice=(IOrderService) ctx.getBean("orderservice");
+		IUserService userservice=(IUserService) ctx.getBean("userservice");
+		
+		User u=userservice.getById(1);
+		Order o=new Order();
+		o.setAge(25);
+		o.setName("zz");
+		o.setNum(1);
+		o.setUser(u);
+		orderservice.save(o);
+		System.out.println(o.getId());
 	}
 
 }

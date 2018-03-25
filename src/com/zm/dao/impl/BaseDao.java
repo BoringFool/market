@@ -41,7 +41,7 @@ public class BaseDao<T> implements IBaseDao<T> {
 	}
 
 	@Override
-	public void delet(Long id) {
+	public void delet(long id) {
 		Session session = getSession();
 		session.delete(getSession().get(clazz, id));
 
@@ -59,15 +59,15 @@ public class BaseDao<T> implements IBaseDao<T> {
 	}
 
 	@Override
-	public T getById(Long id) {
-		return (T) getSession().get(clazz, id);
+	public T getById(int id) {
+		return (T) getSession().get(clazz,id);
 	}
 
 	@Override
-	public List<T> getByIds(Long[] ids) {
+	public List<T> getByIds(long[] ids) {
 		String hql = "FROM " + clazz.getSimpleName() + " WHERE ID in(:ids)";
 		Query q = getSession().createQuery(hql);
-		q.setParameterList("ids", ids);
+		q.setParameter("ids", ids);
 		return q.list();
 	}
 

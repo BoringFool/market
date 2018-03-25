@@ -14,6 +14,7 @@ import org.springframework.stereotype.Component;
 
 
 
+
 import com.zm.dao.IUserDao;
 import com.zm.model.ClassRoom;
 import com.zm.model.User;
@@ -37,6 +38,7 @@ public class UserDao extends BaseDao<User> implements IUserDao {
 		// 鍦ㄤ娇鐢╤ql璇彞鐨勬椂鍊欙紝瑕佸澶勬兂鐫�鎴戜滑浣跨敤鐨勬槸绫伙紝鑰屼笉鏄〃锛侊紒
 				String hql = "from ClassRoom c,Student s where c.id=s.room.id and c.id='1'";
 				
+				@SuppressWarnings("unchecked")
 				List<Object> classes = getSession().createQuery(hql).list();
 				HashSet<Object> cla=new HashSet<>(classes);
 				Iterator<Object> it = cla.iterator();

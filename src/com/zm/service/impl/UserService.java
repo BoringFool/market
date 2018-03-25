@@ -48,9 +48,6 @@ public class UserService implements IUserService {
 		return userdao.findall();
 	}
 
-	public User getByid(Long id) {
-		return userdao.getById(id);
-	}
 
 	public List<User> getByids(Long[] ids) {
 		return userdao.getByIds(ids);
@@ -61,6 +58,12 @@ public class UserService implements IUserService {
 	
 	public void tex(){
 		userdao.connect_ineer();
+	}
+
+	@Override
+	public User getById(int l) {
+		
+		return userdao.getById(new Integer(l));
 	}
 
 }

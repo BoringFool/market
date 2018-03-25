@@ -6,13 +6,13 @@ public interface IBaseDao<T> {
 	
 	public void add(T entity);
 
-	public void delet(Long id);
+	public void delet(long id);
 
 	public void update(T entity);
 
 	public List<T> findall();
 
-	public T getById(Long id);
+	public T getById(int id);
 
-	public List<T> getByIds(Long[] ids);
+	public List<T> getByIds(long[] ids);
 }
