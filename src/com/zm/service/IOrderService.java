@@ -6,4 +6,8 @@ public interface IOrderService {
 
 	public void save(Order o);
 
+	public Order getById(long l);
+
+	public void upadte(Order o);
+
 }

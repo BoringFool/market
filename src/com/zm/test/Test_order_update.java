@@ -9,23 +9,18 @@ import com.zm.model.User;
 import com.zm.service.IOrderService;
 import com.zm.service.IUserService;
 
-public class ssh {
+public class Test_order_update {
 
-	@Test
 	@SuppressWarnings("resource")
-	public void test() {
+	@Test
+	public void test_update(){
 		ApplicationContext ctx=new ClassPathXmlApplicationContext("beans.xml");
-		IUserService userservice=(IUserService) ctx.getBean("userservice");
 		IOrderService orderservice=(IOrderService) ctx.getBean("orderservice");
+		IUserService userservice=(IUserService) ctx.getBean("userservice");
 		Order o=orderservice.getById(4l);
-		User u=new User();
-		u.setName("zm3");
-		u.setEmail("1318593330@qq.com");
-		u.setPassword("123456");
-		u.setOrder(o);
-		String a=userservice.save(u);
-		userservice.getById(1l);
-		System.out.println(a);
+		User u=userservice.getById(3l);
+		o.setUser(u);
+		orderservice.upadte(o);
+		System.out.println(o.getId());
 	}
-
 }

@@ -28,4 +28,16 @@ public class OrderService implements IOrderService {
 		orderdao.add(o);
 		
 	}
+
+	@Override
+	public Order getById(long l) {
+		
+		return orderdao.getById(l);
+	}
+
+	@Override
+	public void upadte(Order o) {
+		orderdao.update(o);
+		
+	}
 }
