@@ -6,6 +6,6 @@ public interface IGoodsService {
 
 	public void save(Goods g);
 
-	public Goods getById(int l);
+	public Goods getById(long l);
 
 }

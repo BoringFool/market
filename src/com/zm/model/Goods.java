@@ -17,7 +17,7 @@ public class Goods {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id", unique = false, nullable = false)
-	private Long id;
+	private long id;
 	private String store;
 	private String brand;
 	private String name;
@@ -26,7 +26,7 @@ public class Goods {
 	private String color;
 	private String size;
 	private Long number;
-	@ManyToMany(mappedBy="goods")//¡¡¡¡±íÊ¾ÓÉCourseÄÇÒ»·½À´½øÐÐÎ¬»¤
+	@ManyToMany(mappedBy="goods")//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Courseï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¬ï¿½ï¿½
 	private Set<OrderList> orderlists;
 
 	public Set<OrderList> getOrderlists() {
@@ -69,7 +69,7 @@ public class Goods {
 		this.number = number;
 	}
 
-	public Long getId() {
+	public long getId() {
 		return id;
 	}
 

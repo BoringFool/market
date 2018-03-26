@@ -59,7 +59,7 @@ public class BaseDao<T> implements IBaseDao<T> {
 	}
 
 	@Override
-	public T getById(int id) {
+	public T getById(long id) {
 		return (T) getSession().get(clazz,id);
 	}
 

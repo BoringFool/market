@@ -12,7 +12,7 @@ public interface IBaseDao<T> {
 
 	public List<T> findall();
 
-	public T getById(int id);
+	public T getById(long id);
 
 	public List<T> getByIds(long[] ids);
 }

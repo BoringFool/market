@@ -49,7 +49,7 @@ public class UserService implements IUserService {
 	}
 
 
-	public List<User> getByids(Long[] ids) {
+	public List<User> getByids(long[] ids) {
 		return userdao.getByIds(ids);
 	}
 	public User getByName(String name) {
@@ -61,9 +61,9 @@ public class UserService implements IUserService {
 	}
 
 	@Override
-	public User getById(int l) {
+	public User getById(long l) {
 		
-		return userdao.getById(new Integer(l));
+		return userdao.getById(l);
 	}
 
 }

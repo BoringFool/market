@@ -23,7 +23,7 @@ public class ssh {
 		User u=new User();
 		u.setName("zz");
 		String a=userservice.save(u);
-		userservice.getById(1);
+		userservice.getById(1l);
 		System.out.println(a);
 	}
 	
@@ -51,7 +51,7 @@ public class ssh {
 		ApplicationContext ctx=new ClassPathXmlApplicationContext("beans.xml");
 		IOrderListService orderlistservice=(IOrderListService) ctx.getBean("orderlistservice");
 		IGoodsService goodsservice=(IGoodsService) ctx.getBean("goodsservice");
-		Goods g=goodsservice.getById(1);
+		Goods g=goodsservice.getById(1l);
 		OrderList o_l=new OrderList();
  		o_l.addGood(g);
 		orderlistservice.save(o_l);
@@ -65,7 +65,7 @@ public class ssh {
 		IOrderService orderservice=(IOrderService) ctx.getBean("orderservice");
 		IUserService userservice=(IUserService) ctx.getBean("userservice");
 		
-		User u=userservice.getById(1);
+		User u=userservice.getById(1l);
 		Order o=new Order();
 		o.setAge(25);
 		o.setName("zz");

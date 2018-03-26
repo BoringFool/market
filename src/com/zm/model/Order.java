@@ -19,7 +19,7 @@ public class Order {
 
 	@Id
 	@GeneratedValue
-	private int id;
+	private long id;
 	private String name;
 	private int age;
 	@OneToOne
@@ -46,7 +46,7 @@ public class Order {
 		this.num = num;
 	}
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 

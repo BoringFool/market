@@ -22,7 +22,7 @@ public class OrderList {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id", unique = false, nullable = false)
-	private int id;
+	private long id;
 	@ManyToMany//��ManyToManyָ����Զ�Ĺ�����ϵ
     //��Ϊ��Զ�֮���ͨ��һ���м����ά������ֱ�ӵĹ�ϵ������ͨ�� JoinTable ���ע����������name����
     //ָ�����м������֣�JoinColumns��һ�� @JoinColumn���͵����飬��ʾ�������ⷽ�ڶԷ��е�������ƣ���
@@ -43,7 +43,7 @@ public class OrderList {
 		goods.add(good);
 	}
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 

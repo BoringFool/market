@@ -15,7 +15,7 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(nullable = false, unique = false, name = "id")
-	private int id;
+	private long id;
 	@OneToOne(mappedBy = "users")
 	private Order order;
 
@@ -47,7 +47,7 @@ public class User {
 		this.email = email;
 	}
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
