@@ -17,8 +17,8 @@ public class Test_order_update {
 		ApplicationContext ctx=new ClassPathXmlApplicationContext("beans.xml");
 		IOrderService orderservice=(IOrderService) ctx.getBean("orderservice");
 		IUserService userservice=(IUserService) ctx.getBean("userservice");
-		Order o=orderservice.getById(4l);
-		User u=userservice.getById(3l);
+		Order o=orderservice.getById(1l);
+		User u=userservice.getById(1l);
 		o.setUser(u);
 		orderservice.upadte(o);
 		System.out.println(o.getId());

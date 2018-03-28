@@ -10,4 +10,6 @@ public interface IOrderService {
 
 	public void upadte(Order o);
 
+	public void delete(long id);
+
 }

@@ -40,4 +40,10 @@ public class OrderService implements IOrderService {
 		orderdao.update(o);
 		
 	}
+
+	@Override
+	public void delete(long id) {
+		orderdao.delet(id);
+		
+	}
 }

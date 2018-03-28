@@ -29,4 +29,22 @@ public class OrderListService implements IOrderListService {
 		orderlistdao.add(o_l);
 
 	}
+
+	@Override
+	public void delete(long l) {
+		orderlistdao.delet(l);
+		
+	}
+
+	@Override
+	public OrderList getById(long l) {
+		return orderlistdao.getById(l);
+		
+	}
+
+	@Override
+	public void update(OrderList ol) {
+		orderlistdao.update(ol);
+		
+	}
 }

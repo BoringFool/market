@@ -8,7 +8,9 @@ import com.zm.model.Order;
 import com.zm.model.User;
 import com.zm.service.IOrderService;
 import com.zm.service.IUserService;
-
+/*
+ * 添加第一步
+ * */
 public class ssh {
 
 	@Test
@@ -17,7 +19,7 @@ public class ssh {
 		ApplicationContext ctx=new ClassPathXmlApplicationContext("beans.xml");
 		IUserService userservice=(IUserService) ctx.getBean("userservice");
 		IOrderService orderservice=(IOrderService) ctx.getBean("orderservice");
-		Order o=orderservice.getById(4l);
+		Order o=orderservice.getById(1l);
 		User u=new User();
 		u.setName("zm3");
 		u.setEmail("1318593330@qq.com");
