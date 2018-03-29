@@ -27,7 +27,7 @@ public class Goods {
 	private String color;
 	private String size;
 	private Long number;
-	@ManyToMany(mappedBy="goods",fetch=FetchType.LAZY)//������ʾ��Course��һ��������ά��
+	@ManyToMany(mappedBy="goods",fetch=FetchType.EAGER)//������ʾ��Course��һ��������ά��
 	private Set<OrderList> orderlists;
 
 	public Set<OrderList> getOrderlists() {

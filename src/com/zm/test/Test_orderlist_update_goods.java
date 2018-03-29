@@ -17,10 +17,10 @@ public class Test_orderlist_update_goods {
 		ApplicationContext ctx=new ClassPathXmlApplicationContext("beans.xml");
 		IOrderListService orderlistservice=(IOrderListService) ctx.getBean("orderlistservice");
 		IGoodsService goodservice=(IGoodsService) ctx.getBean("goodsservice");
-		Goods g=goodservice.getById(2l);
+		Goods g=goodservice.getById(3l);
 		OrderList o=orderlistservice.getById(1l);
-		o.addGood(g);
-		orderlistservice.save(o);
+		o.getGoods().add(g);
+		orderlistservice.update(o);
 		
 	}
 }

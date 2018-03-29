@@ -23,7 +23,7 @@ public class OrderList {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id", unique = false, nullable = false)
 	private long id;
-	@ManyToMany//��ManyToManyָ����Զ�Ĺ�����ϵ
+	@ManyToMany(fetch=FetchType.EAGER)//��ManyToManyָ����Զ�Ĺ�����ϵ
     //��Ϊ��Զ�֮���ͨ��һ���м����ά������ֱ�ӵĹ�ϵ������ͨ�� JoinTable ���ע����������name����
     //ָ�����м������֣�JoinColumns��һ�� @JoinColumn���͵����飬��ʾ�������ⷽ�ڶԷ��е�������ƣ���
     //����Course�������ڶԷ���������ƾ��� rid��inverseJoinColumnsҲ��һ�� @JoinColumn���͵����飬��ʾ��
