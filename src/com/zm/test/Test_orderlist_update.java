@@ -13,7 +13,7 @@ public class Test_orderlist_update {
 
 	@SuppressWarnings("resource")
 	@Test
-	public void update(){
+	public void update_order(){
 		ApplicationContext ctx=new ClassPathXmlApplicationContext("beans.xml");
 		IOrderListService orderlistservice=(IOrderListService) ctx.getBean("orderlistservice");
 		IOrderService orderservice=(IOrderService) ctx.getBean("orderservice");

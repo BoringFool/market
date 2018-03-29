@@ -31,7 +31,7 @@ public class OrderList {
     @JoinTable(name="t_good_orderlist", joinColumns={ @JoinColumn(name="oid")}, 
     inverseJoinColumns={ @JoinColumn(name = "gid") })
 	private Set<Goods> goods;
-	@ManyToOne(fetch=FetchType.LAZY)
+	@ManyToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="order_id")
 	private Order order;
 

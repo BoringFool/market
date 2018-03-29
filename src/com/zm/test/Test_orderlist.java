@@ -24,7 +24,7 @@ public class Test_orderlist {
 		IGoodsService goodsservice=(IGoodsService) ctx.getBean("goodsservice");
 		IOrderService orderservice=(IOrderService) ctx.getBean("orderservice");
 		Order o=orderservice.getById(1l);
-		Goods g=goodsservice.getById(1l);
+		Goods g=goodsservice.getById(2l);
 		OrderList o_l=new OrderList();
 		o_l.setOrder(o);
  		o_l.addGood(g);
