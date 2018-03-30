@@ -1,5 +1,6 @@
 package com.zm.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,7 +17,7 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(nullable = false, unique = false, name = "id")
 	private long id;
-	@OneToOne(mappedBy = "users")
+	@OneToOne(mappedBy = "users",cascade=CascadeType.ALL)
 	private Order order;
 
 	private String name;

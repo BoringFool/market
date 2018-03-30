@@ -11,7 +11,7 @@ import com.zm.service.IUserService;
 /*
  * 添加第一步
  * */
-public class ssh {
+public class Test_user {
 
 	@Test
 	@SuppressWarnings("resource")

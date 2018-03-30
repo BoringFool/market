@@ -8,4 +8,8 @@ public interface IGoodsService {
 
 	public Goods getById(long l);
 
+	public void update(Goods g);
+
+	public void delete(long l);
+
 }

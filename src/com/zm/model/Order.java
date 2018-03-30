@@ -2,6 +2,7 @@ package com.zm.model;
 
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -26,7 +27,7 @@ public class Order {
 	@JoinColumn(name="uid")
 	private User users;
 	private Integer num;
-	@OneToMany(mappedBy="order")
+	@OneToMany(mappedBy="order",cascade=CascadeType.REMOVE)
 	@LazyCollection(LazyCollectionOption.EXTRA)
 	private Set<OrderList> order_num;
 

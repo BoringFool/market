@@ -35,4 +35,16 @@ public class GoodsService implements IGoodsService {
 		return goodsdao.getById(l);
 		
 	}
+
+	@Override
+	public void update(Goods g) {
+		goodsdao.update(g);
+		
+	}
+
+	@Override
+	public void delete(long l) {
+		goodsdao.delet(l);
+		
+	}
 }
