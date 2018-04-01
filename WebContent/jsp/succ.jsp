@@ -8,7 +8,6 @@
 
 </head>
 <body>
-	ok
 	<!-- 该form用来上传文件-->
 	<form action="<%=request.getContextPath() %>/user/upload" enctype="multipart/form-data" name="fileUploadForm" method="post">
 　　　　<input type="file" name="docFile" id="docFile" style="display: none;" onchange="document.fileUploadForm.filePath.value=this.value"/>
