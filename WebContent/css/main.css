@@ -25,34 +25,119 @@ body {
 .head {
 	width: 100%;
 	height: 32px;
-	background-color:#f2f2f2;
+	background-color: #f2f2f2;
 	margin: 0px auto;
 	border-bottom: 1px solid #e5e5e5;
 }
-.head ul{
-	width: 1260px; margin: 0px auto;
+
+.head ul {
+	width: 1260px;
+	margin: 0px auto;
 }
-.head .top_half{
-	float: left; margin-right: 30px;
+
+.head .top_half {
+	float: left;
+	margin-right: 30px;
 }
-.head .bottom_half{
-	float: right; margin-right: 30px;
+
+.head .bottom_half {
+	float: right;
+	margin-right: 30px;
 }
-.head ul li{
-	font-size:12px;
+
+.head ul li {
+	font-size: 12px;
 	line-height: 32px;
 	color: #999;
-	font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+	font-family: "Microsoft YaHei", tahoma, arial, 'Hiragino Sans GB',
+		'\5b8b\4f53', sans-serif;
 }
-.head ul li a{
+
+.head ul li a {
 	color: #999;
 }
-.head ul li a:hover{
+
+.head ul li a:hover {
 	color: #FF0036 !important;
 }
-.head ul li span{
+
+.head ul li span {
 	color: #333;
 }
+
+.search {
+	width: 1260px;
+	height: 170px;
+	margin: 0px auto;
+}
+
+.search .logo {
+	width: 200px;
+	margin-top: 5px;
+	float: left;
+}
+
+.search .logo img {
+	width: 240px;
+	height: 130px;
+	position: relative;
+	left: -15px;
+}
+
+.search .search_head {
+	width: 190px;
+	float: left;
+	height: 36px;
+	color: #fff;
+	background-color: #FF0036;
+	position: absolute;
+	line-height: 36px;
+	padding-left: 10px;
+}
+
+.search .search_right {
+	float: left;
+	margin-left: 120px;
+	margin-top: 50px;
+	width: 627px;
+}
+
+.search .search_form {
+	border: 2px solid red;
+	float: left;
+	height: 36px;
+}
+
+.search .form_input {
+	float: left;
+	height: 36px;
+	width: 491px;
+	font: 16px/22px arial;
+	box-sizing: border-box;
+	padding-left: 5px;
+	outline: none;
+}
+
+.search .form_submit {
+	float: left;
+	background-color: red;
+	width: 132px;
+	height: 36px;
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 5px;
+	color: #fff;
+	border: solid red;
+	outline: none;
+	cursor: pointer;
+}
+.search .show_item{
+	color: #999;margin-top: 5px;float: left;overflow: hidden;
+}
+.search .show_item li{
+	display: inline-block; border-left: 1px solid #ccc; line-height: 1.1; padding: 0 10px;height: 14px; font-size: 14px;
+}
+
 .nav_box {
 	height: 500px;
 	overflow: hidden;
@@ -346,13 +431,14 @@ body {
 	height: 300px;
 	padding: 1px;
 	cursor: pointer;
-	float:left;
-	margin-right:10px;
-	margin-bottom:10px;
-	background-color:#ffffff;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	background-color: #ffffff;
 	border: 1px solid transparent;
 }
-.goods .goods_box:hover{
+
+.goods .goods_box:hover {
 	border: 1px solid red !important;
 }
 
@@ -379,6 +465,6 @@ body {
 	line-height: 18px;
 	margin: 10px auto;
 	display: block;
-	color:red;
+	color: red;
 	text-align: center;
 }

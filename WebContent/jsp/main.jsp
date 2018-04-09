@@ -22,33 +22,28 @@
 		</ul>
 	</div>
 	<!-- search -->
-	<div style="width: 1260px; height: 170px; margin: 0px auto;">
-		<div style="width: 200px;margin-top: 5px;float: left;">
-			<img alt="" src="../image/logo_s.png" style="width: 240px; height: 130px;position: relative;left: -15px;">
-			<div style=" width: 190px; float: left; height: 36px; color: #fff; background-color: #FF0036;
-                         position: absolute; line-height: 36px;padding-left: 10px;">
-				商品分类
-			</div>
+	<div class="search">
+		<div class="logo">
+			<img alt="" src="../image/logo_s.png">
+			<div class="search_head">商品分类</div>
 		</div>
-		<div style="float: left;margin-left: 120px;margin-top: 50px;width: 627px;">
-			<div style="border: 2px solid red;float: left;height: 36px;">
+		<div class="search_right">
+			<div class="search_form">
 				<form action="#" method="post">
-					<input type="text" style="float: left;height: 36px; width: 491px; font: 16px/22px arial; box-sizing: border-box;
-    								padding-left: 5px;outline:none;">
-					<input type="submit" value="搜索" style="float: left;background-color: red;width: 132px; height: 36px;
-    								font-size: 20px; font-weight: 700; letter-spacing: 5px;color: #fff;border: solid red;outline:none;cursor: pointer;">
+					<input type="text" class="form_input">
+					<input type="submit" class="form_submit" value="搜索">
 				</form>
 			</div>
-			<ul style="color: #999;margin-top: 5px;float: left;overflow: hidden;">
-				<li style="margin-left: -10px;display: inline-block; border-left: 1px solid #ccc; line-height: 1.1; padding: 0 10px;height: 14px; font-size: 14px;">针织衫</li>
-				<li style="display: inline-block; border-left: 1px solid #ccc; line-height: 1.1; padding: 0 10px;height: 14px; font-size: 14px;">羽绒服</li>
-				<li style="display: inline-block; border-left: 1px solid #ccc; line-height: 1.1; padding: 0 10px;height: 14px; font-size: 14px;">四件套</li>
-				<li style="display: inline-block; border-left: 1px solid #ccc; line-height: 1.1; padding: 0 10px;height: 14px; font-size: 14px;">电动牙刷</li>
-				<li style="display: inline-block; border-left: 1px solid #ccc; line-height: 1.1; padding: 0 10px;height: 14px; font-size: 14px;">客厅灯</li>
-				<li style="display: inline-block; border-left: 1px solid #ccc; line-height: 1.1; padding: 0 10px;height: 14px; font-size: 14px;">口红</li>
-				<li style="display: inline-block; border-left: 1px solid #ccc; line-height: 1.1; padding: 0 10px;height: 14px; font-size: 14px;">手机</li>
-				<li style="display: inline-block; border-left: 1px solid #ccc; line-height: 1.1; padding: 0 10px;height: 14px; font-size: 14px;">运动鞋</li>
-				<li style="display: inline-block; border-left: 1px solid #ccc; line-height: 1.1; padding: 0 10px;height: 14px; font-size: 14px;">牛奶</li>
+			<ul class="show_item">
+				<li style="margin-left: -10px;">针织衫</li>
+				<li>羽绒服</li>
+				<li>四件套</li>
+				<li>电动牙刷</li>
+				<li>客厅灯</li>
+				<li>口红</li>
+				<li>手机</li>
+				<li>运动鞋</li>
+				<li>牛奶</li>
 			</ul>
 		</div>
 	</div>
