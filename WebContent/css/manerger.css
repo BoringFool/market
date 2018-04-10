@@ -1,0 +1,28 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+}
+body{
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+}
+table{
+	 border-collapse:collapse;
+}
+thead{
+	background:#DFF0D8; 
+}
+table,th,td{
+	border: 1px solid #000000;
+}
+.td{
+	background-color: #F9F9F9;
+}
