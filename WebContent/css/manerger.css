@@ -15,7 +15,9 @@ body{
     color: #333;
 }
 table{
-	 border-collapse:collapse;
+	margin:0px auto;
+	width:1200px;
+	border-collapse:collapse;
 }
 thead{
 	background:#DFF0D8; 
@@ -23,6 +25,22 @@ thead{
 table,th,td{
 	border: 1px solid #000000;
 }
-.td{
-	background-color: #F9F9F9;
+th,td{
+	hight:100px;	
+}
+td{
+	padding-top: 0px;
+}
+
+.a{
+	width:300px;
+}
+.b{
+	width: 80px;
+}
+.c{
+	width: 40px;
+}
+.d{
+	width: 160px;
 }

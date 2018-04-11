@@ -21,9 +21,9 @@ public class Test_user {
 		IOrderService orderservice=(IOrderService) ctx.getBean("orderservice");
 		Order o=orderservice.getById(1l);
 		User u=new User();
-		u.setName("zm3");
+		u.setName("zm22");
 		u.setEmail("1318593330@qq.com");
-		u.setPassword("123456");
+		u.setPassword("123456a");
 		u.setOrder(o);
 		String a=userservice.save(u);
 		userservice.getById(1l);
