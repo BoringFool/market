@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -10,77 +10,98 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div class="nav">
+	
+</div>
+
+<div class="nav_tree">
+	
+</div>
 	<div>
-		<div>
-			<div>
-				图片
-			</div>
-			<div>
-				name
-			</div>
-			<div>
-				attr
-			</div>
-			<div>
-				
-			</div>
-		</div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th class="c">ID</th>
+					<th class="d">图片</th>
+					<th class="a">名称</th>
+					<th class="a">小标题</th>
+					<th class="b">价格</th>
+					<th class="b">库存数量</th>
+					<th class="b">图片管理</th>
+					<th class="b">设置属性</th>
+					<th class="c">编辑</th>
+					<th class="c">删除</th>
+				</tr>
+			</thead>
+			<!-- 一次查询5条 -->
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>q</td>
+					<td>asdasdasdasdasdasd asdasdasdasd asdasd asdadasda sdas d as
+						as dasd as a dad</td>
+					<td>aadasdasdasasdasdasdasdas</td>
+					<td>123465.00</td>
+					<td>10000</td>
+					<td>阿斯顿的</td>
+					<td>三个哥哥</td>
+					<td>哥哥</td>
+					<td>搜索</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>q</td>
+					<td>asdasdasdasdasdasd asdasdasdasd asdasd asdadasda sdas d as
+						as dasd as a dad</td>
+					<td>aadasdasdasasdasdasdasdas</td>
+					<td>123465.00</td>
+					<td>10000</td>
+					<td>阿斯顿的</td>
+					<td>三个哥哥</td>
+					<td>哥哥</td>
+					<td>搜索</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>q</td>
+					<td>asdasdasdasdasdasd asdasdasdasd asdasd asdadasda sdas d as
+						as dasd as a dad</td>
+					<td>aadasdasdasasdasdasdasdas</td>
+					<td>123465.00</td>
+					<td>10000</td>
+					<td>阿斯顿的</td>
+					<td>三个哥哥</td>
+					<td>哥哥</td>
+					<td>搜索</td>
+				</tr>
+
+			</tbody>
+		</table>
 	</div>
-	<table class="table">
-		<thead>
-			<tr>
-				<th class="c">ID</th>
-				<th class="d">图片</th>
-				<th class="a">名称</th>
-				<th class="a">小标题</th>
-				<th class="b">价格</th>
-				<th class="b">库存数量</th>
-				<th class="b">图片管理</th>
-				<th class="b">设置属性</th>
-				<th class="c">编辑</th>
-				<th class="c">删除</th>
-			</tr>
-		</thead>
-		<!-- 一次查询5条 -->
-		<tbody>
-			<tr>
-				<td>1</td>
-				<td>q</td>
-				<td>asdasdasdasdasdasd asdasdasdasd asdasd asdadasda sdas d as as dasd as a dad</td>
-				<td>aadasdasdasasdasdasdasdas</td>
-				<td>123465.00</td>
-				<td>10000</td>
-				<td>阿斯顿的</td>
-				<td>三个哥哥</td>
-				<td>哥哥</td>
-				<td>搜索</td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>q</td>
-				<td>asdasdasdasdasdasd asdasdasdasd asdasd asdadasda sdas d as as dasd as a dad</td>
-				<td>aadasdasdasasdasdasdasdas</td>
-				<td>123465.00</td>
-				<td>10000</td>
-				<td>阿斯顿的</td>
-				<td>三个哥哥</td>
-				<td>哥哥</td>
-				<td>搜索</td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>q</td>
-				<td>asdasdasdasdasdasd asdasdasdasd asdasd asdadasda sdas d as as dasd as a dad</td>
-				<td>aadasdasdasasdasdasdasdas</td>
-				<td>123465.00</td>
-				<td>10000</td>
-				<td>阿斯顿的</td>
-				<td>三个哥哥</td>
-				<td>哥哥</td>
-				<td>搜索</td>
-			</tr>		
-				
-		</tbody>
-	</table>
+	<div class="pagechange">
+		<ul>
+			<li>&lt;&lt;</li>
+			<li>&lt;</li>
+			<li class="bold">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>&gt;</li>
+			<li>&gt;&gt;</li>
+		</ul>
+	</div>
+	<div class="addgood">
+		<div  class="ag_title">新增产品</div>
+		<form action="#" method="post">
+			<ul>
+				<li><label for="name">产品名称</label><input id="name" type="text" ></li>
+				<li><label for="description">产品小标题</label><input id="description" type="text"></li>
+				<li><label for="price">价格</label><input id="price" type="text"></li>
+				<li><label for="number">库存</label><input id="number" type="text"></li>
+			</ul>
+			<div class="submit_out"><input class="submit" type="submit" value="提交"></div>
+		</form>
+	</div>
 </body>
 </html>
