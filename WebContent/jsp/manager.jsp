@@ -82,11 +82,11 @@
 		<ul>
 			<li>&lt;&lt;</li>
 			<li>&lt;</li>
-			<li class="bold">1</li>
-			<li>2</li>
-			<li>3</li>
-			<li>4</li>
-			<li>5</li>
+			<li><a href="#" class="bold">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
 			<li>&gt;</li>
 			<li>&gt;&gt;</li>
 		</ul>

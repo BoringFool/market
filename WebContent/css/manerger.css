@@ -6,6 +6,10 @@
 a {
 	text-decoration: none;
 }
+a:link,a:visited,a:hover,a:active{
+	color:#337ab7;
+}
+
 
 ul {
 	list-style: none;
@@ -76,7 +80,7 @@ td {
 	width: 289px;
 	overflow: hidden;
 	margin: 0px auto;
-	color: #337ab7;
+	color:#337ab7;
 }
 
 .pagechange ul li {
@@ -87,10 +91,11 @@ td {
 	height: 30px;
 	text-align: center;
 	line-height: 30px;
+	cursor: pointer;
 }
 
 .bold {
-	color: #000000;
+	color: #000000 !important;
 	font-weight: 800;
 }
 
