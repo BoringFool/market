@@ -13,8 +13,16 @@ $(document).ready(function(){
 		$(this).addClass("bold");
 	});
 	/*点击进行分页查询,都在同一个函数里面进行，可以方便统计当前页面位置*/
-	$(".pagechange ul li").eq(0).click(function(){});
-	$(".pagechange ul li").eq(1).click(function(){});
-	$(".pagechange ul li").eq(7).click(function(){});
-	$(".pagechange ul li").eq(8).click(function(){});
+	$(".pagechange ul li").eq(0).click(function(){
+		
+	});
+	$(".pagechange ul li").eq(1).click(function(){
+		
+	});
+	$(".pagechange ul li").eq(7).click(function(){
+		
+	});
+	$(".pagechange ul li").eq(8).click(function(){
+		
+	});
 });
