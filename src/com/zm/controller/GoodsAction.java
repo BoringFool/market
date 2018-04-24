@@ -1,11 +1,15 @@
 package com.zm.controller;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
-import org.hibernate.Query;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.zm.model.Goods;
 import com.zm.service.IGoodsService;
 
 @Controller
@@ -24,11 +28,10 @@ public class GoodsAction {
 	}
 	
 	@RequestMapping("query")
-	public String query(String num){
-		int a;
-		a=(Integer.parseInt(num)-1)*6;
-		String sql="select * from goods limit "+ a +",6";
+	public @ResponseBody List<Goods> query(@RequestBody Goods good){
+		long num=good.getId();
+		List<Goods> glist=goodsservice.limitq(num);
 		
-		return "aa";
+		return glist;
 	} 
 }

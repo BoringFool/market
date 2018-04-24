@@ -1,5 +1,7 @@
 package com.zm.service.impl;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
@@ -46,5 +48,10 @@ public class GoodsService implements IGoodsService {
 	public void delete(long l) {
 		goodsdao.delet(l);
 		
+	}
+
+	@Override
+	public List<Goods> limitq(long num) {
+		return goodsdao.limitquery(num);
 	}
 }
