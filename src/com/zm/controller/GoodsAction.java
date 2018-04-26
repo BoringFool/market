@@ -37,8 +37,8 @@ public class GoodsAction {
 		return glist;
 	} 
 	@RequestMapping("a")
-	public String a(@RequestBody Goods g){
-		goodsservice.save(g);
+	public String a(@RequestBody A g){
+		System.out.println(g.getA());
 		return "manager";
 	}
 	/*@RequestMapping("a")

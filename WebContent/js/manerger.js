@@ -38,10 +38,13 @@ $(document).ready(function(){
 				"Size" :"m",
 				"Store":"b",
 		};
+		var b={
+			"a":"a",	
+		};
 		$.ajax({
 			type:"post",
 			url:"/market/goods/a",
-			data:JSON.stringify(a),
+			data:JSON.stringify(b),
 			contentType:"application/json;charset=utf-8",
 			success:function(){
 				alert("ok");
