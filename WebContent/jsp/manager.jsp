@@ -103,5 +103,9 @@
 			<div class="submit_out"><input class="submit" type="submit" value="提交"></div>
 		</form>
 	</div>
+	
+	<div>
+		<button id="aaa">hah</button>
+	</div>
 </body>
 </html>

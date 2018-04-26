@@ -7,8 +7,11 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonObjectFormatVisitor;
+import com.zm.model.A;
 import com.zm.model.Goods;
 import com.zm.service.IGoodsService;
 
@@ -31,7 +34,16 @@ public class GoodsAction {
 	public @ResponseBody List<Goods> query(@RequestBody Goods good){
 		long num=good.getId();
 		List<Goods> glist=goodsservice.limitq(num);
-		
 		return glist;
 	} 
+	@RequestMapping("a")
+	public String a(@RequestBody Goods g){
+		goodsservice.save(g);
+		return "manager";
+	}
+	/*@RequestMapping("a")
+	public String a(@RequestParam("a") String a){
+		System.out.println(a);
+		return "manager";
+	}*/
 }

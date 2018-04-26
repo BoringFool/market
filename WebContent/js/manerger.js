@@ -25,4 +25,46 @@ $(document).ready(function(){
 	$(".pagechange ul li").eq(8).click(function(){
 		
 	});
+	
+	$("#aaa").click(function(){
+		
+		var a={
+				"Name":"电脑6",
+				"Brand": "dasd",
+				"Color": "black",
+				"Imgeurl" :"afdfd",
+				"Number" :"1l",
+				"Price" :"122l",
+				"Size" :"m",
+				"Store":"b",
+		};
+		$.ajax({
+			type:"post",
+			url:"/market/goods/a",
+			data:JSON.stringify(a),
+			contentType:"application/json;charset=utf-8",
+			success:function(){
+				alert("ok");
+			},
+			error:function(){
+				alert("wrong");
+			}
+		});
+		$.ajax({
+			type:"post",
+			url:"/market/goods/query",
+			data:JSON.stringify(a),
+			contenttype:"application/json;charset=utf-8",
+			datatype:"json",
+			success:function(data){
+				$.each(data, function(i,topic) {
+				    alert(topic);
+				    alert(topic.name);
+				});
+			},
+			error:function(){
+				alert("fault");
+			}
+		});
+	});
 });
