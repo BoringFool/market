@@ -29,17 +29,23 @@ $(document).ready(function(){
 	$("#aaa").click(function(){
 		
 		var a={
-				"Name":"电脑6",
-				"Brand": "dasd",
-				"Color": "black",
-				"Imgeurl" :"afdfd",
-				"Number" :"1l",
-				"Price" :"122l",
-				"Size" :"m",
-				"Store":"b",
+				"id":"1",
+				"name":"电脑6",
+				"brand": "dasd",
+				"color": "black",
+				"imgeurl" :"afdfd",
+				"number" :"1",
+				"price" :"122",
+				"size" :"m",
+				"store":"b",
 		};
 		var b={
-			"a":"a",	
+				
+				"a":"1",
+				
+		};
+		var c={
+				"c":"1"
 		};
 		$.ajax({
 			type:"post",
@@ -56,7 +62,7 @@ $(document).ready(function(){
 		$.ajax({
 			type:"post",
 			url:"/market/goods/query",
-			data:JSON.stringify(a),
+			data:JSON.stringify(c),
 			contenttype:"application/json;charset=utf-8",
 			datatype:"json",
 			success:function(data){
@@ -64,6 +70,7 @@ $(document).ready(function(){
 				    alert(topic);
 				    alert(topic.name);
 				});
+				alert(1);
 			},
 			error:function(){
 				alert("fault");
