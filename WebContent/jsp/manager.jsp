@@ -17,7 +17,7 @@
 <div class="nav_tree">
 	
 </div>
-	<div>
+	<div class="table-container">
 		<table class="table">
 			<thead>
 				<tr>
@@ -34,61 +34,20 @@
 				</tr>
 			</thead>
 			<!-- 一次查询5条 -->
-			<tbody>
-				<tr>
-					<td>1</td>
-					<td>q</td>
-					<td>asdasdasdasdasdasd asdasdasdasd asdasd asdadasda sdas d as
-						as dasd as a dad</td>
-					<td>aadasdasdasasdasdasdasdas</td>
-					<td>123465.00</td>
-					<td>10000</td>
-					<td>阿斯顿的</td>
-					<td>三个哥哥</td>
-					<td>哥哥</td>
-					<td>搜索</td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>q</td>
-					<td>asdasdasdasdasdasd asdasdasdasd asdasd asdadasda sdas d as
-						as dasd as a dad</td>
-					<td>aadasdasdasasdasdasdasdas</td>
-					<td>123465.00</td>
-					<td>10000</td>
-					<td>阿斯顿的</td>
-					<td>三个哥哥</td>
-					<td>哥哥</td>
-					<td>搜索</td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>q</td>
-					<td>asdasdasdasdasdasd asdasdasdasd asdasd asdadasda sdas d as
-						as dasd as a dad</td>
-					<td>aadasdasdasasdasdasdasdas</td>
-					<td>123465.00</td>
-					<td>10000</td>
-					<td>阿斯顿的</td>
-					<td>三个哥哥</td>
-					<td>哥哥</td>
-					<td>搜索</td>
-				</tr>
-
-			</tbody>
+			<tbody></tbody>
 		</table>
 	</div>
 	<div class="pagechange">
 		<ul>
-			<li>&lt;&lt;</li>
-			<li>&lt;</li>
+			<li class="change_li">首页</li>
+			<li class="change_li">上一页</li>
 			<li><a href="#" class="bold">1</a></li>
 			<li><a href="#">2</a></li>
 			<li><a href="#">3</a></li>
 			<li><a href="#">4</a></li>
 			<li><a href="#">5</a></li>
-			<li>&gt;</li>
-			<li>&gt;&gt;</li>
+			<li class="change_li">下一页</li>
+			<li class="change_li">尾页</li>
 		</ul>
 	</div>
 	<div class="addgood">
