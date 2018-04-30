@@ -25,11 +25,12 @@ $(document).ready(
 				$("td").attr({
 					"valign" : "top",
 					"align" : "left",
-					"height" : "60px",
+					"height" : "50px",
 					"background-color" : "black",
 					"word-wrap" : "break-word",
 					"word-break" : "break-all",
 				});
+				/*隔一个改变td背景色*/
 				for (var i = 0; i < $("tr").length; i++) {
 					if (i % 2 != 0) {
 						$("tr").eq(i).css("background-color", "#F6F6F6");
