@@ -38,14 +38,9 @@
 		</table>
 	</div>
 	<div class="pagechange">
-		<ul>
+		<ul class="page">
 			<li class="change_li">首页</li>
 			<li class="change_li">上一页</li>
-			<li><a href="#" class="bold">1</a></li>
-			<li><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">5</a></li>
 			<li class="change_li">下一页</li>
 			<li class="change_li">尾页</li>
 		</ul>
@@ -64,7 +59,11 @@
 	</div>
 	
 	<div>
-		<button id="aaa">hah</button>
+		<button class="aaa">hah</button>
+		<button class="aaa">hah</button>
+		<button class="aaa">hah</button>
+		<button class="aaa">hah</button>
+		<button class="aaa">hah</button>
 	</div>
 </body>
 </html>
