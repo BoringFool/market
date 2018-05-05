@@ -41,6 +41,10 @@
 		<ul class="page">
 			<li class="change_li">首页</li>
 			<li class="change_li">上一页</li>
+			<li class="differ_li">
+				<ul class="inner_ul">
+				</ul>
+			</li>
 			<li class="change_li">下一页</li>
 			<li class="change_li">尾页</li>
 		</ul>
@@ -65,5 +69,35 @@
 		<button class="aaa">hah</button>
 		<button class="aaa">hah</button>
 	</div>
+	
+				
+				<div style="width: 100px;height: 50px;border: 1px solid red;position: relative;overflow: hidden;">
+				 	<ul style="width: 200px;border: 1px solid blue;">
+					<li style="float: left;border: 1px solid black;">1</li>
+					<li style="float: left;border: 1px solid black;">2</li>
+					<li style="float: left;border: 1px solid black;">3</li>
+					<li style="float: left;border: 1px solid black;">4</li>
+					<li style="float: left;border: 1px solid black;">5</li>
+					<li style="float: left;border: 1px solid black;">5</li>
+					<li style="float: left;border: 1px solid black;">5</li>
+					<li style="float: left;border: 1px solid black;">5</li>
+					<li style="float: left;border: 1px solid black;">5</li>
+					<li style="float: left;border: 1px solid black;">5</li>
+					<li style="float: left;border: 1px solid black;">5</li>
+					<li style="float: left;border: 1px solid black;">5</li>
+					<li style="float: left;border: 1px solid black;">5</li>
+					<li style="float: left;border: 1px solid black;">5</li>
+					<li style="float: left;border: 1px solid black;">5</li>
+					<li style="float: left;border: 1px solid black;">5</li>
+					<li style="float: left;border: 1px solid black;">5</li>
+					<li style="float: left;border: 1px solid black;">5</li>
+					<li style="float: left;border: 1px solid black;">5</li>
+					<li style="float: left;border: 1px solid black;">5</li>
+					<li style="float: left;border: 1px solid black;">5</li>
+					<li style="float: left;border: 1px solid black;">5</li>
+					<li style="float: left;border: 1px solid black;">5</li>
+					<li style="float: left;border: 1px solid black;">5</li>
+				</ul>
+				</div>
 </body>
 </html>

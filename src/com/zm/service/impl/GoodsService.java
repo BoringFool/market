@@ -29,29 +29,35 @@ public class GoodsService implements IGoodsService {
 	@Override
 	public void save(Goods g) {
 		goodsdao.add(g);
-		
+
 	}
 
 	@Override
 	public Goods getById(long l) {
 		return goodsdao.getById(l);
-		
+
 	}
 
 	@Override
 	public void update(Goods g) {
 		goodsdao.update(g);
-		
+
 	}
 
 	@Override
 	public void delete(long l) {
 		goodsdao.delet(l);
-		
+
 	}
 
 	@Override
 	public List<Goods> limitq(long num) {
 		return goodsdao.limitquery(num);
+	}
+
+	@Override
+	public Long count() {
+
+		return goodsdao.countNum();
 	}
 }

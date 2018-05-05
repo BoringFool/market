@@ -78,23 +78,40 @@ table,th,td {
 
 .pagechange .page {
 	width: 463px;
+	
 	overflow: hidden;
 	margin: 0px auto;
 	color:#337ab7;
 }
 
-.pagechange .page li {
+.pagechange .page .change_li,.differ_li {
 	font-size: 15px;
 	float: left;
 	border: 1px solid #DDDDDD;
-	width: 37px;
+	width: 60px;
 	height: 30px;
 	text-align: center;
 	line-height: 30px;
 	cursor: pointer;
 }
-.change_li{
-	width: 60px !important;
+
+.differ_li{
+	position:relative;
+	overflow: hidden;
+	width: 190px;
+	border:none;
+	height: 32px;
+	
+}
+.inner_ul{
+	width: 10000000000000000000000px;
+}
+.inner_ul li {
+	float: left;
+	width: 37px;
+	margin-right:-1px;	
+	border: 1px solid #DDDDDD;
+	
 }
 
 .bold {

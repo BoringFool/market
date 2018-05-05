@@ -13,6 +13,9 @@ public interface IGoodsService {
 	public void update(Goods g);
 
 	public void delete(long l);
+
 	public List<Goods> limitq(long num);
+
+	public Long count();
 
 }

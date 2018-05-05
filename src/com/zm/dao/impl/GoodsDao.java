@@ -21,4 +21,11 @@ public class GoodsDao extends BaseDao<Goods> implements IGoodsDao {
 		return query.setFirstResult(first).setMaxResults(5).list();
 	}
 
+	@Override
+	public long countNum() {
+		String hql="SELECT COUNT(*) From Goods g";
+		Long count=(Long) getSession().createQuery(hql).iterate().next();
+		return count;
+	}
+
 }

@@ -1,16 +1,21 @@
 $(document).ready(
 		function() {
-			
-			
-			
+
 			/* limit_query()用 */
 			tongji = 1;
-			/* table样式 */
-			css_add();
+			
+			trig = false;
+			
+			count=count_num();
+			
+			add_li(6);
 			/* 页面首次自动调用查询后展示 */
 			ajax_q(tongji);
+
 			
-			
+			/* 去除重合的border边 */
+			$(".pagechange .page li").css("margin-right", "-1px");
+
 			/* table中各个td的固定width以及其他css样式 */
 			function css_add() {
 				$("th").eq(1).attr("width", "40px");
@@ -32,7 +37,7 @@ $(document).ready(
 					"word-wrap" : "break-word",
 					"word-break" : "break-all",
 				});
-				/*隔一个改变td背景色*/
+				/* 隔一个改变td背景色 */
 				for (var i = 0; i < $("tr").length; i++) {
 					if (i % 2 != 0) {
 						$("tr").eq(i).css("background-color", "#F6F6F6");
@@ -43,17 +48,19 @@ $(document).ready(
 			}
 			;
 
-			/* 去除重合的border边 */
-			$(".pagechange .page li").css("margin-right", "-1px");
-
-			/* 点击进行分页查询,都在同一个函数里面进行，可以方便统计当前页面位置 */
-			function limit_query(th,max_num) {
+			/*
+			 * 点击进行分页查询,都在同一个函数里面进行，可以方便统计当前页面位置 th $(this),max_num页数最大值
+			 */
+			function limit_query(th, max_num) {
 				/*
 				 * 点击改变字体color和weight
 				 * （“首页...”通过callback_limitq()来再次调用limit_query()来改变）
 				 */
-				$(".pagechange .page li a").removeClass("bold");
-				th.find("a").addClass("bold");
+
+				if (th.parent().attr("class") == "inner_ul") {
+					$(".inner_ul li").removeClass("bold");
+					th.addClass("bold");
+				}
 
 				var text = th.text();
 
@@ -93,15 +100,28 @@ $(document).ready(
 				ajax_q(tongji);
 			}
 			;
-			
-			
-			
+
 			/* 用来解决点击“首页上一页...”这四个个li的时候“li a”的css样式改变问题 */
 			function callback_limitq() {
-				var qumo = (tongji % 5) -1;
-				$(".pagechange .page li a").eq(qumo).trigger("click");
+				var qumo = tongji - 1;
+				$(".inner_ul li").eq(qumo).trigger("click");
 			}
 
+			function count_num(){
+				$.ajax({
+					type:"post",
+					url:"/market/goods/count",
+					async :false, //这里如果不设置成同步的话，count的值取不到 
+					dataType:"json",
+					success:function(data){
+						count=data.a;
+						
+					},
+					error:function(){
+						alert("查询失败");
+					}
+				});
+			}
 			/* 分批查询 */
 			function ajax_q(num) {
 				$("tbody").empty();
@@ -119,16 +139,21 @@ $(document).ready(
 							show(topic);
 						});
 						css_add();
+						/*页数1样式改变*/
+						if (trig == false) {
+							$(".inner_ul li").eq(0).trigger("click");
+							trig = true;
+						}
+
 					},
 					error : function() {
 						alert("fault");
 					}
 				});
 
-				
 			}
 
-			/*tbody中td的模版*/			 
+			/* tbody中td的模版 */
 			function show(data) {
 				var content = "<tr>" + "<td>" + data.id + "</td>" + "<td>"
 						+ data.imgeurl + "</td>" + "<td>" + data.name + "</td>"
@@ -140,41 +165,84 @@ $(document).ready(
 				$("tbody").append(content);
 			}
 			;
-			
-			
-			/*还需要前后移li位置，下页会隔一个的问题，上一页尾页不触发问题*/
-			li_change(6);
-			function li_change(pagenum){
-				var a="test";
-				if(pagenum<=5){
-					for(var i=1;i<=pagenum;i++){
-						$(".pagechange .page li").eq(i).after("<li><a href=\"#\">"+i+"</a></li>");
-					}
-					$(".pagechange .page li a").eq(0).addClass("bold");
-					/* 去除重合的border边 */
-					$(".pagechange .page li").css("margin-right", "-1px");
-					/*ul的宽度调整*/
-					var wd=350+(pagenum*17);
-					$(".pagechange .page").css("width", wd+"px");
-				}else if(pagenum>5){
-					var a=pagenum-5;
-					for(var i=1+a;i<=pagenum;i++){
-						$(".pagechange .page li").eq(i-a).after("<li><a href=\"#\">"+i+"</a></li>");
-					}
-					/* 去除重合的border边 */
-					$(".pagechange .page li").css("margin-right", "-1px");
-					$(".pagechange .page").css("width", "463px");
+
+			/*
+			 * 这一部分本来是准备点击触发，但是出了很多问题，感觉很复杂，就换成了另外一种方式来实现。
+			 * 
+			 * 
+			 * 
+			 * 
+			 * 还需要前后移li位置，下页会隔一个的问题，上一页尾页不触发问题 li_change(5); function
+			 * li_change(pagenum){ var a="test"; if(pagenum<=5){ for(var i=1;i<=pagenum;i++){
+			 * $(".pagechange .page li").eq(i).after("<li><a href=\"#\">"+i+"</a></li>"); }
+			 * $(".pagechange .page li a").eq(0).addClass("bold"); 去除重合的border边
+			 * $(".pagechange .page li").css("margin-right", "-1px"); ul的宽度调整
+			 * var wd=350+(pagenum*17); $(".pagechange .page").css("width",
+			 * wd+"px"); }else if(pagenum>5){ var a=pagenum-5; for(var i=1+a;i<=pagenum;i++){
+			 * $(".pagechange .page li").eq(i-a).after("<li><a
+			 * href=\"#\">"+i+"</a></li>"); } 去除重合的border边 $(".pagechange
+			 * .page li").css("margin-right", "-1px"); $(".pagechange
+			 * .page").css("width", "463px"); }
+			 * 
+			 * $(".pagechange .page li").on("click",function(){ var th=$(this);
+			 * limit_query(th,pagenum); }); }
+			 */
+
+			/*用来添加底部页数li*/
+			function add_li(cunt) {
+				if(cunt<5){
+					var d_value=190-38*(5-cunt);
+					$(".differ_li").css("width",d_value+"px");
 				}
-				
-				$(".pagechange .page li").on("click",function(){
-					var th=$(this);
-					limit_query(th,pagenum);
-				});
+				for (var i = 1; i <= cunt; i++) {
+					$(".inner_ul").append("<li>" + i + "</li>");
+				}
 			}
-			
-			$(".aaa").click(function(){
-				
+			/* 第一层ul外的前后4个li绑定事件 */
+			$(".change_li").click(function() {
+				var th = $(this);
+				limit_query(th, count);
 			});
-			
-			
+			/* ul内的ul事件绑定 */
+			$(".inner_ul li").click(function() {
+				var text = $(this).text();
+				var th = $(this);
+				panduan(text, count);
+				limit_query(th, count);
+			});
+
+			/* 判断是否需要移动ul */
+			function panduan(text, max) {
+				if ((text - 3) >= 1) {
+					/*判断是否到达最后5页*/
+					if ((max - text) <= 1) {
+						if ((max - text) == 1) {
+							var a = text - 4;
+							move_li(a);
+							return;
+						} else if ((max - text) == 0) {
+							var a = text - 5;
+							move_li(a);
+							return;
+						}
+						{
+							return;
+						}
+					} else {
+						var a = text - 3;
+						move_li(a);
+					}
+				} else {
+					move_li(0);
+				}
+			}
+
+			/*li移动渐变动画*/
+			function move_li(times) {
+				var t = times * -38;
+				$(".inner_ul").stop(true, true).animate({
+					"margin-left" : t + "px"
+				}, 250);
+			}
+
 		});

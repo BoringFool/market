@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.zm.model.C;
 import com.zm.model.Goods;
 import com.zm.service.IGoodsService;
 
@@ -34,4 +35,13 @@ public class GoodsAction {
 		return glist;
 	}
 
+	@RequestMapping("count")
+	@ResponseBody
+	public C count() {
+		Long count=goodsservice.count();
+		C c=new C();
+		c.setA(count);
+		return c;
+		
+	}
 }
