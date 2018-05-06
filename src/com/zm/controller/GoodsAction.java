@@ -44,4 +44,15 @@ public class GoodsAction {
 		return c;
 		
 	}
+	@RequestMapping("add")
+	@ResponseBody
+	public Goods add(@RequestBody Goods c) {
+
+		goodsservice.save(c);
+		Goods g =c;
+		return g;
+		
+		 
+		
+	}
 }

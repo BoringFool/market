@@ -3,14 +3,15 @@ $(document).ready(
 
 			/* limit_query()用 */
 			tongji = 1;
-			
+			/*第一次加载给第一个li通过出发点击添加css样式*/
 			trig = false;
-			
+			/*总页数*/
 			count=1;
+			/*获取总页数*/
 			count_num();
+			/*页面首次加载，获取并添加页面li*/
 			add_li(count);
-			alert(count);
-			/* 页面首次自动调用查询后展示 */
+			/* 页面首次自动调用查询后展示td */
 			ajax_q(tongji);
 
 			
@@ -195,13 +196,16 @@ $(document).ready(
 
 			/*用来添加底部页数li*/
 			function add_li(cunt) {
-				if(cunt<5){
-					var d_value=190-38*(5-cunt);
-					$(".differ_li").css("width",d_value+"px");
-				}
 				if(cunt==0){
 					cunt=1;
 				}
+				if(cunt<5){
+					var d_value=190-38*(5-cunt);
+					var d_va=434-38*(5-cunt);
+					$(".differ_li").css("width",d_value+"px");
+					$(".pagechange .page").css("width",d_va+"px");
+				}
+				
 				for (var i = 1; i <= cunt; i++) {
 					$(".inner_ul").append("<li>" + i + "</li>");
 				}
@@ -257,5 +261,66 @@ $(document).ready(
 					"margin-left" : t + "px"
 				}, 250);
 			}
+		
+			
+			
+			/*判断是否为空，空格，null，undefined*/
+			function ifnull(str){
+				var regu = "^[ ]+$";
+				var re = new RegExp(regu);
+				
+				var bool=re.test(str);
+				if(typeof str == "undefined" || str == null || str == ""||bool==true){
+					return true;
+				}
+				return false;
+			}
+			/*判断是否为数字*/
+			function ifnum(num){
+				if(isNaN(num)){
+					return true;
+				}else{
+					return false;
+				}
+			}
+			
+			/*添加商品*/
+			$("#submit").click(function(){
+				var number=$("#number").val();
+				var price=$("#price").val();
+				var description=$("#description").val();
+				var name=$("#name").val();
+				
+				if(ifnull(number)||ifnull(price)||ifnum(number)||ifnum(price)||ifnull(description)||ifnull(name)){
+					alert("不可为空！价格和库存必须为数字！");
+					return;
+				}
+				
+				var form={
+						"name":name,
+						"description":description,
+						"price":price,
+						"number":number,
+				};
+				$.ajax({
+					type:"post",
+					url:"/market/goods/add",
+					data:JSON.stringify(form),
+					contentType:"application/json;charset=utf-8",
+					dataType:"json",
+					success:function(data){
+						alert("添加成功，物品ID号为"+data.id);
+					},
+					error:function(){
+						alert("添加失败，请重新添加！");
+					},
+				});
+				/*添加成功后清空input*/
+				$("#add_form li input").val("");
+				/*刷新展示到第一页*/
+				history.go(0);
+			});
+			
+
 
 		});

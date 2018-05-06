@@ -28,6 +28,15 @@ public class Goods {
 	private String color;
 	private String size;
 	private Long number;
+	private String description;
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
 	@ManyToMany(mappedBy="goods",fetch=FetchType.EAGER)//������ʾ��Course��һ��������ά��
 	private Set<OrderList> orderlists;
 

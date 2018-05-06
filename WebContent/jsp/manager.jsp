@@ -51,15 +51,13 @@
 	</div>
 	<div class="addgood">
 		<div  class="ag_title">新增产品</div>
-		<form action="#" method="post">
-			<ul>
+			<ul id="add_form">
 				<li><label for="name">产品名称</label><input id="name" type="text" ></li>
 				<li><label for="description">产品小标题</label><input id="description" type="text"></li>
 				<li><label for="price">价格</label><input id="price" type="text"></li>
 				<li><label for="number">库存</label><input id="number" type="text"></li>
 			</ul>
-			<div class="submit_out"><input class="submit" type="submit" value="提交"></div>
-		</form>
+			<div class="submit_out"><input id="submit" class="submit" type="button" value="提交"></div>
 	</div>
 	
 	<div>
@@ -71,33 +69,5 @@
 	</div>
 	
 				
-				<div style="width: 100px;height: 50px;border: 1px solid red;position: relative;overflow: hidden;">
-				 	<ul style="width: 200px;border: 1px solid blue;">
-					<li style="float: left;border: 1px solid black;">1</li>
-					<li style="float: left;border: 1px solid black;">2</li>
-					<li style="float: left;border: 1px solid black;">3</li>
-					<li style="float: left;border: 1px solid black;">4</li>
-					<li style="float: left;border: 1px solid black;">5</li>
-					<li style="float: left;border: 1px solid black;">5</li>
-					<li style="float: left;border: 1px solid black;">5</li>
-					<li style="float: left;border: 1px solid black;">5</li>
-					<li style="float: left;border: 1px solid black;">5</li>
-					<li style="float: left;border: 1px solid black;">5</li>
-					<li style="float: left;border: 1px solid black;">5</li>
-					<li style="float: left;border: 1px solid black;">5</li>
-					<li style="float: left;border: 1px solid black;">5</li>
-					<li style="float: left;border: 1px solid black;">5</li>
-					<li style="float: left;border: 1px solid black;">5</li>
-					<li style="float: left;border: 1px solid black;">5</li>
-					<li style="float: left;border: 1px solid black;">5</li>
-					<li style="float: left;border: 1px solid black;">5</li>
-					<li style="float: left;border: 1px solid black;">5</li>
-					<li style="float: left;border: 1px solid black;">5</li>
-					<li style="float: left;border: 1px solid black;">5</li>
-					<li style="float: left;border: 1px solid black;">5</li>
-					<li style="float: left;border: 1px solid black;">5</li>
-					<li style="float: left;border: 1px solid black;">5</li>
-				</ul>
-				</div>
 </body>
 </html>

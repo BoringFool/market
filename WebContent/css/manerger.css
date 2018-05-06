@@ -74,11 +74,11 @@ table,th,td {
 	width: 100%;
 	padding-top: 60px;
 	overflow: hidden;
+	
 }
 
 .pagechange .page {
-	width: 463px;
-	
+	width: 434px;
 	overflow: hidden;
 	margin: 0px auto;
 	color:#337ab7;
