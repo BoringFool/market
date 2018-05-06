@@ -6,9 +6,10 @@ $(document).ready(
 			
 			trig = false;
 			
-			count=count_num();
-			
-			add_li(6);
+			count=1;
+			count_num();
+			add_li(count);
+			alert(count);
 			/* 页面首次自动调用查询后展示 */
 			ajax_q(tongji);
 
@@ -57,6 +58,10 @@ $(document).ready(
 				 * （“首页...”通过callback_limitq()来再次调用limit_query()来改变）
 				 */
 
+				if(max_num==0){
+					max_num=1;
+				}
+				
 				if (th.parent().attr("class") == "inner_ul") {
 					$(".inner_ul li").removeClass("bold");
 					th.addClass("bold");
@@ -106,7 +111,7 @@ $(document).ready(
 				var qumo = tongji - 1;
 				$(".inner_ul li").eq(qumo).trigger("click");
 			}
-
+			
 			function count_num(){
 				$.ajax({
 					type:"post",
@@ -114,13 +119,13 @@ $(document).ready(
 					async :false, //这里如果不设置成同步的话，count的值取不到 
 					dataType:"json",
 					success:function(data){
-						count=data.a;
-						
+						count=Math.ceil((data.a)/5);
 					},
 					error:function(){
 						alert("查询失败");
 					}
 				});
+				return count;
 			}
 			/* 分批查询 */
 			function ajax_q(num) {
@@ -194,6 +199,9 @@ $(document).ready(
 					var d_value=190-38*(5-cunt);
 					$(".differ_li").css("width",d_value+"px");
 				}
+				if(cunt==0){
+					cunt=1;
+				}
 				for (var i = 1; i <= cunt; i++) {
 					$(".inner_ul").append("<li>" + i + "</li>");
 				}
@@ -213,6 +221,11 @@ $(document).ready(
 
 			/* 判断是否需要移动ul */
 			function panduan(text, max) {
+				if(max==0){
+					max=1;
+				}
+				
+				
 				if ((text - 3) >= 1) {
 					/*判断是否到达最后5页*/
 					if ((max - text) <= 1) {
