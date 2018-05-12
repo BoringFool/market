@@ -1,5 +1,11 @@
 $(document).ready(function(){
 
+	/*商品展示*/
+	show_goods();
+	
+	
+	
+	
 	var n=0;
 	
 	$(".nav_con li").each(function(i){
@@ -16,6 +22,8 @@ $(document).ready(function(){
 		$(this).css("display","none");
 	});
 	
+	
+	/*滚动首页ad*/
 	function turn(i){
 		if(i==0){
 			$(".turn").eq(3).animate({"z-index":"0","opacity":"0"},1000);
@@ -33,7 +41,7 @@ $(document).ready(function(){
 	var intv=setInterval(function(){
 		turn(n);
 		},3000);
-	
+	/*鼠标hover清除轮播效果，离开回复*/
 	$(".turn").hover(function(){
 		clearInterval(intv);
 	},function(){
@@ -42,6 +50,7 @@ $(document).ready(function(){
 			},3000);
 	});
 	
+	/*hover透明度调整*/
 	$(".imga,.goods_box").hover(function(){
 		$(this).addClass("ttt");
 	},function(){
@@ -62,6 +71,7 @@ $(document).ready(function(){
 	$().click(function(){chan();});*/
 	
 	
+	/*商标墙的鼠标hover显示*/
 	$(".a_hid").hover(function(){
 		$(this).find(".show_hidden").stop(true,true).fadeIn(100);
 	},function(){
@@ -73,5 +83,43 @@ $(document).ready(function(){
 			$(window).attr("location","#");
 		});
 	});
+	
+	
+	/*商品展示*/
+	function show_goods(){
+		$.ajax({
+			type:"post",
+			url:"",
+			data:"",
+			contentType:"application/json;charset=utf-8",
+			dataType:"json",
+			success:function(data){
+				$.each(data,function(i,good){
+					md(good);
+				});
+			},
+			error:function(){
+				alert("查询失败！");
+			}
+			
+		});
+		
+		function md(data){
+			var model="<div class=\"goods_box\">"
+				+"<img alt="" src=\""+data.url+"\">"
+				+"<div class=\"content_box\">"
+				+"<p>"+data.description+"</p>"
+				+"<span>"+data.price+"</span>"
+				+"</div>"
+				+"</div>";
+			
+			$(".goods").append(model);
+		};
+		
+	};
+	
+	
+	
+	
 	
 });
