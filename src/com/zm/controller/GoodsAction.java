@@ -31,7 +31,14 @@ public class GoodsAction {
 	@RequestMapping("query")
 	@ResponseBody
 	public List<Goods> query(@RequestBody Goods c) {
-		List<Goods> glist = goodsservice.limitq(c.getId());
+		List<Goods> glist = goodsservice.limitq(c.getId(),5);
+		return glist;
+	}
+	
+	@RequestMapping("showquery")
+	@ResponseBody
+	public List<Goods> showquery(@RequestBody C c) {
+		List<Goods> glist = goodsservice.limitq(c.getA(),c.getB());
 		return glist;
 	}
 

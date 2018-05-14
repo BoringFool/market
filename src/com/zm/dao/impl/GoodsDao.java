@@ -13,12 +13,12 @@ public class GoodsDao extends BaseDao<Goods> implements IGoodsDao {
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Goods> limitquery(long num) {
+	public List<Goods> limitquery(long num,int length) {
 		
 		String hql="From Goods g";
 		int first=(int) ((num-1)*5);
 		Query query=getSession().createQuery(hql);
-		return query.setFirstResult(first).setMaxResults(5).list();
+		return query.setFirstResult(first).setMaxResults(length).list();
 	}
 
 	@Override

@@ -51,8 +51,8 @@ public class GoodsService implements IGoodsService {
 	}
 
 	@Override
-	public List<Goods> limitq(long num) {
-		return goodsdao.limitquery(num);
+	public List<Goods> limitq(long num,int length) {
+		return goodsdao.limitquery(num,length);
 	}
 
 	@Override
