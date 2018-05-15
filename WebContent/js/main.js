@@ -97,7 +97,7 @@ $(document).ready(
 				});
 			});
 
-			
+			/*model*/
 			function md(data) {
 				var model = "<div class=\"goods_box\">" 
 						+ "<img alt= src=\""+data.url+"\">" 
