@@ -5,6 +5,11 @@ $(document).ready(
 
 			/* 商品展示 */
 			
+			$(window).scroll(function(){
+				if ($(document).scrollTop() + $(window).height() == $(document).height()) {
+		        	   show_goods();
+		           }
+			});
 			
 			
 			var n = 0;
@@ -140,9 +145,7 @@ $(document).ready(
 			function rectification(){
 				
 			       $window.scroll(function(){
-			           if ($(document).scrollTop() + $(window).height() == $(document).height()) {
-			        	   show_goods();
-			           }
+			           
 			       });
 			}
 		});
