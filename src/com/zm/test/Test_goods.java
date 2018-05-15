@@ -23,7 +23,7 @@ public class Test_goods {
 		g.setPrice(4000.00);
 		g.setSize("M");
 		g.setStore("LuLuStore");
-		goodsservice.save(g);
-		System.out.println(g);
+		String mess=goodsservice.save(g);
+		System.out.println(mess);
 	}
 }

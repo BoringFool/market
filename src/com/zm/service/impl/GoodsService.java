@@ -27,8 +27,15 @@ public class GoodsService implements IGoodsService {
 	}
 
 	@Override
-	public void save(Goods g) {
-		goodsdao.add(g);
+	public String save(Goods g) {
+		Goods newg=goodsdao.getByName(g.getName());
+		if(newg!=null){
+			goodsdao.add(g);
+			return "保存成功！";
+		}else{
+			return "商品已经存在！";
+		}
+		
 
 	}
 
@@ -51,12 +58,12 @@ public class GoodsService implements IGoodsService {
 	}
 
 	@Override
-	public List<Goods> limitq(long num,int length) {
+	public List<Goods> limitq(int num,int length) {
 		return goodsdao.limitquery(num,length);
 	}
 
 	@Override
-	public Long count() {
+	public long count() {
 
 		return goodsdao.countNum();
 	}

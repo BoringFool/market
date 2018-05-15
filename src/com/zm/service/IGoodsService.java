@@ -6,7 +6,7 @@ import com.zm.model.Goods;
 
 public interface IGoodsService {
 
-	public void save(Goods g);
+	public String save(Goods g);
 
 	public Goods getById(long l);
 
@@ -14,8 +14,8 @@ public interface IGoodsService {
 
 	public void delete(long l);
 
-	public List<Goods> limitq(long num,int length);
+	public List<Goods> limitq(int num,int length);
 
-	public Long count();
+	public long count();
 
 }

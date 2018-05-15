@@ -2,7 +2,7 @@ package com.zm.model;
 
 public class C {
 
-	private Long a;
+	private int a;
 	private int b;
 
 	public int getB() {
@@ -13,11 +13,11 @@ public class C {
 		this.b = b;
 	}
 
-	public Long getA() {
+	public int getA() {
 		return a;
 	}
 
-	public void setA(long a) {
+	public void setA(int a) {
 		this.a = a;
 	}
 }

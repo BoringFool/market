@@ -13,19 +13,29 @@ public class GoodsDao extends BaseDao<Goods> implements IGoodsDao {
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Goods> limitquery(long num,int length) {
+	public List<Goods> limitquery(int num,int length) {
 		
 		String hql="From Goods g";
-		int first=(int) ((num-1)*5);
 		Query query=getSession().createQuery(hql);
-		return query.setFirstResult(first).setMaxResults(length).list();
+		return query.setFirstResult(num).setMaxResults(length).list();
 	}
 
 	@Override
 	public long countNum() {
 		String hql="SELECT COUNT(*) From Goods g";
-		Long count=(Long) getSession().createQuery(hql).iterate().next();
+		long count=(long) getSession().createQuery(hql).iterate().next();
 		return count;
+	}
+
+	@Override
+	public Goods getByName(String name) {
+		String hql = "FROM User as u WHERE u.name='" + name + "'";
+		Query q = getSession().createQuery(hql);
+		if (q.list().size() != 0) {
+			return (Goods) q.list().get(0);
+		} else {
+			return null;
+		}
 	}
 
 }

@@ -31,7 +31,8 @@ public class GoodsAction {
 	@RequestMapping("query")
 	@ResponseBody
 	public List<Goods> query(@RequestBody Goods c) {
-		List<Goods> glist = goodsservice.limitq(c.getId(),5);
+		int first=(int) ((c.getId()-1)*5);
+		List<Goods> glist = goodsservice.limitq(first,5);
 		return glist;
 	}
 	
@@ -45,9 +46,9 @@ public class GoodsAction {
 	@RequestMapping("count")
 	@ResponseBody
 	public C count() {
-		Long count=goodsservice.count();
+		long count=goodsservice.count();
 		C c=new C();
-		c.setA(count);
+		c.setA((int) count);
 		return c;
 		
 	}
