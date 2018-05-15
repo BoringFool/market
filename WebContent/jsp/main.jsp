@@ -813,77 +813,7 @@
 			</div>
 		</div>
 
-		<div class="goods_box">
-			<img alt="" src="../image/goods_pic.jpg">
-			<div class="content_box">
-				<p>雀巢莜麦黑米黑芝麻3合1牛奶燕麦片即食</p>
-				<span>（价格）</span>
-			</div>
-		</div>
 
-		<div class="goods_box">
-			<img alt="" src="../image/goods_pic.jpg">
-			<div class="content_box">
-				<p>雀巢莜麦黑米黑芝麻3合1牛奶燕麦片即食</p>
-				<span>（价格）</span>
-			</div>
-		</div>
-
-		<div class="goods_box">
-			<img alt="" src="../image/goods_pic.jpg">
-			<div class="content_box">
-				<p>雀巢莜麦黑米黑芝麻3合1牛奶燕麦片即食</p>
-				<span>（价格）</span>
-			</div>
-		</div>
-
-		<div class="goods_box">
-			<img alt="" src="../image/goods_pic.jpg">
-			<div class="content_box">
-				<p>雀巢莜麦黑米黑芝麻3合1牛奶燕麦片即食</p>
-				<span>（价格）</span>
-			</div>
-		</div>
-
-		<div class="goods_box">
-			<img alt="" src="../image/goods_pic.jpg">
-			<div class="content_box">
-				<p>雀巢莜麦黑米黑芝麻3合1牛奶燕麦片即食</p>
-				<span>（价格）</span>
-			</div>
-		</div>
-
-		<div class="goods_box">
-			<img alt="" src="../image/goods_pic.jpg">
-			<div class="content_box">
-				<p>雀巢莜麦黑米黑芝麻3合1牛奶燕麦片即食</p>
-				<span>（价格）</span>
-			</div>
-		</div>
-
-		<div class="goods_box">
-			<img alt="" src="../image/goods_pic.jpg">
-			<div class="content_box">
-				<p>雀巢莜麦黑米黑芝麻3合1牛奶燕麦片即食</p>
-				<span>（价格）</span>
-			</div>
-		</div>
-
-		<div class="goods_box">
-			<img alt="" src="../image/goods_pic.jpg">
-			<div class="content_box">
-				<p>雀巢莜麦黑米黑芝麻3合1牛奶燕麦片即食</p>
-				<span>（价格）</span>
-			</div>
-		</div>
-
-		<div class="goods_box">
-			<img alt="" src="../image/goods_pic.jpg">
-			<div class="content_box">
-				<p>雀巢莜麦黑米黑芝麻3合1牛奶燕麦片即食</p>
-				<span>（价格）</span>
-			</div>
-		</div>
 
 	</div>
 
