@@ -29,7 +29,7 @@ public class GoodsDao extends BaseDao<Goods> implements IGoodsDao {
 
 	@Override
 	public Goods getByName(String name) {
-		String hql = "FROM User as u WHERE u.name='" + name + "'";
+		String hql = "FROM Goods as g WHERE g.name='" + name + "'";
 		Query q = getSession().createQuery(hql);
 		if (q.list().size() != 0) {
 			return (Goods) q.list().get(0);

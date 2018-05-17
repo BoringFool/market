@@ -29,7 +29,7 @@ public class GoodsService implements IGoodsService {
 	@Override
 	public String save(Goods g) {
 		Goods newg=goodsdao.getByName(g.getName());
-		if(newg!=null){
+		if(newg==null){
 			goodsdao.add(g);
 			return "保存成功！";
 		}else{
