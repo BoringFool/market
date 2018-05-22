@@ -141,11 +141,5 @@ $(document).ready(
 
 			
 			
-			rectification();
-			function rectification(){
-				
-			       $window.scroll(function(){
-			           
-			       });
-			}
+			
 		});

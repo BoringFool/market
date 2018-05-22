@@ -33,13 +33,19 @@ public class GoodsAction {
 	public List<Goods> query(@RequestBody Goods c) {
 		int first=(int) ((c.getId()-1)*5);
 		List<Goods> glist = goodsservice.limitq(first,5);
+		System.out.println(glist);
 		return glist;
 	}
 	
 	@RequestMapping("showquery")
 	@ResponseBody
 	public List<Goods> showquery(@RequestBody C c) {
-		List<Goods> glist = goodsservice.limitq(c.getA(),c.getB());
+		int first=(int) (c.getA()*5)/5;
+		List<Goods> glist = goodsservice.limitq(first,5);
+		System.out.println(glist);
+		for(Goods g:glist){
+			 System.out.println(g.getId());
+		}
 		return glist;
 	}
 
