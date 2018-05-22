@@ -15,7 +15,7 @@ public class Test_goods {
 		ApplicationContext ctx=new ClassPathXmlApplicationContext("beans.xml");
 		IGoodsService goodsservice=(IGoodsService) ctx.getBean("goodsservice");
 		Goods g=new Goods();
-		g.setName("电脑6");
+		g.setName("电脑");
 		g.setBrand("Dell");
 		g.setColor("black");
 		g.setImgeurl("url:null");

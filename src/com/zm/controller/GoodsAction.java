@@ -40,8 +40,8 @@ public class GoodsAction {
 	@RequestMapping("showquery")
 	@ResponseBody
 	public List<Goods> showquery(@RequestBody C c) {
-		int first=(c.getA()-1)*50;
-		List<Goods> glist = goodsservice.limitq(first,c.getB());
+		int first=(int) (c.getA()*5)/5;
+		List<Goods> glist = goodsservice.limitq(first,5);
 		System.out.println(glist);
 		for(Goods g:glist){
 			 System.out.println(g.getId());
@@ -61,8 +61,9 @@ public class GoodsAction {
 	@RequestMapping("add")
 	@ResponseBody
 	public Goods add(@RequestBody Goods c) {
+
 		goodsservice.save(c);
-		Goods g =c;//save后c的状态改变，拥有了id
+		Goods g =c;
 		return g;
 		
 		 
