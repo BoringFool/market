@@ -60,12 +60,12 @@ public class GoodsAction {
 	}
 	@RequestMapping("add")
 	@ResponseBody
-	public Goods add(@RequestBody Goods c) {
+	public C add(@RequestBody Goods c) {
 		goodsservice.save(c);
-		Goods g =c;//save后c的状态改变，拥有了id
-		return g;
-		
-		 
-		
+		Goods g=goodsservice.getByName(c.getName());
+		 //c在save后c的状态改变，拥有了id
+		C m=new C();
+		m.setA((int) g.getId());
+		return m;
 	}
 }

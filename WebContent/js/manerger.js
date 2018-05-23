@@ -230,7 +230,7 @@ $(document).ready(
 				}
 				
 				
-				if ((text - 3) >= 1) {
+				if ((text - 3) > 1) {
 					/*判断是否到达最后5页*/
 					if ((max - text) <= 1) {
 						if ((max - text) == 1) {
@@ -306,21 +306,27 @@ $(document).ready(
 					type:"post",
 					url:"/market/goods/add",
 					data:JSON.stringify(form),
-					contentType:"application/json;charset=utf-8",
-					dataType:"json",
+					contentType : "application/json;charset=utf-8",
+					datatype : "json",
 					success:function(data){
-						alert("添加成功，物品ID号为"+data.id);
+						alert("添加成功，物品ID号为");
 					},
-					error:function(){
-						alert("添加失败，请重新添加！");
-					},
+					error:function(XMLHttpRequest, textStatus, errorThrown) {
+                        alert(XMLHttpRequest.status);
+                        alert(XMLHttpRequest.readyState);
+                        alert(textStatus);
+                    },
 				});
+				
+				cleanli();
+			});
+			
+			function cleanli(){
 				/*添加成功后清空input*/
 				$("#add_form li input").val("");
 				/*刷新展示到第一页*/
 				history.go(0);
-			});
-			
+			}
 
 
 		});

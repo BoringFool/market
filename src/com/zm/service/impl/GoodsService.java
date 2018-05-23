@@ -35,8 +35,6 @@ public class GoodsService implements IGoodsService {
 		}else{
 			return "商品已经存在！";
 		}
-		
-
 	}
 
 	@Override
@@ -64,7 +62,11 @@ public class GoodsService implements IGoodsService {
 
 	@Override
 	public long count() {
-
 		return goodsdao.countNum();
+	}
+	
+	
+	public Goods getByName(String name) {
+		return goodsdao.getByName(name);
 	}
 }

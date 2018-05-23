@@ -17,5 +17,7 @@ public interface IGoodsService {
 	public List<Goods> limitq(int num,int length);
 
 	public long count();
+	public Goods getByName(String name);
+
 
 }
