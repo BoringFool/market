@@ -68,4 +68,18 @@ public class GoodsAction {
 		m.setA((int) g.getId());
 		return m;
 	}
+	
+	
+	@RequestMapping("addg")
+	@ResponseBody
+	public C addt(@RequestBody Goods c) {
+		goodsservice.save(c);
+		Goods g=goodsservice.getByName(c.getName());
+		 //c在save后c的状态改变，拥有了id
+		C m=new C();
+		m.setA((int) g.getId());
+		
+		System.out.println(c.getName()+"a"+c.getId());
+		return m;
+	}
 }

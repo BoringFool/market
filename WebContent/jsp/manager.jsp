@@ -68,6 +68,10 @@
 		<button class="aaa">hah</button>
 	</div>
 	
-				
+			
+			<div>
+				<input type="text" id="thename">
+				<input type="button" value="test" id="test">			
+			</div>	
 </body>
 </html>
