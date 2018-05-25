@@ -31,20 +31,20 @@ public class GoodsAction {
 	@RequestMapping("query")
 	@ResponseBody
 	public List<Goods> query(@RequestBody Goods c) {
-		int first=(int) ((c.getId()-1)*5);
-		List<Goods> glist = goodsservice.limitq(first,5);
+		int first = (int) ((c.getId() - 1) * 5);
+		List<Goods> glist = goodsservice.limitq(first, 5);
 		System.out.println(glist);
 		return glist;
 	}
-	
+
 	@RequestMapping("showquery")
 	@ResponseBody
 	public List<Goods> showquery(@RequestBody C c) {
-		int first=(c.getA()-1)*50;
-		List<Goods> glist = goodsservice.limitq(first,c.getB());
+		int first = (c.getA() - 1) * 50;
+		List<Goods> glist = goodsservice.limitq(first, c.getB());
 		System.out.println(glist);
-		for(Goods g:glist){
-			 System.out.println(g.getId());
+		for (Goods g : glist) {
+			System.out.println(g.getId());
 		}
 		return glist;
 	}
@@ -52,34 +52,21 @@ public class GoodsAction {
 	@RequestMapping("count")
 	@ResponseBody
 	public C count() {
-		long count=goodsservice.count();
-		C c=new C();
+		long count = goodsservice.count();
+		C c = new C();
 		c.setA((int) count);
 		return c;
-		
+
 	}
-	@RequestMapping("add")
-	@ResponseBody
-	public C add(@RequestBody Goods c) {
-		goodsservice.save(c);
-		Goods g=goodsservice.getByName(c.getName());
-		 //c在save后c的状态改变，拥有了id
-		C m=new C();
-		m.setA((int) g.getId());
-		return m;
-	}
-	
-	
+
 	@RequestMapping("addg")
 	@ResponseBody
 	public C addt(@RequestBody Goods c) {
 		goodsservice.save(c);
-		Goods g=goodsservice.getByName(c.getName());
-		 //c在save后c的状态改变，拥有了id
-		C m=new C();
+		Goods g = goodsservice.getByName(c.getName());
+		// c在save后c的状态改变，拥有了id
+		C m = new C();
 		m.setA((int) g.getId());
-		
-		System.out.println(c.getName()+"a"+c.getId());
 		return m;
 	}
 }
