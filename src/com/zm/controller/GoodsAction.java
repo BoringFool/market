@@ -4,11 +4,15 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import org.json.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonObjectFormatVisitor;
+import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
 import com.zm.model.C;
 import com.zm.model.Goods;
 import com.zm.service.IGoodsService;
@@ -61,12 +65,32 @@ public class GoodsAction {
 
 	@RequestMapping("addg")
 	@ResponseBody
-	public C addt(@RequestBody Goods c) {
+	public C addg(@RequestBody Goods c) {
 		goodsservice.save(c);
 		Goods g = goodsservice.getByName(c.getName());
 		// c在save后c的状态改变，拥有了id
 		C m = new C();
 		m.setA((int) g.getId());
 		return m;
+	}
+	
+	@RequestMapping("addgattr")
+	@ResponseBody
+	public void addgattr(@RequestBody Goods g){
+		Goods updateg=goodsservice.getById(g.getId());
+		updateg.setBrand(g.getBrand());
+		updateg.setColor(g.getColor());
+		updateg.setSize(g.getSize());
+		updateg.setImgeurl(g.getImgeurl());
+		updateg.setStore(g.getStore());
+		goodsservice.update(updateg);
+		
+	}
+	@RequestMapping("jsontest")
+	public void testjson(@RequestBody Goods g){
+		String a=g.getImgeurl();
+		System.out.println(a);
+		JSONObject aa=new JSONObject(a);
+		Array arr=a
 	}
 }

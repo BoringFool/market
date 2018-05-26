@@ -339,4 +339,9 @@ $(document)
 						/* 刷新展示到第一页 */
 						history.go(0);
 					}
+					
+					var datatest=["asd",123,"asd"];
+					alert(datatest);
+					var jsonstring=JSON.stringify(datatest);
+					alert(jsonstring+"json");
 				});

@@ -806,9 +806,6 @@
 	<!-- goods模块 -->
 	<div class="goods">
 		
-
-
-
 	</div>
 
 </body>

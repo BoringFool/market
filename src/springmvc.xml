@@ -16,7 +16,7 @@
 			expression="org.springframework.web.bind.annotation.ControllerAdvice" />
 	</context:component-scan>
 
-	<!-- 静态资源 -->
+	<!-- 静态资源文件放在web-info下时，需要配置 -->
 	<mvc:default-servlet-handler />
 	<!-- <mvc:resources mapping="/images/**" location="/WEB-INF/images/" /> -->
 
