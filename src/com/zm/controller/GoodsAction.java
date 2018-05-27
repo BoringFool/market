@@ -4,17 +4,14 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
-import org.json.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonObjectFormatVisitor;
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
 import com.zm.model.C;
 import com.zm.model.Goods;
+import com.zm.myuntil.JsonStringToArray;
 import com.zm.service.IGoodsService;
 
 @Controller
@@ -90,7 +87,10 @@ public class GoodsAction {
 	public void testjson(@RequestBody Goods g){
 		String a=g.getImgeurl();
 		System.out.println(a);
-		JSONObject aa=new JSONObject(a);
-		Array arr=a
+		//取得数组第一个，因为会抛出异常，所以需要检查结果是否为null
+		String s=JsonStringToArray.jsonget(g.getImgeurl(), 0);
+		if(s==null){
+			System.out.println("json字符串有问题，请检查！");
+		}
 	}
 }

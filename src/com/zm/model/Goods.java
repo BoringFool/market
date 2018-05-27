@@ -20,6 +20,7 @@ public class Goods {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id", unique = false, nullable = false)
 	private long id;
+	//用户名字直接代替店铺名
 	private String store;
 	private String brand;
 	private String name;

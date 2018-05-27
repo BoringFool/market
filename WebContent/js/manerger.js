@@ -37,7 +37,7 @@ $(document)
 							"height" : "50px",
 							"background-color" : "black",
 							"word-wrap" : "break-word",
-							"word-break" : "break-all",
+							"word-break" : "break-all"
 						});
 						/* 隔一个改变td背景色 */
 						for (var i = 0; i < $("tr").length; i++) {
@@ -133,7 +133,7 @@ $(document)
 					function ajax_q(num) {
 						$("tbody").empty();
 						var g = {
-							"id" : num,
+							"id" : num
 						};
 						$.ajax({
 							type : "post",
@@ -307,7 +307,7 @@ $(document)
 							"name" : name,
 							"description" : description,
 							"price" : price,
-							"number" : number,
+							"number" : number
 						};
 
 						$.ajax({
@@ -343,5 +343,5 @@ $(document)
 					var datatest=["asd",123,"asd"];
 					alert(datatest);
 					var jsonstring=JSON.stringify(datatest);
-					alert(jsonstring+"json");
+					console.log(jsonstring);
 				});
