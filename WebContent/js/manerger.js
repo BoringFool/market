@@ -340,8 +340,33 @@ $(document)
 						history.go(0);
 					}
 					
-					var datatest=["asd",123,"asd"];
-					alert(datatest);
-					var jsonstring=JSON.stringify(datatest);
-					console.log(jsonstring);
+					testjsontojson();
+					function testjsontojson(){
+						var datatest=["asd","123","asd"];
+						console.log(datatest.toString());
+						console.log(datatest.toString().split(","));
+						
+						var data={
+								"name":datatest.toString()
+						};
+						$.ajax({
+							type:"post",
+							url:"/market/goods/stringtest",
+							data:JSON.stringify(data),
+							contentType:"application/json;charset=utf-8",
+							success:function(data){
+								console.log(data.name);
+								var arraystring=data.name.split(",");
+								console.log(arraystring);
+								
+							},
+							error:function(){
+								alert("fail");
+							}
+							
+						});
+					}
+					
+					
+					
 				});

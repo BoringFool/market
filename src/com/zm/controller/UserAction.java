@@ -58,6 +58,7 @@ public class UserAction {
 			if (u.getPassword().equals(user.getPassword())) {
 				tof = 1l;
 				req.getSession().setAttribute("logoin","ok");
+				req.getSession().setAttribute("username",u.getName());
 			} else {
 				tof = 0l;
 			}

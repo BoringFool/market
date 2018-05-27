@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.zm.model.C;
 import com.zm.model.Goods;
-import com.zm.myuntil.JsonStringToArray;
+import com.zm.myuntil.StringArray;
 import com.zm.service.IGoodsService;
 
 @Controller
@@ -70,27 +70,43 @@ public class GoodsAction {
 		m.setA((int) g.getId());
 		return m;
 	}
-	
+
 	@RequestMapping("addgattr")
 	@ResponseBody
-	public void addgattr(@RequestBody Goods g){
-		Goods updateg=goodsservice.getById(g.getId());
+	public void addgattr(@RequestBody Goods g) {
+		Goods updateg = goodsservice.getById(g.getId());
 		updateg.setBrand(g.getBrand());
 		updateg.setColor(g.getColor());
 		updateg.setSize(g.getSize());
 		updateg.setImgeurl(g.getImgeurl());
 		updateg.setStore(g.getStore());
 		goodsservice.update(updateg);
-		
+
 	}
+
 	@RequestMapping("jsontest")
-	public void testjson(@RequestBody Goods g){
-		String a=g.getImgeurl();
+	@ResponseBody
+	public String testjson(@RequestBody Goods g) {
+		String a = g.getImgeurl();
 		System.out.println(a);
-		//取得数组第一个，因为会抛出异常，所以需要检查结果是否为null
-		String s=JsonStringToArray.jsonget(g.getImgeurl(), 0);
-		if(s==null){
+		// 取得数组第一个，因为会抛出异常，所以需要检查结果是否为null
+		String s = StringArray.jsonget(g.getImgeurl(), 0);
+		if (s == null) {
 			System.out.println("json字符串有问题，请检查！");
 		}
+		return "1";
+	}
+
+	@RequestMapping("stringtest")
+	@ResponseBody
+	public Goods stringjson(@RequestBody Goods g) {
+		String b = g.getName();
+		System.out.println(b);
+		System.out.println(StringArray.stringToArray(b) + "\n输出的是数组\n");
+		System.out.println(StringArray.ArrayToString(StringArray.stringToArray(b)) + "\n输出的string\n");
+
+		Goods ngood=new Goods();
+		ngood.setName(StringArray.ArrayToString(StringArray.stringToArray(b)));
+		return ngood;
 	}
 }

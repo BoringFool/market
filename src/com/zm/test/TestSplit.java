@@ -1,8 +1,10 @@
 package com.zm.test;
 
+import java.util.Arrays;
+
 import org.junit.Test;
 
-import com.zm.myuntil.JsonStringToArray;
+import com.zm.myuntil.StringArray;
 
 public class TestSplit {
 
@@ -42,7 +44,7 @@ public class TestSplit {
 		/*实际使用*/
 		System.out.println("\nnew************");
 		String asa="[\"asd1\",123,\"asd\"]";
-		String[] asas=JsonStringToArray.turn(asa);
+		String[] asas=StringArray.turn(asa);
 		for(int i=0;i<asas.length;i++){
 			System.out.println(asas[i]);
 		}
@@ -52,10 +54,38 @@ public class TestSplit {
 		/*实际使用*/
 		System.out.println("\nnew************");
 		String jsonstring="[\"work\",123,\"asd\"]";
-		
-		
-		String st=JsonStringToArray.jsonget(jsonstring, 0);
+		String st=StringArray.jsonget(jsonstring, 0);
 		System.out.println(st);
+		
+		//
+		System.out.println("\nnew************");
+		String[] sarray=new String[3];
+		sarray[0]="work";
+		sarray[1]="123";
+		sarray[2]="asd";
+		String string=Arrays.toString(sarray);
+		
+		System.out.println(string);
+		String[] stringa=string.split(",");
+		for(int i=0;i<stringa.length;i++){
+			System.out.println(stringa[i]);
+		}
+		
+		//
+		System.out.println("\nnew************");
+		String[] stringarray=new String[3];
+		stringarray[0]="work";
+		stringarray[1]="123";
+		stringarray[2]="asd";
+		for(String it:stringarray){
+			System.out.println(it);
+		}
+		String lstring=StringArray.ArrayToString(stringarray);
+		System.out.println(lstring+"这是string");
+		String[] rstring=StringArray.stringToArray(lstring);
+		for(String it:rstring){
+			System.out.println(it);
+		}
 		
 	}
 }
