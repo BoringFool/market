@@ -24,7 +24,7 @@ public class TestInterceptor extends HandlerInterceptorAdapter {
 			return true;
 		} else {
 			String username = (String) request.getSession()
-					.getAttribute("user");
+					.getAttribute("username");
 			if (username == null) {
 				System.out.println("Interceptor：跳转到login页面！");
 				request.getRequestDispatcher("/page/index.jsp").forward(

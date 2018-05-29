@@ -68,7 +68,7 @@ $().ready(function() {
 					change();
 					setTimeout(function (){
 						$(location).attr("href","http://localhost:8080/market/jsp/login.jsp");
-					}, 5000);
+					}, 4000);
 
 				} else {
 					alert("用户已存在");
