@@ -63,6 +63,7 @@
 			<param-value>/jsp/login.jsp,/jsp/register.jsp,/jsp/main.jsp</param-value>
 		</init-param>
 	</filter>
+	
 	<!--过滤/market命名空间下所有controller -->
 	<filter-mapping>
 		<filter-name>SessionInvalidate</filter-name>
