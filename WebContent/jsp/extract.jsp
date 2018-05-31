@@ -49,7 +49,7 @@
 				<div class="single_show">
 					<!-- 在eclipse的浏览器里面，图片周围会有一圈显示出来的border，不知道什么原因,只能加个border：none去除 -->
 					<%request.setAttribute("url", "../image/shop_pic.jpg"); %>
-					<img alt="" src=${url} />
+					<img alt="" src= "${url}"/>
 				</div> <!-- 用jq的fadein（）和fadeout（）来显,可能因为该div的子元素有position属性，导致fadein和fadeout失效 -->
 				<!-- 天猫用两个span而不使用div，是因为a包含div（是inner包含block）是不行的，把a设置为block还是不行，要么也可以不用a嵌套，直接js绑定点击事件 -->
 				<div class="show_hidden">
