@@ -3,6 +3,8 @@ package com.zm.controller;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -73,24 +75,26 @@ public class GoodsAction {
 
 	@RequestMapping("addgattr")
 	@ResponseBody
-	public void addgattr(@RequestBody Goods g) {
+	public String addgattr(@RequestBody Goods g,HttpServletRequest req) {
+		System.out.println("aaa");
 		Goods updateg = goodsservice.getById(g.getId());
 		updateg.setBrand(g.getBrand());
 		updateg.setColor(g.getColor());
 		updateg.setSize(g.getSize());
-		updateg.setImgeurl(g.getImgeurl());
-		updateg.setStore(g.getStore());
+		updateg.setImageurl(g.getImageurl());
+		String st=(String) req.getSession().getAttribute("username");
+		updateg.setStore(st);
 		goodsservice.update(updateg);
-
+		return "1";
 	}
 
 	@RequestMapping("jsontest")
 	@ResponseBody
 	public String testjson(@RequestBody Goods g) {
-		String a = g.getImgeurl();
+		String a = g.getImageurl();
 		System.out.println(a);
 		// 取得数组第一个，因为会抛出异常，所以需要检查结果是否为null
-		String s = StringArray.jsonget(g.getImgeurl(), 0);
+		String s = StringArray.jsonget(g.getImageurl(), 0);
 		if (s == null) {
 			System.out.println("json字符串有问题，请检查！");
 		}

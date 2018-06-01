@@ -27,8 +27,19 @@ public class TestInterceptor extends HandlerInterceptorAdapter {
 					.getAttribute("username");
 			if (username == null) {
 				System.out.println("Interceptor：跳转到login页面！");
-				request.getRequestDispatcher("/page/index.jsp").forward(
+				request.getRequestDispatcher("/jsp/login.jsp").forward(
 						request, response);
+				//结果:http://localhost:8080/market/jsp/login.jsp
+				
+				
+				
+				/* 
+				 *  http://localhost:8080/market/user/in
+				 *	因为是拦截的controller，所以路径用绝对路径。用相对路径如下：
+				 *  request.getRequestDispatcher("login.jsp").forward(request, response);
+				 *  结果：http://localhost:8080/market/user/login.jsp
+				 *  回事错误的。
+				 * */
 				return false;
 			} else {
 				return true;

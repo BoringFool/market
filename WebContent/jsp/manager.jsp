@@ -62,10 +62,6 @@
 	
 	<div>
 		<button class="aaa">hah</button>
-		<button class="aaa">hah</button>
-		<button class="aaa">hah</button>
-		<button class="aaa">hah</button>
-		<button class="aaa">hah</button>
 	</div>
 	
 			

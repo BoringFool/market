@@ -367,6 +367,34 @@ $(document)
 						});
 					}
 					
+					$(".aaa").click(function(){
+						alert(1);
+						goodAdd();
+					});
+					function goodAdd(){
+						var good={
+							"id":"1",
+							"brand":"brand",
+							"color":"color",
+							"size":"size",
+							"imageurl":"imageurl",
+						};
+						$.ajax({
+							type:"post",
+							url:"/market/goods/addgattr",
+							data:JSON.stringify(good),
+							contentType:"application/json;charset=utf-8",
+							dataType:"json",
+							success:function(data){
+								alert(data);
+							},
+							error:function(){
+								alert("失败");
+							}
+							
+						});
+					}
+					
 					
 					
 				});

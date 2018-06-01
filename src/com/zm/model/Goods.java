@@ -24,7 +24,7 @@ public class Goods {
 	private String store;
 	private String brand;
 	private String name;
-	private String imgeurl;
+	private String imageurl;
 	private Double price;
 	private String color;
 	private String size;
@@ -105,12 +105,12 @@ public class Goods {
 		this.brand = brand;
 	}
 
-	public String getImgeurl() {
-		return imgeurl;
+	public String getImageurl() {
+		return imageurl;
 	}
 
-	public void setImgeurl(String imgeurl) {
-		this.imgeurl = imgeurl;
+	public void setImageurl(String imageurl) {
+		this.imageurl = imageurl;
 	}
 
 	public Double getPrice() {
