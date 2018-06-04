@@ -18,7 +18,7 @@ public class Test_goods {
 		g.setName("电脑6");
 		g.setBrand("Dell");
 		g.setColor("black");
-		g.setImgeurl("url:null");
+		g.setImageurl("url:null");
 		g.setNumber(1l);
 		g.setPrice(4000.00);
 		g.setSize("M");

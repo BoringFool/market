@@ -10,13 +10,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<div class="nav">
-	
-</div>
+	<div class="nav"></div>
 
-<div class="nav_tree">
-	
-</div>
+	<div class="nav_tree"></div>
 	<div class="table-container">
 		<table class="table">
 			<thead>
@@ -50,24 +46,33 @@
 		</ul>
 	</div>
 	<div class="addgood">
-		<div  class="ag_title">新增产品</div>
-			<ul id="add_form">
-				<li><label for="name">产品名称</label><input id="name" type="text" ></li>
-				<li><label for="description">产品小标题</label><input id="description" type="text"></li>
-				<li><label for="price">价格</label><input id="price" type="text"></li>
-				<li><label for="number">库存</label><input id="number" type="text"></li>
-			</ul>
-			<div class="submit_out"><input id="submit" class="submit" type="button" value="提交"></div>
+		<div class="ag_title">新增产品</div>
+		<ul id="add_form">
+			<li><label for="name">产品名称</label><input id="name" type="text"></li>
+			<li><label for="description">产品小标题</label><input
+				id="description" type="text"></li>
+			<li><label for="price">价格</label><input id="price" type="text"></li>
+			<li><label for="number">库存</label><input id="number" type="text"></li>
+		</ul>
+		<div class="submit_out">
+			<input id="submit" class="submit" type="button" value="提交">
+		</div>
 	</div>
-	
+
 	<div>
 		<button class="aaa">hah</button>
 	</div>
-	
-			
-			<div>
-				<input type="text" id="thename">
-				<input type="button" value="test" id="test">			
-			</div>	
+
+
+	<div>
+		<input type="text" id="thename"> <input type="button"
+			value="test" id="test">
+	</div>
+
+
+	<div>
+		<%=session.getAttribute("userNumber") %><br>
+		<span>${sessionScope.userNumber}</span>
+	</div>
 </body>
 </html>

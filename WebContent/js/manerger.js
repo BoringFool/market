@@ -395,6 +395,8 @@ $(document)
 						});
 					}
 					
-					
+					$(window).close(function(){
+						session.abandon();
+					});
 					
 				});
