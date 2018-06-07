@@ -144,6 +144,7 @@ $(document)
 							success : function(data) {
 								$.each(data, function(i, topic) {
 									show(topic);
+									set();
 								});
 								css_add();
 								/* 页数1样式改变 */
@@ -167,7 +168,7 @@ $(document)
 								+ data.name + "</td>" + "<td>"
 								+ data.description + "</td>" + "<td>"
 								+ data.price + "</td>" + "<td>" + data.number
-								+ "</td>" + "<td>" + "图片管理" + "</td>" + "<td>"
+								+ "</td>" + "<td>" + "图片管理" + "</td>" + "<td id=\"setAttr\">"
 								+ "设置属性" + "</td>" + "<td>" + "编辑" + "</td>"
 								+ "<td>" + "删除" + "</td>" + "</tr>";
 						$("tbody").append(content);
@@ -289,9 +290,9 @@ $(document)
 
 					/* 添加商品 */
 					$("#submit").click(function() {
-						test();
+						goodAdd();
 					});
-					function test() {
+					function goodAdd() {
 						var number = $("#number").val();
 						var price = $("#price").val();
 						var description = $("#description").val();
@@ -340,7 +341,10 @@ $(document)
 						history.go(0);
 					}
 					
-					testjsontojson();
+					/*
+					 * 测试前台数组string之间的转换
+					 * 和后台的转换
+					 * */
 					function testjsontojson(){
 						var datatest=["asd","123","asd"];
 						console.log(datatest.toString());
@@ -367,11 +371,13 @@ $(document)
 						});
 					}
 					
+					/*
+					 * 出问题测试使用的
+					 * */
 					$(".aaa").click(function(){
-						alert(1);
-						goodAdd();
+						test();
 					});
-					function goodAdd(){
+					function test(){
 						var good={
 							"id":"1",
 							"brand":"brand",
@@ -394,9 +400,21 @@ $(document)
 							
 						});
 					}
+					/*
+					 * 关闭页面注销session，非法关闭浏览器可能不执行
+					 * 					$(window).close(function(){
+					 *		session.abandon();
+					 *	});
+					 *  
+					 * */
 					
-					$(window).close(function(){
-						session.abandon();
-					});
-					
+					/*
+					 * 绑定   设置属性
+					 * */
+					function set(){
+						$("#setAttr").click(function(){
+							alert("11");
+							$(window).attr("location","http://localhost:8080/market/jsp/addAttr.jsp");
+						});
+					}
 				});
