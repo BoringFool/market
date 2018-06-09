@@ -18,7 +18,7 @@ $().ready(function() {
 				}else if(data==3){
 					alert("用户不存在！");
 				}else{
-					$(location).attr("href","http://localhost:8080/market/index.jsp");
+					$(location).attr("href","http://localhost:8080/market/jsp/main.jsp");
 				}	
 			},
 			error : function() {

@@ -413,7 +413,6 @@ $(document)
 					 * */
 					function set(){
 						$("#setAttr").click(function(){
-							alert("11");
 							$(window).attr("location","http://localhost:8080/market/jsp/addAttr.jsp");
 						});
 					}
