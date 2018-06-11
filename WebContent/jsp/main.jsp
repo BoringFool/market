@@ -8,6 +8,17 @@
 <link href="../css/main.css" rel="stylesheet" type="text/css">
 <script src="../js/jquery-min.js"></script>
 <script src="../js/main.js"></script>
+<script>
+function loginChange(){
+	var name="${sessionScope.usrname}";
+	
+	if(name!=null){
+		$(".top_half").eq(2).empty();
+		$(".top_half").eq(2).text(name);
+	}	
+}
+
+</script>
 </head>
 <body>
 	<!-- head -->
