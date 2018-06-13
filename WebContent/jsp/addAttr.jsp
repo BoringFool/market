@@ -18,5 +18,20 @@
 		<span>IMAGEURL :<input id="imageurl" type="text" /></span>
 		<span><button id="submit" class="submit">提交</button></span>
 	</div>
+	
+	
+	<div id="allAttr" class="allAttr">
+		<span>ID :<input id="id" type="text" readonly="readonly" value="1"/></span>
+		<span>STORE :<input id="store" type="text" readonly="readonly"/></span>
+		<span>BRAND :<input id="brand" type="text" /></span>
+		<span>NAME :<input id="name" type="text" /></span>
+		<span>IMAGEURL :<input id="imageurl" type="text" /></span>
+		<span>PRICE :<input id="price" type="text" /></span>
+		<span>COLOR :<input id="color" type="text" /></span>
+		<span>SIZE :<input id="size" type="text" /></span>
+		<span>NUMBER :<input id="number" type="text" /></span>
+		<span class="spSpan">DESCRIPTION :<input id="description" type="text" class="spInput"/></span>
+		<span><button id="submit" class="submit">提交</button></span>
+	</div>
 </body>
 </html>

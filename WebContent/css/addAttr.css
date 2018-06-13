@@ -16,18 +16,18 @@ body{
 	color: #333;
 }
 .attr{
-	width: 260px;
+	width: 270px;
 	height: 500px;
 	overflow: hidden;
-	
+	float:left;
 }
-.attr span{
+.attr span,.allAttr span{
 	float: left;
 	margin-left: 5px;
-	width: 250px;
+	width: 260px;
 	height: 30px;
 }
-.attr span input{
+.attr span input,.allAttr span input{
 	float: right;
 }
 .submit{
@@ -40,4 +40,18 @@ body{
 	outline: none;
 	color:white;
 	display: block;
+}
+.allAttr{
+	width: 300px;
+	height: 500px;
+	overflow: hidden;
+	float:left;
+	border: 1px solid red;
+	margin-left: 20px;
+}
+.spSpan{
+	height: 100px !important;
+}
+.spInput{
+	height: 90px !important;
 }

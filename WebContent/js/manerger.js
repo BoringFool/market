@@ -413,7 +413,7 @@ $(document)
 					 * */
 					function set(){
 						$("#setAttr").click(function(){
-							$(window).attr("location","http://localhost:8080/market/jsp/addAttr.jsp");
+							$(window).attr("location","http://localhost:8080/market/jsp/addAttr.jsp?div=attr&id=1");
 						});
 					}
 				});
