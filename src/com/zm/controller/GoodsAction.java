@@ -5,7 +5,6 @@ import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -64,7 +63,9 @@ public class GoodsAction {
 
 	@RequestMapping("addg")
 	@ResponseBody
-	public C addg(@RequestBody Goods c) {
+	public C addg(@RequestBody Goods c, HttpServletRequest req) {
+		String st = (String) req.getSession().getAttribute("username");
+		c.setStore(st);
 		goodsservice.save(c);
 		Goods g = goodsservice.getByName(c.getName());
 		// c在save后c的状态改变，拥有了id
@@ -75,18 +76,30 @@ public class GoodsAction {
 
 	@RequestMapping("addgattr")
 	@ResponseBody
-	public String addgattr(@RequestBody Goods g,HttpServletRequest req) {
-		System.out.println("aaa");
-		Goods updateg = goodsservice.getById(g.getId());
-		updateg.setBrand(g.getBrand());
-		updateg.setColor(g.getColor());
-		updateg.setSize(g.getSize());
-		updateg.setImageurl(g.getImageurl());
-		String st=(String) req.getSession().getAttribute("username");
-		updateg.setStore(st);
-		goodsservice.update(updateg);
-		return "1";
+	public String addgattr(@RequestBody Goods g) {
+		if (g.getBrand().contains("_")){
+			String fix=g.getBrand().substring(1);
+			g.setBrand(fix);
+			goodsservice.update(g);
+			return "1";
+		} else {
+			Goods updateg = goodsservice.getById(g.getId());
+			updateg.setBrand(g.getBrand());
+			updateg.setColor(g.getColor());
+			updateg.setSize(g.getSize());
+			updateg.setImageurl(g.getImageurl());
+			goodsservice.update(updateg);
+			return "1";
+		}
+
 	}
+	
+	@RequestMapping("getbyid")
+	@ResponseBody
+	public Goods  getById(@RequestBody Goods g){
+		return goodsservice.getById(g.getId());
+	}
+	
 
 	@RequestMapping("jsontest")
 	@ResponseBody
@@ -107,9 +120,10 @@ public class GoodsAction {
 		String b = g.getName();
 		System.out.println(b);
 		System.out.println(StringArray.stringToArray(b) + "\n输出的是数组\n");
-		System.out.println(StringArray.ArrayToString(StringArray.stringToArray(b)) + "\n输出的string\n");
+		System.out.println(StringArray.ArrayToString(StringArray
+				.stringToArray(b)) + "\n输出的string\n");
 
-		Goods ngood=new Goods();
+		Goods ngood = new Goods();
 		ngood.setName(StringArray.ArrayToString(StringArray.stringToArray(b)));
 		return ngood;
 	}

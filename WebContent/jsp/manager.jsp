@@ -7,7 +7,7 @@
 <link href="../css/manerger.css" rel="stylesheet" type="text/css">
 <script src="../js/jquery-min.js"></script>
 <script src="../js/manerger.js"></script>
-<title>Insert title here</title>
+<title>商品管理</title>
 </head>
 <body>
 	<div class="nav"></div>

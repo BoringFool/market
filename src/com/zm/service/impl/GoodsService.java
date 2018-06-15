@@ -69,4 +69,6 @@ public class GoodsService implements IGoodsService {
 	public Goods getByName(String name) {
 		return goodsdao.getByName(name);
 	}
+	
+	
 }

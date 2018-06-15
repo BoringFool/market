@@ -4,7 +4,7 @@ $(document)
 
 					/* limit_query()用 */
 					tongji = 1;
-					/* 第一次加载给第一个li通过出发点击添加css样式 */
+					/* 第一次加载给第一个li通过触发点击添加加粗效果css样式 */
 					trig = false;
 					/* 总页数 */
 					count = 1;
@@ -144,8 +144,9 @@ $(document)
 							success : function(data) {
 								$.each(data, function(i, topic) {
 									show(topic);
-									set();
+									
 								});
+								set();
 								css_add();
 								/* 页数1样式改变 */
 								if (trig == false) {
@@ -163,14 +164,15 @@ $(document)
 
 					/* tbody中td的模版 */
 					function show(data) {
-						var content = "<tr>" + "<td>" + data.id + "</td>"
-								+ "<td>" + data.imgeurl + "</td>" + "<td>"
+						var content = "<tr>" + "<td class=\"setid\">" + data.id + "</td>"
+								+ "<td>" + data.imageurl + "</td>" + "<td>"
 								+ data.name + "</td>" + "<td>"
 								+ data.description + "</td>" + "<td>"
 								+ data.price + "</td>" + "<td>" + data.number
-								+ "</td>" + "<td>" + "图片管理" + "</td>" + "<td id=\"setAttr\">"
-								+ "设置属性" + "</td>" + "<td>" + "编辑" + "</td>"
-								+ "<td>" + "删除" + "</td>" + "</tr>";
+								+ "</td>" + "<td>" + "图片管理" + "</td>"
+								+ "<td class=\"setAttr\">" + "设置属性" + "</td>"
+								+ "<td class=\"editor\">" + "编辑" + "</td>" + "<td>" + "删除"
+								+ "</td>" + "</tr>";
 						$("tbody").append(content);
 					}
 					;
@@ -319,8 +321,10 @@ $(document)
 							datatype : "json",
 							success : function(data) {
 								alert("添加成功，物品ID号为" + data.a);
-								/* 这个方法如果放在ajax外调用，会导致ajax后台动作成功，
-								 * 但是进入error方法。既数据能成功在后台保存成功，但是ajax调用失败 */
+								/*
+								 * 这个方法如果放在ajax外调用，会导致ajax后台动作成功，
+								 * 但是进入error方法。既数据能成功在后台保存成功，但是ajax调用失败
+								 */
 								cleanli();
 							},
 							error : function(XMLHttpRequest, textStatus,
@@ -332,88 +336,117 @@ $(document)
 						});
 
 					}
-					
-					/*提交成功后刷新页面*/
+
+					/* 提交成功后刷新页面 */
 					function cleanli() {
 						/* 添加成功后清空input */
 						$("#add_form li input").val("");
 						/* 刷新展示到第一页 */
 						history.go(0);
 					}
-					
+
 					/*
-					 * 测试前台数组string之间的转换
-					 * 和后台的转换
-					 * */
-					function testjsontojson(){
-						var datatest=["asd","123","asd"];
+					 * 测试前台数组string之间的转换 和后台的转换
+					 */
+					function testjsontojson() {
+						var datatest = [ "asd", "123", "asd" ];
 						console.log(datatest.toString());
 						console.log(datatest.toString().split(","));
-						
-						var data={
-								"name":datatest.toString()
+
+						var data = {
+							"name" : datatest.toString()
 						};
 						$.ajax({
-							type:"post",
-							url:"/market/goods/stringtest",
-							data:JSON.stringify(data),
-							contentType:"application/json;charset=utf-8",
-							success:function(data){
+							type : "post",
+							url : "/market/goods/stringtest",
+							data : JSON.stringify(data),
+							contentType : "application/json;charset=utf-8",
+							success : function(data) {
 								console.log(data.name);
-								var arraystring=data.name.split(",");
+								var arraystring = data.name.split(",");
 								console.log(arraystring);
-								
+
 							},
-							error:function(){
+							error : function() {
 								alert("fail");
 							}
-							
+
 						});
 					}
-					
+
 					/*
 					 * 出问题测试使用的
-					 * */
-					$(".aaa").click(function(){
+					 */
+					$(".aaa").click(function() {
 						test();
 					});
-					function test(){
-						var good={
-							"id":"1",
-							"brand":"brand",
-							"color":"color",
-							"size":"size",
-							"imageurl":"imageurl",
+					function test() {
+						var good = {
+							"id" : "1",
+							"brand" : "brand",
+							"color" : "color",
+							"size" : "size",
+							"imageurl" : "imageurl",
 						};
 						$.ajax({
-							type:"post",
-							url:"/market/goods/addgattr",
-							data:JSON.stringify(good),
-							contentType:"application/json;charset=utf-8",
-							dataType:"json",
-							success:function(data){
+							type : "post",
+							url : "/market/goods/addgattr",
+							data : JSON.stringify(good),
+							contentType : "application/json;charset=utf-8",
+							dataType : "json",
+							success : function(data) {
 								alert(data);
 							},
-							error:function(){
+							error : function() {
 								alert("失败");
 							}
-							
+
 						});
 					}
 					/*
-					 * 关闭页面注销session，非法关闭浏览器可能不执行
-					 * 					$(window).close(function(){
-					 *		session.abandon();
-					 *	});
-					 *  
-					 * */
+					 * 关闭页面注销session，非法关闭浏览器可能不执行 $(window).close(function(){
+					 * session.abandon(); });
+					 * 
+					 */
+
+					/*
+					 * 绑定 设置属性
+					 */
+					function set() {
+						$(".setAttr").click(function() {
+							var id=$(this).parent().children().first().text();
+							var adress="http://localhost:8080/market/jsp/addAttr.jsp?div=attr&id={0}";
+							$(window).attr("location",adress.placeholder(id));
+							});
+						
+						$(".editor").click(function(){
+							var id=$(this).parent().children().first().text();
+							var adress="http://localhost:8080/market/jsp/addAttr.jsp?div=allAttr&id={0}";
+							$(window).attr("location",adress.placeholder(id));
+						});
+					}
+					
+					
 					
 					/*
-					 * 绑定   设置属性
+					 * 给String添加一个方法，用来实现占位符
 					 * */
-					function set(){
-						$("#setAttr").click(function(){
-							$(window).attr("location","http://localhost:8080/market/jsp/addAttr.jsp?div=attr&id=1");
-						});
-					}
+					String.prototype.placeholder = function() {
+						if (arguments.length === 0) {
+							return this;
+						}
+						var param = arguments[0], str = this;
+						if (typeof (param) === 'object') {
+							for ( var key in param) {
+								str = str.replace(new RegExp("\\{" + key + "\\}", "g"), param[key]);
+							}
+							return str;
+						} else {
+							for (var i = 0; i < arguments.length; i++) {
+								str = str.replace(new RegExp("\\{" + i + "\\}", "g"), arguments[i]);
+							}
+							return str;
+						}
+					};
+
 				});

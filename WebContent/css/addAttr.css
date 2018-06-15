@@ -24,11 +24,14 @@ body{
 .attr span,.allAttr span{
 	float: left;
 	margin-left: 5px;
-	width: 260px;
+	width: 305px;
 	height: 30px;
 }
-.attr span input,.allAttr span input{
+.attr span input,.allAttr span input,.description{
 	float: right;
+	width:180px;
+	float: right;
+	font-size: 14px;
 }
 .submit{
 	width:80px;
@@ -42,7 +45,7 @@ body{
 	display: block;
 }
 .allAttr{
-	width: 300px;
+	width: 310px;
 	height: 500px;
 	overflow: hidden;
 	float:left;
@@ -52,6 +55,6 @@ body{
 .spSpan{
 	height: 100px !important;
 }
-.spInput{
+.description{
 	height: 90px !important;
 }
