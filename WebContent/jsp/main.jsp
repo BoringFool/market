@@ -4,20 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>展示页面</title>
 <link href="../css/main.css" rel="stylesheet" type="text/css">
 <script src="../js/jquery-min.js"></script>
 <script src="../js/main.js"></script>
 <script>
-function loginChange(){
-	var name="${sessionScope.usrname}";
-	
-	if(name!=null){
-		$(".top_half").eq(2).empty();
-		$(".top_half").eq(2).text(name);
-	}	
-}
-
+name="${sessionScope.username}";
 </script>
 </head>
 <body>
@@ -25,11 +17,13 @@ function loginChange(){
 	<div class="head">
 		<ul>
 			<li class="top_half">喵，欢迎来天猫</li>
-			<li class="top_half"><a href="login.jsp">登录</a></li>
+			<li class="top_half"><a href="login.jsp" id="loginchange">登陆</a></li>
 			<li class="top_half"><a href="register.jsp">免费注册</a></li>
 
 			<li class="bottom_half"><a href="#">我的订单</a></li>
 			<li class="bottom_half"><a href="#">购物车<span>0</span>件</a></li>
+			<li class="bottom_half"><a href="manager.jsp" target="_blank">后台管理</a></li>
+			
 		</ul>
 	</div>
 	<!-- search -->

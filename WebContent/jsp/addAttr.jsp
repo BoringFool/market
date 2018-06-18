@@ -16,7 +16,7 @@
 		<span>COLOR :<input id="color" type="text" /></span>
 		<span>SIZE :<input id="size" type="text" /></span>
 		<span>IMAGEURL :<input id="imageurl" type="text" /></span>
-		<span><button id="submit" class="submit">提交</button></span>
+		<span><button id="sub" class="submit">提交</button></span>
 	</div>
 	
 	

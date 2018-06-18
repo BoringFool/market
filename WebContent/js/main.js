@@ -2,11 +2,18 @@ $(document).ready(
 		function() {
 
 			var times = 1;
-
+			oneuse=true;
 			/* 商品展示 */
-			
+			//页面第一次查询
+			if(times===1){
+				show_goods();
+			}
+			/*
+			 * 如果不加入第二个判断，在抽风式刷新的情况下会
+			 * 出现两次重复查询
+			 * */
 			$(window).scroll(function(){
-				if ($(document).scrollTop() + $(window).height() == $(document).height()) {
+				if (($(document).scrollTop() + $(window).height() == $(document).height())&&times==2) {
 		        	   show_goods();
 		           }
 			});
@@ -100,7 +107,7 @@ $(document).ready(
 			/*model*/
 			function md(data) {
 				var model = "<div class=\"goods_box\">" 
-						+ "<img alt= src=\""+data.url+"\">" 
+						+ "<img alt=\"\" src=\""+data.imageurl+"\">" 
 						+ "<div class=\"content_box\">"
 						+ "<p>" + data.description + "</p>"
 						+ "<span>"+ data.price + "</span>" 
@@ -139,8 +146,25 @@ $(document).ready(
 
 			};
 
+			loginChange();
+			function loginChange(){
+				if(name!=""){
+					$("#loginchange").css("color","red");
+					$("#loginchange").text(name);
+					$(".bottom_half").eq(2).css("display","block");
+				}else{
+					$(".bottom_half").eq(2).css("display","none");
+				}
+			}
+			$("#loginchange").click(function(){
+				if(name!=""){
+					$("#loginchange").attr("href","");
+				}
+			});
 			
-			
-			
+			/*
+			 * 用来打断点进入查看jquery源码入口
+			 * */
+			console.log($());
 			
 		});

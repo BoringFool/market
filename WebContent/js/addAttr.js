@@ -28,7 +28,7 @@ $(document).ready(function() {
 	
 	
 	$("#submit").click(function() {
-		ajaxSub();returnData();
+		ajaxSub();
 	});
 	$(".submit").click(function() {
 		returnData();
@@ -65,7 +65,6 @@ $(document).ready(function() {
 	/*
 	 * allAttr
 	 * */
-	alert("in");
 	goCheck();
 	function goCheck(){
 		var data={

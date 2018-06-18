@@ -41,6 +41,9 @@ public class GoodsAction {
 
 	@RequestMapping("showquery")
 	@ResponseBody
+	/*
+	 * 缺少处理imageurl的方法，暂时只能使用一个图片地址的imageurl
+	 * */
 	public List<Goods> showquery(@RequestBody C c) {
 		int first = (c.getA() - 1) * 50;
 		List<Goods> glist = goodsservice.limitq(first, c.getB());
