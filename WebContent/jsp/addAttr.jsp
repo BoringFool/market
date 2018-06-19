@@ -31,7 +31,7 @@
 		<span>SIZE :<input class="size" type="text" /></span>
 		<span>NUMBER :<input class="number" type="text" /></span>
 		<span class="spSpan">DESCRIPTION :<textarea class="description" rows="5" cols="21"></textarea></span>
-		<span><button class="submit">提交</button></span>
+		<span><button id="allsub" class="submit">提交</button></span>
 	</div>
 </body>
 </html>

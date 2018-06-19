@@ -27,10 +27,10 @@ $(document).ready(function() {
 	}
 	
 	
-	$("#submit").click(function() {
+	$("#sub").click(function() {
 		ajaxSub();
 	});
-	$(".submit").click(function() {
+	$("#allsub").click(function() {
 		returnData();
 	});
 	/*
@@ -44,7 +44,6 @@ $(document).ready(function() {
 			color : $("#color").val(),
 			imageurl : $("#imageurl").val(),
 		};
-		
 		$.ajax({
 			type : "post",
 			url : "/market/goods/addgattr",
