@@ -109,8 +109,8 @@ $(document).ready(
 				var model = "<div class=\"goods_box\">" 
 						+ "<img alt=\"\" src=\""+data.imageurl+"\">" 
 						+ "<div class=\"content_box\">"
-						+ "<p>" + data.description + "</p>"
-						+ "<span>"+ data.price + "</span>" 
+						+ "<p>" + data.name + "</p>"
+						+ "<span>"+ data.price + "元"+"</span>" 
 						+ "</div>" + "</div>";
 
 				$(".goods").append(model);

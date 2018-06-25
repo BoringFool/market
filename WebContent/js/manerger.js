@@ -7,9 +7,9 @@ $(document)
 					/* 第一次加载给第一个li通过触发点击添加加粗效果css样式 */
 					trig = false;
 					/* 总页数 */
-					count = 1;
+					count = count_num();
 					/* 获取总页数 */
-					count_num();
+					
 					/* 页面首次加载，获取并添加页面li */
 					add_li(count);
 					/* 页面首次自动调用查询后展示td */
