@@ -377,9 +377,9 @@ $(document)
 					/*
 					 * 出问题测试使用的
 					 */
-					$(".aaa").click(function() {
+					/*$(".aaa").click(function() {
 						test();
-					});
+					});*/
 					function test() {
 						var good = {
 							"id" : "1",
@@ -449,4 +449,28 @@ $(document)
 						}
 					};
 
+					$(".aaa").click(function(){
+						alert(1);
+						del();
+					});
+					function del(){
+						var data={
+								"id":"1l",
+						};
+						$.ajax({
+							type:"post",
+							url:"/market/goods/delete",
+							data:JSON.stringify(data),
+							contentType:"application/json;charset=utf-8",
+							dataType:"json",
+							success:function(data){
+								alert(2);
+							},
+							erroro:function(){
+								
+							}
+						});
+						
+						
+					}
 				});

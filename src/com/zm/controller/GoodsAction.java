@@ -103,6 +103,14 @@ public class GoodsAction {
 		return goodsservice.getById(g.getId());
 	}
 	
+	
+	@RequestMapping("delete")
+	@ResponseBody
+	public String  delete(@RequestBody Goods g){
+		goodsservice.delete(g.getId());
+		return "1";
+	}
+	
 
 	@RequestMapping("jsontest")
 	@ResponseBody
