@@ -2,6 +2,9 @@ $(document)
 		.ready(
 				function() {
 
+					
+					
+					var good=new Goods();
 					/* limit_query()用 */
 					tongji = 1;
 					/* 第一次加载给第一个li通过触发点击添加加粗效果css样式 */
@@ -171,7 +174,7 @@ $(document)
 								+ data.price + "</td>" + "<td>" + data.number
 								+ "</td>" + "<td>" + "图片管理" + "</td>"
 								+ "<td class=\"setAttr\">" + "设置属性" + "</td>"
-								+ "<td class=\"editor\">" + "编辑" + "</td>" + "<td>" + "删除"
+								+ "<td class=\"editor\">" + "编辑" + "</td>" + "<td class=\"del\">" + "删除"
 								+ "</td>" + "</tr>";
 						$("tbody").append(content);
 					}
@@ -292,9 +295,9 @@ $(document)
 
 					/* 添加商品 */
 					$("#submit").click(function() {
-						goodAdd();
+						good.goodAdd();
 					});
-					function goodAdd() {
+					Goods.prototype.goodAdd=function () {
 						var number = $("#number").val();
 						var price = $("#price").val();
 						var description = $("#description").val();
@@ -334,8 +337,7 @@ $(document)
 								alert(textStatus);
 							},
 						});
-
-					}
+					};
 
 					/* 提交成功后刷新页面 */
 					function cleanli() {
@@ -424,6 +426,12 @@ $(document)
 							var adress="http://localhost:8080/market/jsp/addAttr.jsp?div=allAttr&id={0}";
 							$(window).attr("location",adress.placeholder(id));
 						});
+						
+						$(".del").click(function(){
+							var id=$(this).parent().children().first().text();
+							
+							good.del(id);
+						});
 					}
 					
 					
@@ -448,14 +456,13 @@ $(document)
 							return str;
 						}
 					};
-
-					$(".aaa").click(function(){
-						alert(1);
-						del();
-					});
-					function del(){
+					function Goods(){
+						
+					}
+					
+					Goods.prototype.del=function (id){
 						var data={
-								"id":"1l",
+								"id":id,
 						};
 						$.ajax({
 							type:"post",
@@ -464,13 +471,12 @@ $(document)
 							contentType:"application/json;charset=utf-8",
 							dataType:"json",
 							success:function(data){
-								alert(2);
+								history.go(0);
 							},
 							erroro:function(){
 								
 							}
 						});
 						
-						
-					}
+					};
 				});

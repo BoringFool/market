@@ -107,6 +107,7 @@ public class GoodsAction {
 	@RequestMapping("delete")
 	@ResponseBody
 	public String  delete(@RequestBody Goods g){
+		System.out.println("调用");
 		goodsservice.delete(g.getId());
 		return "1";
 	}
