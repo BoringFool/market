@@ -10,9 +10,21 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	
+	<div id="imageMana" class="imageMana">
+		<form action="<%=request.getContextPath() %>/goods/turn" method="post" name="fileUploadForm" enctype="multipart/form-data" >
+		<input type="file" name="docFile" id="docFile" class="image"/>
+		<span><button type="button" class="see" >浏览</button><input id="newfile" type="text" /></span>
+		<img class="img" alt="" src="">
+		<input type="submit" name="subm" class="subm" value="上传">
+		</form>
+	</div>
+	
+	
+	
+	
 	<div id="attr" class="attr">
-		<span>BRAND :<input id="brand" type="text" /></span>
+		<span>BRAND :<input id="branda" type="text" /></span>
 		<span>COLOR :<input id="color" type="text" /></span>
 		<span>SIZE :<input id="size" type="text" /></span>
 		<span>IMAGEURL :<input id="imageurl" type="text" /></span>

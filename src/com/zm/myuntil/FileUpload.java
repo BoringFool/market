@@ -1,81 +1,17 @@
-package com.zm.controller;
+package com.zm.myuntil;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.UUID;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-import com.zm.model.User;
-import com.zm.myuntil.FileUpload;
-import com.zm.service.IUserService;
+public class FileUpload {
 
-@Controller
-@RequestMapping("/user")
-public class UserAction {
-
-	@Resource
-	private IUserService userservice;
-
-	public IUserService getSuerservice() {
-		return userservice;
-	}
-
-	public void setSuerservice(IUserService suerservice) {
-		this.userservice = suerservice;
-	}
-
-	@RequestMapping("/register")
-	public @ResponseBody Long register(@RequestBody User u) {
-		User user = userservice.getByName(u.getName());
-		if (user == null) {
-			userservice.save(u);
-			return 1l;
-		} else {
-			return 0l;
-		}
-	}
-
-	/*
-	 * login判断
-	 */
-	@RequestMapping("/in")
-	public @ResponseBody
-	Long in(@RequestBody User u, HttpServletRequest req) {
-		Long tof;
-		User user = userservice.getByName(u.getName());
-		if (user == null) {
-			return tof = 3l;
-		} else {
-			if (u.getPassword().equals(user.getPassword())) {
-				tof = 1l;
-				req.getSession().setAttribute("logoin", "ok");
-				req.getSession().setAttribute("username", u.getName());
-			} else {
-				tof = 0l;
-			}
-			return tof;
-		}
-	}
-
-	// form在succ.jsp中
-	@RequestMapping("/upload")
-	public String a(HttpServletRequest req) {
-		FileUpload.picUpdate(req);
-		return "succ";
-
-	}
-	
-	
-	public void picUpdate(HttpServletRequest req){
+	public static void picUpdate(HttpServletRequest req){
 		// 获取支持文件上传的Request对象 MultipartHttpServletRequest
 				MultipartHttpServletRequest mtpreq = (MultipartHttpServletRequest) req;
 				// 通过 mtpreq 获取文件域中的文件，文件名是file元素的id
