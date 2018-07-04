@@ -68,8 +68,11 @@ public class UserAction {
 
 	// form在succ.jsp中
 	@RequestMapping("/upload")
-	public String a(HttpServletRequest req) {
-		FileUpload.picUpdate(req);
+	public String a(HttpServletRequest request) {
+		String a="docFile";
+		String b="image";
+		HttpServletRequest req=request;
+		FileUpload.picUpdate(a,b,req);
 		return "succ";
 
 	}

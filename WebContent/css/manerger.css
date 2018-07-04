@@ -189,3 +189,7 @@ table,th,td {
 	background-color: #3F8F3F;
 	border-color: #3F8F3F;
 }
+.showImg{
+	height: 50px;
+	width: :30px;
+}

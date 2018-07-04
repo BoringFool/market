@@ -26,9 +26,15 @@ $(document)
 							if (urlcutS_f != null && urlcutS_f[0] == "div"
 								&& urlcutS_f[1] == "attr") {
 								$(".allAttr").css("display", "none");
+								$(".imageMana").css("display", "none");
 							} else if (urlcutS_f != null && urlcutS_f[0] == "div"
 								&& urlcutS_f[1] == "allAttr") {
 								$(".attr").css("display", "none");
+								$(".imageMana").css("display", "none");
+							}else if (urlcutS_f != null && urlcutS_f[0] == "div"
+								&& urlcutS_f[1] == "imageMana") {
+								$(".attr").css("display", "none");
+								$(".allAttr").css("display", "none");
 							}
 							
 							if (urlcutS_s != null && urlcutS_s[0] == "id"
@@ -150,7 +156,20 @@ $(document)
 						$(".image").change(function(){
 							$("#newfile").val($(this).val());
 							$("img").attr("src",URL.createObjectURL($(this)[0].files[0]));
-						});
+							
+							
+							$("#hid").val(goodsid);
+						});	
 					};
+					
+					
+					
+					
+					$("#docFile").change(function(){
+						/*alert($("#docFile").val());
+						var file=$("#docFile")[0].files;
+						alert(file[0].name);
+						alert(file[0].size);*/
+					});
 
 				});

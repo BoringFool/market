@@ -11,11 +11,12 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 public class FileUpload {
 
-	public static void picUpdate(HttpServletRequest req){
+	public static String picUpdate(String a,String b,HttpServletRequest req){
 		// 获取支持文件上传的Request对象 MultipartHttpServletRequest
 				MultipartHttpServletRequest mtpreq = (MultipartHttpServletRequest) req;
 				// 通过 mtpreq 获取文件域中的文件，文件名是file元素的id
-				MultipartFile file = mtpreq.getFile("docFile");
+				
+				MultipartFile file = mtpreq.getFile(a);
 				// 通过MultipartFile 对象获取文件的原文件名
 				String fileName = file.getOriginalFilename();
 				// 生成一个uuid 的文件名
@@ -25,7 +26,8 @@ public class FileUpload {
 				String uuidName = randomUUID.toString() + fileName.substring(i);
 				// 获取服务器的路径地址（被上传文件的保存地址）
 				// C:\Users\Administrator\Documents\GitHub\market\WebContent\image
-				String realPath = req.getSession().getServletContext().getRealPath("image");
+				
+				String realPath = req.getSession().getServletContext().getRealPath(b);
 				// 将路径转化为文件夹 并 判断文件夹是否存在
 				File dir = new File(realPath);
 				if (!dir.exists()) {
@@ -49,5 +51,6 @@ public class FileUpload {
 				System.err.println("-----图片名称为：:" + fileName);
 				System.err.println("-----图片新名称为：:" + uuidName);
 				System.err.println("-----图片新路径为：:" + path);
+				return uuidName;
 	}
 }

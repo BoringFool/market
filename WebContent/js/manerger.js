@@ -147,8 +147,8 @@ $(document)
 							success : function(data) {
 								$.each(data, function(i, topic) {
 									show(topic);
-									
 								});
+								good.noImgNoShow();
 								set();
 								css_add();
 								/* 页数1样式改变 */
@@ -168,17 +168,16 @@ $(document)
 					/* tbody中td的模版 */
 					function show(data) {
 						var content = "<tr>" + "<td class=\"setid\">" + data.id + "</td>"
-								+ "<td>" + data.imageurl + "</td>" + "<td>"
+								+ "<td>" + "<img class=\"showImg\" alt=\"\" src=\""+ data.imageurl+"\">" + "</td>" + "<td>"
 								+ data.name + "</td>" + "<td>"
 								+ data.description + "</td>" + "<td>"
 								+ data.price + "</td>" + "<td>" + data.number
-								+ "</td>" + "<td>" + "图片管理" + "</td>"
+								+ "</td>" + "<td class=\"managerImg\">" + "图片管理" + "</td>"
 								+ "<td class=\"setAttr\">" + "设置属性" + "</td>"
 								+ "<td class=\"editor\">" + "编辑" + "</td>" + "<td class=\"del\">" + "删除"
 								+ "</td>" + "</tr>";
 						$("tbody").append(content);
-					}
-					;
+					};
 
 					/*
 					 * 这一部分本来是准备点击触发，但是出了很多问题，感觉很复杂，就换成了另外一种方式来实现。
@@ -427,9 +426,16 @@ $(document)
 							$(window).attr("location",adress.placeholder(id));
 						});
 						
+						$(".managerImg").click(function(){
+							var id=$(this).parent().children().first().text();
+							var adress="http://localhost:8080/market/jsp/addAttr.jsp?div=imageMana&id={0}";
+							$(window).attr("location",adress.placeholder(id));
+						});
+						
+						
+						
 						$(".del").click(function(){
 							var id=$(this).parent().children().first().text();
-							
 							good.del(id);
 						});
 					}
@@ -471,7 +477,7 @@ $(document)
 							contentType:"application/json;charset=utf-8",
 							dataType:"json",
 							success:function(data){
-								history.go(0);
+								$(location).attr("href","http://localhost:8080/market/jsp/manager.jsp");
 							},
 							erroro:function(){
 								
@@ -479,4 +485,15 @@ $(document)
 						});
 						
 					};
+					
+					
+					Goods.prototype.noImgNoShow=function (){
+						$(".showImg").each(function(){
+							//后台赋值为null，所以得用"null"而不是null来判断
+							if($(this).attr("src")=="null"){
+									$(this).remove();
+								}
+					    });
+					};
+					
 				});

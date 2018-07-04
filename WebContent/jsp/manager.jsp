@@ -74,5 +74,9 @@
 		<%=session.getAttribute("userNumber") %><br>
 		<span>${sessionScope.userNumber}</span>
 	</div>
+	<div class="hhh">aaa1</div>
+	<div class="hhh">aaa2</div>
+	<div class="hhh">aaa3</div>
+	<div class="hhh">aaa4</div>
 </body>
 </html>

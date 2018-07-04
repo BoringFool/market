@@ -1,9 +1,6 @@
 package com.zm.controller;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.List;
-import java.util.UUID;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -12,8 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import com.zm.model.C;
 import com.zm.model.Goods;
@@ -147,8 +142,22 @@ public class GoodsAction {
 	}
 	
 	@RequestMapping("turn")
-	public String turn(HttpServletRequest req){
-		FileUpload.picUpdate(req);
+	public String turn(HttpServletRequest request){
+		String a="docFile";
+		String b="image";
+		/*
+		 * 
+		 * 不知道什么原因，直接以request为参数会报错
+		 * The method picUpdate(String, String, HttpServletRequest) in the type FileUpload
+		 *  is not applicable for the arguments (HttpServletRequest)
+		 * 
+		 * */
+		HttpServletRequest req=request;
+		String newName= FileUpload.picUpdate(a,b,req);
+		Goods g=goodsservice.getById(Integer.parseInt(req.getParameter("hid")));
+		System.out.println(g+"******************************************************");
+		g.setImageurl("../image/"+newName);
+		goodsservice.update(g);
 		return "manager";
 	}
 	
